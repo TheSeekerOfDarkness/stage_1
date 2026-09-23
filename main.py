@@ -27,6 +27,12 @@ def main():
         action="store_true",
         help="Force download and overwrite even if already marked as downloaded in control layer",
     )
+    ingest_parser.add_argument(
+        "--datalake",
+        choices=["time_based", "book_based", "batch_based"],
+        default="time_based",
+        help="Datalake organization hierarchy (default: time_based)",
+    )
 
     # Index subcommand
     index_parser = subparsers.add_parser("index", help="Index downloaded books into Datamarts")
@@ -42,6 +48,12 @@ def main():
         default="monolithic",
         help="Inverted index storage architecture (default: monolithic)",
     )
+    index_parser.add_argument(
+        "--datalake",
+        choices=["time_based", "book_based", "batch_based"],
+        default="time_based",
+        help="Datalake layout to read books from (default: time_based)",
+    )
 
     # Search subcommand
     search_parser = subparsers.add_parser("search", help="Search the inverted index")
@@ -54,7 +66,13 @@ def main():
     )
 
     # Status subcommand
-    subparsers.add_parser("status", help="Show datalake and control layer status")
+    status_parser = subparsers.add_parser("status", help="Show datalake and control layer status")
+    status_parser.add_argument(
+        "--datalake",
+        choices=["time_based", "book_based", "batch_based"],
+        default="time_based",
+        help="Datalake organization hierarchy to inspect (default: time_based)",
+    )
 
     args = parser.parse_args()
 
@@ -62,7 +80,8 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    pipeline = IngestionPipeline()
+    dl_type = getattr(args, "datalake", "time_based")
+    pipeline = IngestionPipeline(datalake_type=dl_type)
 
     if args.command == "ingest":
         results = pipeline.ingest_batch(args.book_id, force=args.force)
