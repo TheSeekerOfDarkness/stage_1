@@ -12,3 +12,7 @@ datamarts/*.json
 # Alternative benchmark datalakes
 datalake_book_based/
 datalake_batch_based/
+
+# Compiled artifacts
+languages/java/build/
+languages/rust/target/
