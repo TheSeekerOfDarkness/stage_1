@@ -6,7 +6,13 @@ from pathlib import Path
 # Base directories
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATALAKE_DIR = BASE_DIR / "datalake"
+DATAMARTS_DIR = BASE_DIR / "datamarts"
 CONTROL_DIR = BASE_DIR / "control"
+
+# Metadata and datamarts files
+METADATA_DB_PATH = DATAMARTS_DIR / "metadata.db"
+INVERTED_INDEX_JSON_PATH = DATAMARTS_DIR / "inverted_index.json"
+INVERTED_INDEX_DIR_PATH = DATAMARTS_DIR / "inverted_index"
 
 # Control files
 DOWNLOADED_BOOKS_FILE = CONTROL_DIR / "downloaded_books.txt"

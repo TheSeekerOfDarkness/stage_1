@@ -28,6 +28,31 @@ def main():
         help="Force download and overwrite even if already marked as downloaded in control layer",
     )
 
+    # Index subcommand
+    index_parser = subparsers.add_parser("index", help="Index downloaded books into Datamarts")
+    index_parser.add_argument(
+        "--book-id",
+        type=int,
+        nargs="*",
+        help="Specific book ID(s) to index (defaults to all pending downloaded books)",
+    )
+    index_parser.add_argument(
+        "--indexer",
+        choices=["monolithic", "hierarchical", "database"],
+        default="monolithic",
+        help="Inverted index storage architecture (default: monolithic)",
+    )
+
+    # Search subcommand
+    search_parser = subparsers.add_parser("search", help="Search the inverted index")
+    search_parser.add_argument("query", type=str, help="Search query keywords")
+    search_parser.add_argument(
+        "--indexer",
+        choices=["monolithic", "hierarchical", "database"],
+        default="monolithic",
+        help="Inverted index storage architecture to query",
+    )
+
     # Status subcommand
     subparsers.add_parser("status", help="Show datalake and control layer status")
 
@@ -46,6 +71,24 @@ def main():
             print(json.dumps(res, indent=2))
         all_success = all(r.get("status") in ("success", "skipped") for r in results)
         sys.exit(0 if all_success else 1)
+
+    elif args.command == "index":
+        if args.book_id:
+            results = [pipeline.index_book(bid, indexer_type=args.indexer) for bid in args.book_id]
+        else:
+            results = pipeline.index_pending(indexer_type=args.indexer)
+        print(f"\n=== Indexing Summary ({args.indexer}) ===")
+        for res in results:
+            print(json.dumps(res, indent=2))
+        sys.exit(0)
+
+    elif args.command == "search":
+        result = pipeline.search(args.query, indexer_type=args.indexer)
+        print(f"\n=== Search Results for: '{args.query}' ({args.indexer}) ===")
+        print(f"Total matching books: {result['total_hits']}")
+        for hit in result["results"]:
+            print(f"  - [{hit['book_id']}] {hit['title']} by {hit['author']}")
+        sys.exit(0)
 
     elif args.command == "status":
         status = pipeline.get_status()
