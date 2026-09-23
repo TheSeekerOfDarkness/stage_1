@@ -2,6 +2,7 @@
 
 import logging
 from pathlib import Path
+from typing import Any
 from src.control.tracker import ControlTracker
 from src.crawler.downloader import BookDownloader
 from src.datalake.time_based import TimeBasedDatalake
@@ -11,17 +12,28 @@ logger = logging.getLogger(__name__)
 
 
 class IngestionPipeline:
-    """Orchestrates loading and ingesting books into the time-based datalake."""
+    """Orchestrates loading and ingesting books into the datalake and datamarts."""
 
     def __init__(
         self,
         downloader: BookDownloader | None = None,
-        datalake: TimeBasedDatalake | None = None,
+        datalake: Any | None = None,
         control: ControlTracker | None = None,
+        datalake_type: str = "time_based",
     ):
+        from src.datalake import BatchBasedDatalake, BookBasedDatalake, TimeBasedDatalake
         self.downloader = downloader or BookDownloader()
-        self.datalake = datalake or TimeBasedDatalake()
         self.control = control or ControlTracker()
+        self.datalake_type = datalake_type
+
+        if datalake is not None:
+            self.datalake = datalake
+        elif datalake_type == "book_based":
+            self.datalake = BookBasedDatalake()
+        elif datalake_type == "batch_based":
+            self.datalake = BatchBasedDatalake()
+        else:
+            self.datalake = TimeBasedDatalake()
 
     def ingest_book(self, book_id: int | str, force: bool = False) -> dict:
         """Ingest a single book by ID.

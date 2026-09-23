@@ -8,3 +8,7 @@ datamarts/inverted_index/
 datamarts/*.db
 datamarts/*.json
 !datamarts/.gitkeep
+
+# Alternative benchmark datalakes
+datalake_book_based/
+datalake_batch_based/

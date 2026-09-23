@@ -35,10 +35,14 @@ This repository implements **Stage 1 (Building the Data Layer)** of the Big Data
 ```
 
 ### 1. Datalake
-Stores the raw and cleaned book content in an unstructured format:
-- **Time-Based Hierarchy** (`YYYYMMDD/HH/`):
+Stores the raw and cleaned book content in an unstructured format, with 3 physical structural designs for benchmark comparison:
+- **Time-Based Hierarchy** (`datalake/YYYYMMDD/HH/`):
   - `<BOOK_ID>.header.txt`: Metadata, title, author, release notes.
   - `<BOOK_ID>.body.txt`: Cleaned body text delimited between Gutenberg markers.
+- **Book-Based Hierarchy** (`datalake_book_based/<BOOK_ID>/`):
+  - Dedicated directory per book: `header.txt` and `body.txt`.
+- **Batch / Range-Based Hierarchy** (`datalake_batch_based/batch_00000_00999/`):
+  - Partitioned into batch folders of 1,000 books to prevent directory exhaustion on massive scale.
 
 ### 2. Control Layer
 Maintains state files in `control/` for pipeline auditability and deduplication:
