@@ -1,6 +1,7 @@
 """Ingestion pipeline orchestrating Crawler, Datalake, and Control layers."""
 
 import logging
+import random
 from pathlib import Path
 from typing import Any
 from src.control.tracker import ControlTracker
@@ -23,7 +24,7 @@ class IngestionPipeline:
     ):
         from src.datalake import BatchBasedDatalake, BookBasedDatalake, TimeBasedDatalake
         self.downloader = downloader or BookDownloader()
-        self.control = control or ControlTracker()
+        self.control = control or ControlTracker(datalake_type=datalake_type)
         self.datalake_type = datalake_type
 
         if datalake is not None:
@@ -66,6 +67,10 @@ class IngestionPipeline:
 
         logger.info("Parsing and splitting text for book %s...", book_id_str)
         header, body, _ = self.downloader.split_book_text(raw_text)
+
+        for old_path in self.datalake.find_book(book_id_str):
+            if old_path:
+                old_path.unlink()
 
         logger.info("Saving book %s into time-based datalake...", book_id_str)
         header_path, body_path = self.datalake.save_book(book_id_str, header, body)
@@ -126,7 +131,7 @@ class IngestionPipeline:
         if indexer_type == "hierarchical":
             return HierarchicalInvertedIndex()
         elif indexer_type in ("database", "mongodb", "sqlite"):
-            return DatabaseInvertedIndex()
+            return DatabaseInvertedIndex(mongo_uri="mongodb://localhost:27017")
         return MonolithicInvertedIndex()
 
     def index_book(self, book_id: int | str, indexer_type: str = "monolithic") -> dict:
@@ -155,7 +160,7 @@ class IngestionPipeline:
         index.save()
 
         # 3. Mark indexed in control layer
-        self.control.mark_indexed(book_id_str)
+        self.control.mark_indexed(book_id_str, indexer_type)
 
         logger.info("Successfully indexed book %s using %s indexer.", book_id_str, indexer_type)
         return {
@@ -168,9 +173,13 @@ class IngestionPipeline:
 
     def index_pending(self, indexer_type: str = "monolithic") -> list[dict]:
         """Index all downloaded books that are marked pending in the control tracker."""
-        pending = sorted(list(self.control.get_pending_indexing()), key=lambda x: int(x))
+        pending = sorted(list(self.control.get_pending_indexing(indexer_type)), key=lambda x: int(x))
+        return self.index_batch(pending, indexer_type=indexer_type)
+
+    def index_batch(self, book_ids: list[int | str], indexer_type: str = "monolithic") -> list[dict]:
+        """Index a batch of books."""
         results = []
-        for bid in pending:
+        for bid in book_ids:
             try:
                 res = self.index_book(bid, indexer_type=indexer_type)
                 results.append(res)
@@ -178,6 +187,19 @@ class IngestionPipeline:
                 logger.error("Failed to index book %s: %s", bid, exc)
                 results.append({"book_id": bid, "status": "failed", "error": str(exc)})
         return results
+
+    def run_step(self, indexer_type: str = "monolithic", attempts: int = 10) -> dict:
+        """Index one pending book, or download a new random one if nothing is pending."""
+        pending = self.control.get_pending_indexing(indexer_type)
+        if pending:
+            return self.index_book(min(pending, key=int), indexer_type=indexer_type)
+
+        downloaded = self.control.get_downloaded_ids()
+        for _ in range(attempts):
+            candidate = random.randint(1, 70000)
+            if str(candidate) not in downloaded:
+                return self.ingest_book(candidate)
+        return {"status": "no_candidate"}
 
     def search(self, query: str, indexer_type: str = "monolithic") -> dict:
         """Execute a search query across the inverted index and resolve metadata."""
@@ -188,7 +210,7 @@ class IngestionPipeline:
         query_terms = tokenizer.tokenize(query)
 
         if not query_terms:
-            return {"query": query, "terms": [], "results": []}
+            return {"query": query, "terms": [], "total_hits": 0, "results": []}
 
         index = self.get_index_backend(indexer_type)
         metadata_store = MetadataStore()

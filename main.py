@@ -65,6 +65,16 @@ def main():
         help="Inverted index storage architecture to query",
     )
 
+    # Run subcommand
+    run_parser = subparsers.add_parser("run", help="Run control layer steps (index pending or download new)")
+    run_parser.add_argument("--steps", type=int, default=1, help="Number of steps to run (default: 1)")
+    run_parser.add_argument(
+        "--indexer",
+        choices=["monolithic", "hierarchical", "database"],
+        default="monolithic",
+        help="Inverted index used for indexing steps (default: monolithic)",
+    )
+
     # Status subcommand
     status_parser = subparsers.add_parser("status", help="Show datalake and control layer status")
     status_parser.add_argument(
@@ -93,7 +103,7 @@ def main():
 
     elif args.command == "index":
         if args.book_id:
-            results = [pipeline.index_book(bid, indexer_type=args.indexer) for bid in args.book_id]
+            results = pipeline.index_batch(args.book_id, indexer_type=args.indexer)
         else:
             results = pipeline.index_pending(indexer_type=args.indexer)
         print(f"\n=== Indexing Summary ({args.indexer}) ===")
@@ -109,6 +119,15 @@ def main():
             print(f"  - [{hit['book_id']}] {hit['title']} by {hit['author']}")
         sys.exit(0)
 
+    elif args.command == "run":
+        for step in range(1, args.steps + 1):
+            try:
+                res = pipeline.run_step(indexer_type=args.indexer)
+            except Exception as exc:
+                res = {"status": "failed", "error": str(exc)}
+            print(f"[CONTROL] Step {step}/{args.steps}: {res.get('status')} {res.get('book_id', '')}")
+        sys.exit(0)
+
     elif args.command == "status":
         status = pipeline.get_status()
         print("\n=== Data Layer Status ===")
@@ -119,8 +138,9 @@ def main():
         if status["datalake_books"]:
             print("\nDatalake contents:")
             for b in status["datalake_books"]:
+                location = f"(Date: {b['date']}, Hour: {b['hour']}) " if "date" in b else ""
                 print(
-                    f"  - Book ID: {b['book_id']} (Date: {b['date']}, Hour: {b['hour']}) "
+                    f"  - Book ID: {b['book_id']} {location}"
                     f"[Header: {b['header_size_bytes']} bytes, Body: {b['body_size_bytes']} bytes]"
                 )
 
