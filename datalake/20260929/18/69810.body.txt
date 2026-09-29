@@ -1,0 +1,1870 @@
+Transcriber’s Notes:
+
+  Underscores “_” before and after a word or phrase indicate _italics_
+    in the original text.
+  Equal signs “=” before and after a word or phrase indicate =bold=
+    in the original text.
+  Small capitals have been converted to SOLID capitals.
+  Old or antiquated spellings have been preserved.
+  Typographical and punctuation errors have been silently corrected.
+
+
+
+
+                            THE
+                    PRONUNCIATION OF GREEK;
+
+                     ACCENT AND QUANTITY.
+
+                    A PHILOLOGICAL INQUIRY.
+
+                             BY
+                     JOHN STUART BLACKIE,
+
+                     PROFESSOR OF GREEK IN
+                 THE UNIVERSITY OF EDINBURGH.
+
+                EDINBURGH: SUTHERLAND AND KNOX.
+              LONDON: SIMPKIN, MARSHALL, AND CO.
+                           MDCCCLII.
+
+                   EDINBURGH: T. CONSTABLE,
+                    PRINTER TO HER MAJESTY.
+
+    “_Sit omnibus rebus suum senium, sua juventus; et
+    ut verba verbis, sic etiam sonis sonos succedere
+    permittamus._”—BISHOP GARDINER.
+
+    “_This new pronunciation hath since prevailed,
+    whereby we Englishmen speak Greek, and are able
+    to understand one another, which nobody else
+    can._”—THOMAS FULLER.
+
+    “_Maxime cupio ut in omnibus Academiis nostris
+     hodierna Græcorum pronuntiatio recipiatur._”
+     —BOISSONADE.
+
+    “_Neque dubitamus quin_ ERASMUS, _si in tantam
+    Græcæ pronuntiationis discrepantiam incidisset,
+    vulgarem usum intactum et salvum reliquisset_.”
+    —SEYFFARTH.
+
+    “_Ich gebe der neugriechischen Aus-sprache im
+    Ganzen bei weitem den Vorzug._”—THIERSCH.
+
+    “_Neque enim de cœlo dilapsa ad nos pervenit Græcorum
+    lingua, sed e patria sua una cum omnibus quæ habemus
+    subsidiis, suo vestita cultu prodiit, quem tollere
+    aut immutare velle esset imperium in linguam liberam
+    exercere._”—WETSTEN.
+
+    “_Die sogenannte Erasmische Aus-sprache, wie es
+    in Deutschland erscheint, ist völlig grundlos, ein
+    Gebilde man weiss nicht von wannen es kam, ein
+    Gemische welches jeder sich zustutzt nach eigner
+    Lust und Willkühr._”—LISCOV.
+
+
+
+
+THE PRONUNCIATION OF GREEK, &c.
+
+
+It is purely as a practical man, and with a direct practical result in
+view, that I venture to put forth a few words on the vexed question
+of the PRONUNCIATION OF GREEK. He were a frigid pedant, indeed, who,
+with the whole glorious literature of Hellas before him, and the rich
+vein of Hellenic Archæology, scarcely yet opened in Scotland, should,
+for the mere gratification of a subtle speculative restlessness, walk
+direct into this region of philological thorns. So far as my personal
+curiosity was concerned, Sir John Cheke, wrapt in his many folded
+mantle of Ciceronian verboseness, and the Right Reverend Stephen
+Gardiner’s prætorian edicts in favour of Greek sounds,[1] and the βή ϐή
+of the old comedian’s Attic sheep, might have been allowed to sleep
+undisturbed on the library shelves. I had settled the question long
+ago in my own mind on broad grounds of common sense, rather than on
+any nice results that seemed obtainable from the investigations of the
+learned; but the nature of the public duties now imposed on me does not
+allow me to take my own course in such matters, merely because I think
+it right. I must shew to the satisfaction of my fellow-teachers and of
+my students, that I am not seeking after an ephemeral notoriety by the
+public galvanisation of a dead crotchet; that any innovations which I
+may propose are in reality, as so often happens in the political world
+also, and in the ecclesiastical, a mere recurrence to the ancient
+and established practice of centuries, and that whatever opinions I
+may entertain on points confessedly open to debate, I entertain not
+for myself alone, but in company with some of the ripest scholars
+and profoundest philologists of modern times. I have reason also for
+thinking with a recent writer, that the present time is peculiarly
+favourable for the reconsideration of the question;[2] for, although
+Sir John Cheke might have said with some show of truth in his day,
+“_Græca jam lingua nemini patria est_,”[3] none but a prophetic
+partisan of universal Russian domination in the Mediterranean will
+now assert, that the living Greeks are not a nation and a people who
+have a right to be heard on the question, how their own language is to
+be pronounced. Taking the Greek language as it appears in the works
+of the learned commentator Corais, in the poetry of the Soutzos and
+Rangabe, in the history of Perrhæbus, so highly spoken of by Niebuhr,
+and in the publications of the daily press at Athens; and taking
+the new kingdom for no greater thing than the intrigues of meddling
+diplomatists, its own wretched cabals, and the guns of Admiral Parker
+will allow it to be; it is plain that to disregard the witness of
+such a speaking fact, standing as it does upon the unbroken tradition
+and catholic philological succession of eighteen centuries, would be,
+much more manifestly now than in the days of the learned WETSTEN, to
+“exercise a despotism over a free language,” such as no man has a right
+to claim.[4] Besides, in Scotland we have already had our orthodox
+hereditary routine in this matter disturbed by the invasion of English
+teachers of the Greek language; an invasion, no doubt, which our strong
+national feeling may look on with jealousy, but which we brought on
+ourselves by the shameful condition of prostration in which we allowed
+the philological classes in our higher schools and colleges to lie
+for two centuries; and it was not to be expected that these English
+teachers, being placed in a position which enabled them to give the
+law within a certain influential circle, should sacrifice their own
+traditional pronunciation of the Greek language, however arbitrary, to
+ours, in favour of which, in some points, there was little but the mere
+conservatism of an equally arbitrary usage to plead. Finding matters
+in this condition, I feel it impossible for me to waive the discussion
+of a matter already fermenting with all the elements of uncertainty. I
+have therefore taken the trouble of working my way through Havercamp’s
+two volumes, and comparing the arguments used in the famous old
+Cantabrigian controversy with those advanced by a well-informed modern
+member of the same learned corporation. I have taken the learned
+Germans, too, as in duty bound, on such a question, into my counsels;
+I have devoted not a little time and attention to the language and
+literature of modern Greece; and above all, I have carefully examined
+those places of the ancient rhetoricians and grammarians that touch
+upon the various branches of the subject. With all these precautions,
+if I shall not succeed in making converts to my views, I hope, at
+least with reasonable men, to escape the imputation of rashness and
+superficiality.
+
+[1] _Ego sonorum causam tueor ex edicto possessorio, et ut prætor,
+interdixi de possessione._
+
+[2] An Essay on the Pronunciation of the Greek Language. By G. T.
+PENNINGTON, M.A., late Fellow of King’s College, Cambridge. London:
+Murray. 1844. This is the work that I recommend to the English student
+who wishes to understand the subject in detail, without wading through
+the confounding mass of pertinent and impertinent matter that the
+learned eloquence of more than three centuries has heaped up.
+
+[3] _Sylloge scriptorum qui de linguæ Græcæ vera et recta
+pronuntiatione Commentarios reliquerunt; edidit_ HAVERCAMPUS. _Ludg.
+Bat._, 1740. Vol. ii. p. 220
+
+[4] JOH. RUDOLFI WETSTENII: _pro Græca et genuina linguæ Græcæ
+pronuntiatione Orationes Apologeticæ_. Basil; 1686, p. 27. The whole
+passage is quoted in the prefixed mottoes.
+
+The exact history of our present pronunciation of Greek, both in
+England and Scotland, I have not learning enough curiously to trace;
+but one thing seems to me plain, that all the great scholars in this
+country, and on the continent generally, in the fifteenth, and the
+early part of the sixteenth century, could have known nothing of our
+present arbitrary method of pronouncing;[5] for they could pronounce
+Greek no other way than as they received it from Chrysoloras, Gaza,
+Lascaris, Musurus, and the other native Greeks who were their masters.
+Erasmus was, if not absolutely the first,[6] certainly the first
+scholar of extensive European influence and popularity who ventured to
+disturb the tradition of the Byzantine elders in this matter; but his
+famous dialogue, _De recta Latini Græcique sermonis pronuntiatione_,
+did not appear till the year 1528, by which time so strong a
+prescription had already run in favour of the received method, that it
+seems strange how even his learning and wit should have prevailed to
+overturn it. But there are periods in the history of the world when the
+minds of men are naturally disposed to receive all sorts of novelties;
+and the era of the Reformation was one of them. Erasmus, though a
+conservative in religion, (as many persons are who are conservative
+in nothing else,) pleased his free speculative whim with all sorts of
+imaginations; and among other things fell—though, if what Wetsten
+tells be true, in a very strange way[7]—on the notion of purging
+the pronunciation of the classical languages of all those defects
+which belonged to it, whether by degenerate tradition or perverse
+provincialism, and erecting in its stead an ideal pronunciation, made
+up of erudite conjecture and philosophical argumentation. Nothing was
+more easy than to prove that in the course of two thousand years the
+orthoepy of the language of the Greeks had declined considerably from
+the perfection in which its musical fulness had rolled like a river of
+gold from the mouth of Plato, or had been dashed like a thunderbolt
+of Jove from the indignant lips of Demosthenes; yet more easy was it,
+and admirable game for such a fine spirit as Erasmus, to evoke the
+shades of Cicero and Quinctilian, and make mirth to them out of a
+Latin oration delivered before the Emperor Maximilian, by a twittering
+French courtier and a splay-mouthed Westphalian baron.[8] It is certain
+also that there are in that dialogue many admirable observations on
+the blundering practices of the schoolmasters, and even the learned
+professors, his contemporaries, which very many of them in that day,
+and the great majority even now have wanted either sense or courage to
+attend to; observations which, I doubt not, will yet bear fruit in the
+present age, if education is to be advanced in the only way possible,
+viz., by those whose profession it is to teach others, learning in
+the first place to teach themselves. But in one great point of his
+rich and various discourse, the learned Dutchman was more witty than
+wise, and achieved a success where he was altogether wrong, or only
+half-right, that has been denied to him where he is altogether right.
+While his admirable observations on accent and quantity, and many of
+his precepts on the practical art of teaching languages, have been
+totally lost sight of by the great mass of our classical teachers, his
+strictures on the pronunciation of the Greek vowels and diphthongs have
+been received more or less by pedagogic men in all parts of Europe;
+or at least prevailed so far as to shake the faith of scholars in the
+pronunciation of the native Greek, and lead them to invent a new and
+arbitrary Hellenic utterance for each country, an altogether barbarous
+conglomerate, made up of modern national peculiarities and scraps of
+Erasmian philology. This is a sorry state of matters; but as European
+scholarship then stood, innovators could look for no more satisfactory
+result. Neither Erasmus nor the scholars who followed his “divisive
+courses” in England and other countries, were in possession of
+philological materials sufficiently comprehensive for settling so nice
+a point. Much less could they use the materials in their hands with
+that spirit of calm philosophic survey, and that touch of fine critical
+sagacity which the ripe scholars of Germany now exhibit. It was one
+thing to quarrel learnedly with the pronunciation of Chrysoloras, and
+to chuckle with academic pride over the tautophonic tenuity of σὺ
+δ’ εἶπέ μοι μὴ μῆκος, and other such ingeniously gathered scraps of
+Atticism in the mouth of a modern Turkish serf; another, and a far more
+serious thing, to draw out a complete table of elocutionary sounds,
+such as they existed at any given period in Greek literature; say at
+the successive epochs of Homer, Æschylus, Plato, Callimachus, Strabo,
+Chrysostom. Bishop Gardiner, therefore, was right to press this point
+hard against the Erasmians,—“_Quod vero difficillimum dicebam neque
+statuis neque potes, ut tanquam ad punctum constituas sonorum modum. Ab
+usu præsente manifeste recedis: sed an ad veterum sonorum formam omnino
+accedas, nihil expeditum est._” Here, as in more serious matters, the
+good Bishop saw that it was easier to destroy than to build up; and
+therefore he interposed his interdict despotically in the Roman style,
+_ne quid detrimenti respublica capiat_. But these maxims of old Roman
+aristocracy do not apply to the democracy of letters. So the Bishop’s
+philological thunderbolt started more heretics than it laid. The love
+of liberty was now conjoined with the love of originality; to speak
+Greek with Erasmus became now the sign of academic patriotism and the
+watchword of philological progress. FORCE being the chief apparent
+power on the one side, it was naturally felt by those against whom it
+was exercised, that REASON was altogether on their side. The matter was
+therefore practically settled on the side of persecuted innovation;
+the subtlety of a few academic doctors triumphed proudly over the long
+tradition of Byzantine centuries, and the living protest of millions of
+men, with Greek blood in their veins and Greek words in their mouths;
+and they who were once the few despised Nazarenes of the scholastic
+world, are now a sort of philological Scribes and Pharisees, sitting in
+the seat of Aristarchus, whose dictum it is dangerous to dispute.
+
+[5] See the opinions of SCALIGER, SALMASIUS, and some others, quoted by
+WETSTEN.
+
+[6] WETSTEN refers to a work by ALDUS MANUTIUS _de potestate
+literarum_, which I have not seen.
+
+[7] “_Audici M. Rutgerum Reschium professorem Linguæ Græcæ in collegio
+Baslidiano apud Lovanienses, meum piæ memoriæ præceptorem, narrantem,
+se habitasse in Liliensi pædagogeo una cum Erasmo, eo superius, se
+inferius cubiculum obtinente. Henricum autum Glareanum Parisiis
+Lovanium venisse, atque ab Erasmo in collegium vocatum fuisse ad
+prandium: quo cum venisset, quid novi adferret interrogatum dixisse
+(quod in itinere commentus erat, quod sciret Erasmum plus satis
+rerum novarum studiosum ac mire credulum) quosdam in Græcia natos
+Lutetiam venisse, viros ad miraculum doctos; qui longe aliam Græci
+sermonis pronunciationem usurparent, quam quæ vulgo in hisce partibus
+recepta esset: Eos nempe sonare pro_ Vita Beta, _pro_ II ita Eta,
+_pro_ AI, ai, _pro_ OI, oi, _et sic in cæteris. Quo audito Erasmum
+paulo post conscripsisse dialogum de recta Latini Græcique sermonis
+pronunciatione, ut videretur hujus rei ipse incentor, et obtulisse
+Petro Alostensi Typographo imprimendum: Qui cum forte aliis occupatus
+renueret, aut certe se tam cito excudere quam volebat non posse
+diceret, misisse libellum Basileam ad Frobenium, a quo max impressus in
+lucem prodiit. Verum Erasmum cognita fraude, nunquam ea pronunciandi
+ratione postea usum, nec amicis, quibuscum familiariter vivebat, ut eam
+observarent, præcepisse. In ejus rei fidem exhibuit Rutgerus ipsius
+Erasmi manu scriptam in gratiam Damiani a Gœs Hispani pronunciationis
+formulam, in nullo diversam ab ea, qua passim docti et indocti in hac
+lingua utuntur._” The voucher for the story is VOSSIUS, from whose
+_Aristarchus_, lib. 1, c. 28, Wetsten quotes it.
+
+[8] Havercamp, vol. ii. p 174.
+
+Nevertheless, Erasmus, Wetsten distinctly asserts, (pp. 15, 115,)
+did not himself adopt in his practice the perfect theory of Hellenic
+vocalization which he sketched out. So much the less cause is there
+for our having any hesitation in considering the whole question as now
+open, and treating it exactly as if Professor John Cheke, and Professor
+Thomas Smith of Cambridge University, and Adolphus Mekerchus, knight
+and perpetual senator of Bruges, and the other Havercampian hoplites
+had never existed. Let us inquire, therefore, in the first place,
+whether any certain data exist on which such a matter can be settled
+scientifically. We shall give only the grand outlines of the question,
+referring the special student to the English work of PENNINGTON already
+quoted, the German work of LISKOV, and the Latin of SEYFFARTH.[9]
+
+[9] _Ueber die Aus-sprache des Griechischen._ Leipzig, 1825. _De Sonis
+literarum Græcarum_; _auctore_ GUSTAVO SEYFFARTHIO. Lipsiæ, 1824.
+
+Now, there are five ways by which the method of pronunciation used by
+any gone generation of “articulate-speaking men” may be ascertained,
+if not with a curious exactness in every point, at least with such
+an amount of approximation as will be esteemed satisfactory by a
+reasonable inquirer. FIRST, we have the imitation in articulate letters
+of natural sounds and of the cries of animals. There is nothing more
+certain in the philosophy of language than that whole classes of
+words expressive of sound were formed on the principle of a direct
+dramatic imitation of the sound signified. Thus the words DASH,
+HASH, SMASH, in our most significant Saxon tongue, evidently express
+an action producing sound, in which the strong vowel sound of A is
+combined with a sharp sound to which the aspirated S was considered
+the nearest approximation by the original framer of the word. So,
+in the names expressive of flowing water, the liquids L and R are
+observed to preponderate in all languages, these being the sounds
+which are actually given forth by the natural objects so signified:
+thus _river_, ῤέω, _strom_, _flumen_, _purl_, the Hebrew _nahar_ and
+_nahal_, &c. And in the same manner, if the bird which we call CUCKOO
+was called by the Latins _cuculus_, by the Greeks κόκκυξ, and by the
+Germans _kukuk_, no person can doubt that the vowel sounds at least, in
+these words, were intended to be a more or less exact echo of the cry
+of the bird so designated. In arguing, however, from such words, care
+must be taken not to press the argument too closely; for two things
+are manifest—that the original framer of the words might have given,
+and in all likelihood did give only a loose, and not a curiously exact
+imitation of the sound or cry he meant to express; and then that in
+the course of centuries the word may have deviated so far from its
+original pronunciation, as to be no longer a very striking likeness
+of the natural sound it is intended to imitate. These considerations
+explain the fact how the very simple and obvious cry made by sheep,
+which no child will mistake, is expressed by three very different
+vowels, in three of the most notable European languages,—our own
+_bleat_, the Latin _balare_, and the Greek βληχή, pronounced like A
+in _mate_, according to the practice of the Greeks in the classical
+age. From such words, therefore, no safe conclusion can be drawn as
+to the pronunciation of any particular word at any particular period
+of a highly advanced civilization. It is different, however, with
+words not forming any part of the spoken system of articulate speech,
+but invented expressly for the occasion, in order to represent by way
+of echo certain natural sounds. In this way, should we find in an
+old Athenian spelling-book this sentence, “_the sheep cries_ Βή,” we
+should be most justly entitled to conclude, if not that the Greek _B_
+was pronounced exactly like the corresponding letter in our alphabet,
+(for the consonants are less easily fixed down in such imitations
+of inarticulate cries,) certainly that _H_ had the sound of our AI;
+and this conclusion would be irresistible if other arguments were at
+hand, such as will presently be mentioned, leading plainly to the same
+conclusion. Here, however, also, care must be taken not to generalize
+too largely; for, strictly speaking, the inference from such a fact
+as the one supposed, is only that at the particular time and place
+where the said book was composed, a particular vowel sounded to the
+ear of the writer in a particular way; the proof remaining perfectly
+open that at some other place during the same period, or at the same
+place fifty years later, the same vowel may have been pronounced in a
+perfectly different way.[10]. Those who are at all acquainted with the
+style of reasoning on such points, exemplified in almost every page of
+Havercamp’s Collection, will see the necessity of applying at every
+step of their progress the rein of a strictly logical restraint.
+
+[10] “If we find a word pronounced in a given manner in the time of
+Athenæus, we are warranted, in the absence of proof, in supposing it
+to have been pronounced in the same way in the time of Homer; and what
+prevailed in Homer’s time may be presumed to have continued till the
+age of Athenæus.”—PENNINGTON, p. 7. This is too strong. Considering
+the immense interval of time and progress of culture between HOMER and
+ATHENÆUS, and considering the tendency to change inherent in human
+nature, I can see no presumption that the pronunciation of the language
+should have remained through so many centuries unchanged.
+
+Another and a most scientific way by which we may recover the traces of
+a lost orthoepy, is from the physiological description of the action
+of the organs of speech in producing the sounds belonging to certain
+letters, as preserved in the works of grammatical or rhetorical
+writers. This method of proof, taken by itself, may, no doubt, fail of
+giving complete satisfaction in delicate cases; for it is extremely
+difficult to give such an exact description of the action of the organs
+of speech as will enable a student of an unknown language to reproduce
+the sound, without the assistance of the living voice. But, taken
+along with other circumstances, the proof from this source may be so
+strong as absolutely to force conviction; or at all events imperatively
+to exclude certain suppositions, which, without the existence of
+such a description, would have been admissible. Now, it happens most
+fortunately for our present inquiry, that a very satisfactory scale
+of the Greek vowel-sounds is extant in the works of the well-known
+historian and critic Dionysius of Halicarnassus, who lived in the time
+of Augustus Cæsar. This we shall quote at length immediately; and as
+the author was a professional rhetorician, no higher authority on such
+a point, for the epoch to which he belongs, can be wished for.[11]
+
+[11] “I cannot help thinking that if this treatise of Dionysius had
+been in early times made a text-book in schools, no controversy would
+ever have arisen upon the pronunciation of the Greek letters,” (except
+the diphthongs,) “or upon the nature of quantity.”—PENNINGTON.
+
+Again, a very large and various field of proof lies in those instances
+of the direct transference of the sounds of one language into those
+of another, which literary composition sometimes requires, and which
+are sure to occur very frequently in an extensive literature like the
+Greek. Examples of this are most common in the case of proper names,
+and occur especially in translations, as in the ancient translations of
+the Hebrew Bible and of the New Testament, which have been admirably
+used for the illustration of Greek orthoepy in the work of Seyffarth.
+When Strabo, for instance, (p. 213,) in the case given by Pennington,
+(p. 73,) says of the inhabitants of the newly colonized town of Como in
+Upper Italy,—Νεο κωμῖται ἐκλήθησαν ἅπαντες· τοῦτο δὲ μεθερμηνευθὲν Νο
+ϐουμκώμουμ λέγεται, we learn that the diphthong ου was considered by
+an intelligent scientific man in the time of Augustus, as being either
+the exact equipollent of the Latin U, or the nearest approximation
+to it within the compass of Hellenic vocalization; and when we are
+told further that the modern Greeks and the modern Italians pronounce
+the same vowels the same way even now, we cannot for a moment doubt
+that the method of pronouncing that Greek diphthong now practised in
+Scotland (as in _boom_) is the correct one. From the same passage we
+may legitimately draw the inference, with regard to the second letter
+in the Greek alphabet, that it was in all probability pronounced
+softly like our V; for our B is no representative whatever of the Latin
+V, whether we suppose that letter to have been pronounced like the
+corresponding letter with us, or like our W. The modern Germans, in
+the same way, who have not our sound of W, substitute for it in their
+language the sound of V regularly, as in WASSER, which they pronounce
+VASSER, and many such words. If, therefore, an ancient Greek wished
+to express the letter V, and does so by his own _B_, the inference is
+irresistible, either that his _B_ was pronounced like our V, and was
+viewed as the exact expression of the Latin letter so pronounced, or
+as an approximation to it, if pronounced like our W; or, on the other
+hand, that the Greek organ being utterly incapable of pronouncing the
+soft sound of the Latin V, and having no letter or combination of
+letters capable of expressing it, gave up the attempt in despair, and
+wrote the soft Latin V with a hard Greek _B_. But this supposition is
+improbable, for three reasons: FIRST, because the general character
+of the Greek language, as contrasted with the Roman, was not that of
+blunt hardness but of liquid softness, (see QUINCTILIAN and CICERO,
+_passim_;) SECONDLY, the ancient Greeks, in fact, had a combination of
+letters by which they could express in an approximate way the Latin
+V, namely, ου, and by which they actually did so express it on many
+occasions; THIRDLY, the modern Greeks likewise do pronounce the second
+letter of the alphabet like the Latin V; and the burden of proof lies
+on those who assert that the ancients pronounced it otherwise.
+
+A fourth method of proof lies in the remarks made on the identical or
+cognate sounds of syllables, either incidentally by general writers,
+or specially by grammarians in treating orthography and orthoepy; and
+in the accidental interchange of letters in inscriptions and coins.
+Of the strictly grammatical kind of evidence a very valuable fragment
+has been preserved in the Ἐπιμερισμοί of Herodian, the Priscian of the
+Greek grammarians, published by Boissonnade in 1817. In this work are
+alphabetically arranged large classes of words, which, while they are
+pronounced with the same vowel to the ear, are differently spelt to
+the eye; as if I should say in English that the vowel-sounds in the
+words FAIR, FARE, HEIR, THERE, have the same or a similar orthoepy,
+but a very different orthography. Of the other, or incidental kind,
+may be mentioned those plays of sound with which epigrammatic writers
+sometimes amuse themselves, and of which the echo-poems found in some
+of the collections of modern Latin, are the most notable example. Thus,
+Erasmus, in ridicule of the Ciceronians, wrote two lines, of which
+the first, a hexameter, ends with _Cicerone_, the ablative case of
+the great orator’s Latin name, while the second line, a pentameter,
+striking the ear as a sort of echo of the first, ends with the Greek
+word ὄνε, _O you ass!_ from which significant jingle the inference is
+ready enough, that the penultimate syllable of both these words, in the
+classical pronunciation of Erasmus, was accented, and that the sound of
+the vowel in both was the same. The proof, of course, in such a case
+would have been equally complete if the word in the second line had
+been spelt with a different vowel instead of with the same.
+
+_Fifthly_, In determining the pronunciation of any language at any
+past period of its history, its presently existing pronunciation,
+though furnishing no absolute proof, is entitled to be taken into
+account along with other circumstances, and in the absence of any
+distinct evidence to the contrary, must be taken as conclusive. Erasmus
+appealed with great success to the vanity of academic men, when he
+said, with reference to the common Greek pronunciation in his day,
+“_Pronuntiationem, quam nunc habent eruditi, non aliunde petunt quam
+a vulgo, scis quali magistro_;” but to this a learned advocate of the
+existing Itacism very wisely replies, that even supposing it were
+true that the vulgar pronunciation of Greek comes to us only from the
+VULGAR, the common people, as is well known, are generally far more
+tenacious of hereditary national accent than the upper classes of
+society;[12] of which we have a familiar English example in the case
+of the stout Yorkshiremen, who have preserved for two thousand years
+the deep hollow sound of _u_, (saying _Ool_, for _Hull_, &c.,) which is
+the normal sound of that vowel in all the European languages. In this
+view it is passing strange to note, that the slender sound of the first
+syllable of ἡμέρα, as if written _heeméra_, which is the rule with the
+modern Greeks, is the precise sound, that in a passage of Plato is
+noted as the ancient sound, compared with the fuller sound, _haiméra_,
+fashionable in his day;[13] while Aristophanes[14] in one of his plays,
+introduces a conservative old Spartan lady saying ἵκει, instead of
+ἥκει; a distinct proof both that η was not considered identical with ι
+in his day, and that it was then sounded as it is now, by one of the
+most ancient people in the Pelasgic peninsula.
+
+Such appear to me to be the methods of proof that lie open to an
+inquirer into the orthoepy of any language, living or dead, at any
+given period of its history. With these, of course, the student must
+combine such general rules on the philosophy of language, and on the
+habits of human speech, as a little experience of practical philology
+will readily supply. I now proceed to state the results to which I have
+arrived, by a thorough study of the existing evidences. After that we
+shall make our practical inference, and answer a few natural objections.
+
+[12] “_Vulgus antiquæ pronuntiationis tenacissimus est._”—WETSTEN.
+Compare the observations of Professor L. Ross, below, on the antique
+element in modern Greek.
+
+[13] Pluto Cratylus, sec. 74, Bekker.
+
+[14] Aristophanes, Lysist. 86.
+
+In the shape of results, therefore, all that my present purely
+practical purpose requires me to lay down, with regard to ancient Greek
+vocalization, may be combined in the following two propositions—
+
+    PROPOSITION I.—It is demonstrably certain that the
+    method of pronouncing the vowels and diphthongs
+    generally practised in England and Scotland,
+    especially in England, since the days of Sir John
+    Cheke,—that is from about the middle of the sixteenth
+    century—is doubtful in many points, and in not a few
+    most important points directly opposed to the whole
+    stream of ancient authority and tradition. It is in
+    fact in a great measure conjectural, arbitrary, and
+    capricious.
+
+    PROPOSITION II.—It is equally certain that the modern
+    Greeks have declined in several most important points
+    from the purity of Hellenic orthoepy, as practised
+    in the most classic times; but many of the striking
+    peculiarities of the modern pronunciation can be
+    traced back, with more or less uniformity, to a
+    period not far removed from the most flourishing
+    period of Greek literature, a period certainly when
+    pure Greek was both a spoken and a written language,
+    and preserving such a living organic power, as
+    entitled it by a spontaneous impulse from within to
+    modify the laws of its own orthoepy.
+
+Both these propositions, so far as the vowels are concerned, are proved
+by a single glance at the passage of Dionysius (περὶ συντάξεως) already
+referred to, and which I shall now translate:—
+
+“There are seven vowels; two long, η and ω, and two short, ε and ο;
+three both long and short, α, ι, υ. All these are pronounced by the
+wind-pipe acting on the breath, while the mouth remains in its simple
+natural state, and the tongue remaining at rest takes no part in the
+utterance. Now, the long vowels, and those which may be either long or
+short, when they are used as long, are pronounced with the stream of
+breath, extended and continuous; but the short vowels, and those used
+as short, are uttered by a stroke of the mouth cut off immediately
+on emission, the wind-pipe exerting its power only for the shortest
+time. Of all these, the most agreeable sounds are produced by the
+long vowels, and those which are used as long, because their sound
+continues for a considerable time, and they do not suddenly break off
+the energy of the breath. Of an inferior value are the short vowels,
+and those used as short, because the volume of sound in them is small
+and broken. Of the long again, the most sonorous is the α, when it is
+used as long, for it is pronounced by opening the mouth to the fullest,
+while the breath strikes the palate. The next is η, because in its
+formation, while the mouth is moderately open, the sound is driven out
+from below at the mouth of the tongue, and keeping in that quarter does
+not strike upwards. Next comes the ω, for in it the mouth is rounded,
+and contracts the lips, and the stroke of the mouth is sent against the
+extreme end of the mouth, (ἀκροστόμιον, the lips, I presume.) Inferior
+to this is the υ, for in this vowel an observable contraction takes
+place in the extreme region of the lips, so that the sonorous breath
+comes out attenuated and compressed. Last of all comes ι, for here the
+stroke of the breath takes place about the teeth, while the opening of
+the mouth is small, and the lips contribute nothing towards giving the
+sound more dignity as it passes through. Of the short vowels, neither
+is sonorous; but o is the least agreeable, for it parts the mouth more
+than the other, and receives the stroke nearer the wind-pipe.”
+
+Now, while every point of this physiological description may not be
+curiously accurate,[15] there is enough of obvious certainty in it to
+settle some of the most important points of Greek orthoepy, so far as
+the rhetorician of Halicarnassus is concerned; and his authority in
+this matter is that of a man of the highest skill, which, as the daily
+practice of our law courts shows, is worth that of a thousand persons
+taken at random. That the ITACISM of the modern Greeks did not exist,
+or was not allowed by good speakers[16] in the time of this writer, so
+far as the single vowels are concerned, is abundantly manifest; for
+not only do η, ι, υ, which the modern Greeks identify, mean different
+sounds, but the sound of the η in particular is removed as far from the
+ι as it could well be in any scale of vocalization, which sets out with
+the supremacy of the broad A. And if these sounds were distinguished
+by polished ears in the days of Augustus Cæsar, it is contrary to
+all analogy of language to suppose that in the days of Alexander
+the Great, Plato, or Pericles, they should have been confounded.
+Provincialisms, indeed, and certain itacizing peculiarities, such as
+that noticed by Plato, (page 24 above), there might have been; but
+that any language should confound its vowel-sounds in its best days,
+and distinguish them in its days of commencing feebleness, is contrary
+to all that succession of things which we daily witness. Different
+letters were originally invented to express different sounds, and did
+so naturally for a long time, till fashion and freak combined with
+habit, either overran the phonetic rule of speech by a rank growth of
+exceptive oddities, (as has happened in English,) or fixed upon the
+organs of articulation some strong tendency towards the predominance
+of a particular sound, which in process of time became a marked
+idiosyncrasy, from which centuries of supervening usage could not
+shake the language free. This is what has taken place in Greece with
+regard to certain vowel-sounds. But before pursuing these observations
+further, let us see distinctly what the special points are, that this
+remarkable passage of the Halicarnassian distinctly brings out. The
+ascertained points are these,—
+
+[15] What he says about the tongue performing no part in the formation
+of the vowels is manifestly false, as any one may convince himself by
+pronouncing the three sounds, _au_, _ai_, _ee_, successively, with open
+mouth before a mirror. He will thus observe a gradual elevation and
+advance of the tongue, as the sound to be emitted becomes more slender.
+
+[16] This limitation must be carefully borne in mind; for after Athens
+ceased to be a capital, being overwhelmed by Alexandria, it still
+remained a sort of literary metropolis, giving, or affecting to give,
+the law in matters of taste, long after its authority had ceased
+practically to bind large masses of those whose usage fashioned the
+existing language.
+
+    1. The long or slender sound of the English A, (as
+    in _lane_,) is not acknowledged by Dionysius, nor
+    is its existence possible under his description. It
+    is altogether an anomaly and a monstrosity—like so
+    many things in this island—and should never have been
+    tolerated for a moment in the pronunciation of Latin
+    or Greek.[17]
+
+    2. The slender sound of η used by the English and
+    the modern Greeks, is an attenuation the farthest
+    possible removed from the conception of Dionysius.
+    About ε there is no dispute anywhere.
+
+    3. The sound of υ described is manifestly the French
+    _u_, or German _ü_ heard in _Brüder_, _Bühne_: a very
+    delicate and elegant sound bordering closely on the
+    slender sound of _i_, (_ee_, English,) into which
+    it is sometimes attenuated by the Germans, and with
+    which, by a poetical license, it is allowed to rhyme,
+    (as _Brüder_—_nieder_,) but having no connection with
+    the English sound of _oo_, (as in _boom_,) with
+    which, in Scotland, it is confounded. This with us
+    is the more unpardonable, as our Doric dialect in
+    the south possesses a similar sound in such words as
+    _guid_, _bluid_, attenuated by the Northerns into the
+    slender sound of _gueed_, and _bleed_. The English
+    sound of long _u_ is, as Walker has pointed out,
+    a compound sound, of which one element is a sort
+    of consonant—Y. It is, besides, altogether a piece
+    of English idiosyncrasy, that we have no reason to
+    suppose ever existed anywhere, either amongst Greeks
+    or Romans.[18]
+
+    4. The English sound of I is another of John Bull’s
+    phonetic crotchets, and must be utterly discarded.
+    It is, in fact, a compound sound, of which the deep
+    vowel α is the predominant element—an element which,
+    we have seen, stands at the very opposite end of the
+    Halicarnassian’s scale!
+
+[17] In some English schools a small concession has been made to common
+sense, and to sound principles of teaching, by confining the long
+slender sound of _a_ to the long α, while the short α is pronounced
+like the short _a_ in _bat_. Now, as changes are not easily made
+in England, especially among schoolmasters, who are a stiff-necked
+generation everywhere, it would have been worth while when they were
+moving, to kick the barbarous English A out of the scholastic world
+altogether. But their conservatism was too strong for this; besides,
+the ears of many were so gross that they would not have distinguished,
+or would have sworn that they could not distinguish, a long _a_ from a
+short one, without giving the former the sound of an entirely distinct
+vowel! There is no limit to the nonsense that men will talk in defence
+of an inveterate absurdity.
+
+[18] The following passage from MITFORD (Pennington, p. 37) may stand
+here as an instructive lesson, how blindly prejudice many sometimes
+speak: “Strong national partiality only, and determined habit, could
+lead to the imagination cherished by the French critics, that the
+Greek υ was a sound so unpleasant, produced by a position of the
+lips so ungraceful as the French U.”—_History_, book ii. sec. iii.,
+note. SCALIGER (Opuscula: Paris, 1610, p. 131) says rightly, “Est
+obscurissimus sonus in Græca vocali υ, quæ ita pronuntianda est ut
+proxime accedat ad iota.”
+
+So far as we see, therefore, the English, Scotch, and modern Greek
+methods of pronouncing the five vowels all depart in some point from
+the highest authority that can be produced on the subject; in fact, the
+single vowel ω alone has preserved its full rounded purity uncorrupted
+by any party. But with regard to the other four vowels, there is a
+marked difference in the degree of deflection from the classical norm;
+for, while the Scotch err only in one point, υ, the modern Greeks err
+in two, η and υ, (though their error is but a very nice one in the case
+of υ, and has, in both cases, long centuries of undeviating usage to
+stand on,) and the English err in all the four points, α, η, ι, and
+υ, and that in the most paradoxical and abnormal fashion that could
+have been invented, had it been the direct purpose of our Oxonian and
+Etonian doctors to put all classical propriety at defiance. In such
+lawless anarchy has ended the restoration of the divine speech of
+Plato, so loftily promised by Sir John Cheke; and so true in this small
+matter also, is that wise parable of the New Testament, which advises
+reformers to beware of putting new patches on old vestments. Instead of
+the robe of genuine Melibean purple which Erasmus wished to throw round
+the shoulders of the old Greek gods, our English scholars, following in
+his track of conjectural innovation, have produced an English clown’s
+motley jacket, which the Zeus of Olympus never saw, and even Momus
+would disdain. But let us proceed to the diphthongs.
+
+Unhappily Dionysius, by a very unaccountable omission, has given us
+no information on this head; so we are left to pursue our inquiries
+over a wide field of stray inquiry, and conclude from a greater mass
+of materials with much less appearance of scientific certainty. The
+following results, however, to any man that will fairly weigh the
+cumulative power of the evidence brought together with such laborious
+conscientiousness by Liscov and Seyffarth, must appear unquestionable:—
+
+1. It is proved by evidence reaching as far back as the time of
+the first Ptolemies, that the diphthong ΑΙ was pronounced like the
+same diphthong in our English word _gain_.[19] So the diphthong is
+pronounced by the living Greek nation. There is, therefore, the
+evidence of more than 2000 years in its favour, and against the
+prevalent pronunciation, which gives it the broad sound of _ai_ in the
+German word KAISER, rhyming pretty nearly with our English word WISER.
+
+[19] “_Utut sit, id saltem nacti sumus interpretum S. sc. singularum
+atque omnium auctoritate ut constet_ AI _mature atque optimis adeo
+Græcorum temporibus simplici vocali_ E _respondisse_.”—SEYFFARTH, p.
+101. See also the Stanza from CALLIMACHUS, where ναίχι echoes to ἔχει,
+Epig. xxx. 5, (and SEXTUS EMPIRICUS _adv._ Grammat. c. 5.)
+
+2. The diphthong EI was pronounced in the time of Ptolemy Philadelphus
+like the English _ee_ in _seen_, or _ea_ in _beam_.[20] This
+pronunciation it retains at the present day. In this, as in the
+preceding case, we have a striking proof of the tenacity with which
+a great nation clings to elocutional peculiarities. What likelihood
+is there that a people, so constant to itself for 2000 years under
+the most adverse circumstances, should, in the 200 years previous to
+that period, have known nothing of what was afterwards one of its most
+marked characteristics?
+
+[20] “_Quâ potestate literæ_ EI _fuerint eâ Græcorum ætate in quam
+veteres Sc. s. interpretes incidunt ex plurimis iisque variis verbis in
+singulas linguas conversis adeo clarum est ut nulla fere restet causa
+de eâ dubitare._”—SEYFFARTH. The Old Testament translators, in fact,
+use it as regularly for _Hirek_ and _Yod_, as they do AI for _Tzere_,
+_Segol_, and _Sheva_.
+
+3. The evidence for the pronunciation of the diphthong ΟΙ is more
+scanty. Unfortunately the Septuagint translators use this diphthong
+only once for expressing a Hebrew name in the whole compass of the
+Old Testament. From other evidence, and by a train of deduction that
+appears somewhat slippery, Seyffarth comes to the conclusion that its
+original pronunciation was probably that of the German _oe_, from which
+it was by degrees softened into the French _u_, and lastly into the
+slender sound of _i_ (_ee_), which it now has. But as I am dealing
+with certainties in this paper, and not with probabilities, it will be
+enough to say that LISCOV has produced evidence to shew that it was
+confounded with _i_ so early as the time of Julius Cæsar, =ΙΩΝΙΣΤΗΣ=
+being found on a coin of the great dictator for οἰωνιστής. So in
+the coins of Emperors of the second century, =ΟΙΚΟΣΤΟΥ= frequently
+occurs for εἰκοστοῦ.[21] That λοιμός was not pronounced exactly like
+λιμός in the time of Thucydides, has been concluded from a well-known
+passage in his second book, (c. 54;) but the passage is of doubtful
+interpretation,[22] and no man can tell at this time of day what the
+exact, perhaps a very small shade of, difference, was between the two
+sounds.
+
+[21] With regard to this sort of evidence arising from wrong spelt
+words, it is manifest that a single example proves nothing. When Aunt
+Chloe, for instance, in the American novel, says, “I’m _clar_ on’t,”
+this is no proof that the Americans pronounce the _ea_ in _clear_ like
+_a_; the only conclusion is, that certain vulgar people in America
+pronounce it so, and a word with a different vocalization must be
+written in order to express their peculiar method of utterance. But
+when mistakes of this kind occur extensively, and in quarters where
+there is no reason to suspect anything particularly vulgar, they
+authorize a conclusion as general as the fact, especially where no
+evidence exists pointing in a different direction.
+
+[22] THIERSCH uses the passage as a proof of the antiquity of the
+modern slender sound.—_Sprachlehre_, § 16, 5.
+
+4. In the above three examples, the Scotch and the English have equally
+conspired to overthrow the living tradition of two centuries, by an act
+of arbitrary academical conceit or pedagogic carelessness. In the case
+of OU, we Northerns have again been happy; while the English, with
+their fatal facility of blundering in such matters, have invented a
+pronunciation of this diphthong which seems more natural to a growling
+Saxon mastiff than to the smooth fulness of ancient Greek eloquence.
+The Greek writers, with great uniformity, agree in expressing by
+this diphthong the sound of the Latin _u_; while the modern Greeks,
+with equal uniformity, agree in pronouncing their ου as the Italians
+pronounce _u_; that is to say, like the English _oo_ in _boom_.
+Seyffarth classes this diphthong with _a_ and _i_, _o_ and _e_, as a
+sound about which there is no controversy.
+
+5. The diphthongs AU and EU follow; and in their case the contrast
+between the pronunciation of the living Greeks, and that of those who
+are taught only out of dead grammars and dictionaries, is so striking,
+that the contest has been peculiarly keen. Here, however, as is wont
+to be the case in more important matters, it may be that after much
+dusty discussion, erudite wrangling, and inky hostility, it shall turn
+out that both parties are in the right. On the first blush of the
+matter, it seems plain that such words as βασιλεύς, ναῦν, καλεῦνται,
+sound extremely harsh, and not according to the famous euphony of
+the Attic ear, if in them the second letter of the diphthong receive
+the consonantal sound of _v_ or _f_ given by the modern Greeks.
+=VASILEFS, NAFN, CALEFNTAE=—these are sounds which no chaste classic
+ear can tolerate, and which, among the phenomena of human articulation,
+are more naturally classed with such harsh Germanisms as _Pfingst_,
+_Probst_, &c., than with any sound that can be imagined to have been
+wedded euphoniously to Apollo’s lute. All this is very true; and yet,
+as modern German is not all harsh, so ancient Greek, it may be, was
+not all mellow; and no mere general talk about euphony or cacophony
+can, in so freakish a thing as human speech, be allowed to settle any
+question of orthoepy. Now, when we look into the matter an inch beyond
+the film of such shallow scholastic declamation, we find that so early
+as the time of Crassus, that is, in the first half of the first century
+before the Christian era, the diphthong _au_, which we pronounce _ou_,
+(as in _bound_,) and the English like the same vowel in their own
+language, (as in _vault_,) was actually enunciated consonantally like
+_av_ or _af_. For Cicero (Divinat. ii. 40) tells the anecdote how,
+when that unfortunate soldier was on his way to the East, and about
+embarking in a ship at Brundusium, he happened to meet a Greek on the
+quay calling out CAUNIAS! by which call the basket slung over his
+shoulder might have plainly indicated that he meant FIGS! figs of the
+best quality (worthy of a triumvir) from Caunus, in the south-west
+corner of Asia Minor; but the triumvir’s ear—dark destiny brooding in
+his soul—caught up the syllables separately, as _Cav’ ne eas_—=BEWARE
+HOW YOU GO!= Now, as no person pretends that the _v_ in _caveo_ was
+pronounced like the _u_ in _causa_, or could be so scanned in existing
+Latin poetry, it follows that the _au_ in Caunias was pronounced by
+a Greek of those times as a _v_ or _f_, exactly as the living Greeks
+pronounce it now. This is one example, among the many that we have
+adduced, shewing in a particularly striking way how impossible it is
+for modern schoolmasters, judging from mere abstract considerations,
+and bad scholastic habits, to say how the ancient Greeks might or might
+not have pronounced any particular combination of sounds. No doubt this
+Calabrian fig-merchant might not have pronounced that combination of
+letters exactly in the same way that Pericles did 400 years earlier,
+when, from the tribunal on the Athenian Pnyx, with the ominous roar
+of a thirty years’ war in his ear, “he lightened and thundered and
+confounded Greece;” but there is no reason, on the other hand, why a
+Greek fig-merchant and a Greek statesman should not have pronounced
+certain rough syllables in the same way, (for a great orator requires
+rough as well as smooth syllables;) and this much at least is certain,
+the anecdote proves that the modern pronunciation of αὐτός, _aftos_, is
+ancient as well as modern; and the talk of those who will have it that
+this, and other most characteristic sounds of the living orthoepy, were
+introduced by the Turks and the Venetians, or the Greeks themselves
+under their perverse influence, is mere talk—talk of that kind in which
+scholastic men are fond of indulging, when, knowing nothing, they wish
+to have it appear that they know everything. What was the real state of
+the pronunciation with regard to this and the other diphthong ευ in the
+days of Pericles or Plato, we have no means of knowing. Meanwhile the
+result which Seyffarth, after a long and learned investigation, brings
+out, that they were pronounced before a vowel as _v_, or the German
+_w_, and before a consonant as a real diphthong, seems probable enough.
+This agrees both with the natural laws of elocutional physiology, and
+explains how the imperial name FLAVIUS in Roman coins (_Liscov_, p.
+51) came to be written sometimes =ΦΛΑΥΙΟΣ= and sometimes =ΦΛΑΒΙΟΣ=.
+However this be, there is no doubt that the consonantal pronunciation
+of these letters has for more than 1800 years been known among the
+Greeks. It has therefore all the claims that belong to a venerable
+conservatism; whereas, if we reject its title, we throw ourselves loose
+into an element of mere conjecture; as no person can tell us whether
+Demosthenes pronounced αυ in the Scotch or English way, (supposing
+one of the two to be right;) and as for ευ, what extraordinary feats
+the human tongue can play with it, we may learn from the Germans, who
+pronounce it like _oy_ in our _boy_—a rare lesson to the restorers of a
+lost pronunciation how much is to be learnt in such a field from mere
+argument and analogy!
+
+Let us now collect the different points of this inquiry under a single
+glance. In the days of the first Emperors, and, in a majority of cases,
+as early as the first Ptolemies, the scale of Greek vocalization,
+according to the best evidence now obtainable, was as follows:—
+
+      Letter.         Power.
+    Long  Α    =    _a_, as in _father_.
+    Short Α    =    _a_,   ”   _hat_.
+          Η    =    _ai_,  ”   _pain_.
+          Ε    =    _e_,   ”   _get_.
+          Ω    =    _o_,   ”   _pore_.
+          Ο    =    _o_,   ”   _got_.
+    Long  Υ    =    _ü_,   ”   _Bühne_.
+    Short Υ    =    the same shortened.
+    Long  I    =    _ee_, as in _green_.
+    Short I    =    the same shortened.
+         AI    =    _ai_, as in _pain_.
+         EI    =    _ee_,  ”   _green_.
+         OI    =    _ee_,  ”   _green_.
+         OU    =    _oo_,  ”   _boom_.
+         AU    =    _av_, _af_,  or?
+         EU    =    _ev_, _ef_,  or?
+
+Now, in stating the results thus, I wish it to be observed in the
+first place, that I throw no sort of doubt on the possibility that
+in the days of Herodotus and Pericles some of the diphthongal sounds
+here declared normal in the days of the Ptolemies and the Cæsars might
+have been pronounced otherwise. The theory of Pennington, also, (p.
+51), that there might have co-existed in ancient times a system of
+orthoepy for reciting the old poets, considerably different from that
+used in common conversation, may be entertained by whosoever pleases,
+and is not without its uses; but in the present purely practical
+inquiry we must leave all mere theory out of view. It is also perfectly
+open to Liscov, or any philologist, working out a suggestion of the
+great Herman, to prove from the internal analogy of the language, and
+especially from a comparison of the most ancient dialects,[23] that
+_originally_ the diphthongs were pronounced differently from what
+they are now, and were in the days of Ptolemy Philadelphus, (Homer
+unquestionably said, παις—_païs_, and not _pace_. II. _Z_, 467;) but
+in the present investigation, as a practical man, I want something
+better than general probabilities and philosophical negations, or
+even isolated correct assertions; I want a complete scheme of Greek
+pronunciation, for some particular age, congruous within itself, and
+standing on something like historical evidence. This I find only in
+the pronunciation of the modern Greeks, or in that of the Ptolemies
+and Cæsars, which differs from the other only in a very few points.
+What then, we may ask, should hinder us from at once adopting this
+pronunciation? Nothing, I imagine, but the dull inertness of mere
+conservatism, (which in such matters is very potent,) the conceit of
+academical men, proud of their own clumsy invention, and the dread
+of ITACISM. Is it not monstrous, we hear it said, that half a dozen
+different vowels, or combinations of vowels, should be pronounced
+in the same way, and that in such a fashion as only curs yelp, and
+mice squeak, and tenuous shades with feeble whine flit through the
+airy paths that lead to Pluto’s unsubstantial hall? Now, I at once
+admit that the prevalence of the slender sound of _i_ (_ee_), is a
+corruption from the original purity of Hellenic vocalization, from
+which I have no doubt the Pelasgi, and the venerable patriarchs who
+put up the lions, now seen on the gates of Mycenæ, were free; but no
+language spoken by a polished people is free from some corruption
+of this kind; and this particular corruption, like the defects
+observable in men of great original genius, is characteristic. In such
+strongly marked men as Beethoven, Samuel Johnson, and John Hunter
+the physiologist, nothing is more easy than for the nice moralist to
+point out half a dozen points of character that he could have wished
+otherwise. So it is with language. Who, for instance, would not wish to
+reform the capriciousness of our English systemless system of spelling
+and pronunciation? Who can say that we have not too much of the
+sibilant sound of _s_ and _th_ in our language? who will not lament the
+want of body in our vocalization, and the tendency to the ineffective
+tribrachic and even proceleusmatic accent in the termination of our
+polysyllables? In German, again, who does not indulge in a spurt of
+indignation against “_Wenn Ich mich nicht_,” and other such common
+collocations of gutturals? and in Italian are we not so cloyed with
+_ōnes_ and _āres_, and other broad trochaic modulations, that we
+long for the resurrection of some Gothic Quinctilian to inoculate
+the luscious “_lingua Toscana in bocca Romana_,” with a few harsh
+solecisms; while the French, who for cleverness and refinement, (and
+some other things also,) are a sort of Greeks, do so clip and mince
+the stout old Roman lingo, which they have adopted, that except in the
+mouth of flower girls and ballet dancers, their dialect is altogether
+intolerable to many a masculine ear. All these things are true; but no
+sane man thinks of rebelling against such hereditary characteristics
+of a human language, any more than he would against the ingrained
+peculiarities of human character. We take these things as we find them;
+just as we must make the best of a snub nose, or a set of bad teeth
+in an otherwise pretty face. So also we must even attune our ears to
+the Itacism of the Greeks; otherwise we shall assuredly sin against a
+notable characteristic of the language, much more intimately connected
+with the genius of that singular people, than many a clipper of new
+Greek grammars and filcher of notes to old Attic plays imagines. What
+says QUINCTILIAN? _Non possumus esse tam_ GRACILES; _simus_ FORTIORES,
+(xii. 10.) Now, I ask the defenders of our modern system of pronouncing
+Greek in this country, which some of them perhaps call classical and
+Erasmian, but which is in fact, as has been proved, an incoherent
+jabber of barbarisms, what if the so much decried _Itacism_ were
+part of this _gracilitas_, this slenderness or tenuity of ancient
+Hellenic speech, by which it was to the ear of the greatest of Latin
+rhetoricians so strikingly distinguished from the Roman? Certain it is,
+that the rude Teutonic sounds of _ou_ and _i_, (English _i_ and _ai_
+in _Kaiser_), that we hear so often in English Greek, do not answer to
+Quinctilian’s description. In fact, both English and Scotch, instead of
+preserving this natural contrast between Greek and Roman enunciation,
+have in this, and in other matters, (as we shall see presently, when
+we come to talk of accents,) done everything in their power to sweep
+it away; and of nothing am I more firmly convinced than of this, that
+a living conception of what the spoken Greek language really was in
+its best days, will never be attained by any scholar who has not the
+courage to kick all the Erasmian academic gear aside for a season, and
+take a free amble with some living Christopoulos, or Papadopoulos, on
+the banks of the Ilissus, or round the base of Lycabettus. This living
+experience of the language is indeed the only efficient way to argue
+against the learned prejudices of academic men; for, as THIERSCH well
+observes, every one laughs at that pronunciation to which he has not
+been accustomed, (_Sprachlehre_, sect. xvii. 3;) and no man can live
+at Athens for any time, without having his ears reconciled to a slight
+deviation from perfect euphony, or even coming to admire it, as one
+sometimes does the lisp of a pretty woman, or the squint of an arch
+humorist.[24]
+
+[23] GODOFREDI HERMANI _de emendenda ratione Græcæ grammaticæ_, Lib. i.
+c. 2, quoted at length by LISCOV, p. 21.
+
+[24] On revisal it strikes me I have given the enemies of Itacism an
+unfair advantage by not stating, that, while in any other language
+the attenuation of so many different sounds into one, might have
+proved a very grievous evil, there is such a richness of the full
+sound of α (which the English have effaced) and ω in Greek, that the
+blemish rarely offends. I have to mention also, that, while a certain
+prominence even of this slender sound seems necessary to the phonetic
+character of Greek, as distinguished from Latin, I have no objection,
+in reading Homer and the elder poets, (were it only for the sake of
+the often quoted πολυφλοίσβοιο θαλάσσης!) to pronounce οι, as _boy_ in
+English, and η, as we do it in Scotland; just as in reading Chaucer we
+may be forced to adopt some of the peculiarities of the pronunciation
+of his day. But in the common use of the prose language, I think it
+safer to stick by the tradition of so many centuries, than to venture
+on patches of classical restoration, where it is impossible to revive
+a consistent whole. I may say also, that if υ be pronounced uniformly
+like the French _u_, the itacism will be diminished by one letter,
+while the difference between that and the modern Greek pronunciation
+is so slight, that a Scotchman so speaking in Athens will be generally
+understood, whereas our broad Scotch _u_ (_oo_) besides being
+entirely without classical authority, recedes so far from the actual
+pronunciation of the Greeks, as to be a serious bar in the way of
+intelligibility.
+
+So much for the vowel-sounds. I say nothing of the consonants, because
+they are of less consequence in the controversy. I have already
+spoken incidentally about β, (p. 21 above), and I have no wish to
+write a complete treatise. Detailed information on minute points of
+neo-Hellenic pronunciation may be found in Pennington’s work already
+quoted, and in a recent work by Corpe.[25] I now proceed to the matter
+of ACCENT, which we shall find to be no less important, but happily
+much more easily settled.
+
+“In the pronunciation of a Greek word,” says JELF,[26] “regard ought
+to be had both to accent and quantity;” a most significant power
+lying in that word OUGHT, as we know well that many teachers in this
+country pay a very irregular regard to quantity in reading, and very
+few, if any, pay any regard to accent.[27] But that the proposition
+laid down by Mr. JELF is true, no scholar can doubt for a moment,
+though Mr. PENNINGTON, in the year 1844, most evidently anticipated
+a great amount of stolidity, obstinacy, and scepticism, among his
+academic friends on this point; with such minute and scrupulous care,
+and breadth of philological preparation does he set himself to prove,
+what no man that had ever dipped into an ancient Greek grammar, or a
+common Latin work on rhetoric, would ever dream of denying. However,
+I gave myself some trouble to set forth this matter learnedly some
+years ago,[28] knowing that I might have to do with persons not always
+open to reason, and utterly impervious to nature and common sense;
+and the Fellow of King’s also might have had occasion to know that it
+is one thing to prick soft flesh with a pin, another to drive nails
+into a stone wall. The fact is, that the living Greek language having
+come down to us with most audible accentuation, and the signs of these
+accents being contained in all printed Greek books, and not only so,
+but commented on by a long series of grammarians, from Herodian and
+Arcadius, down through the Homeric bishop of Thessalonica, to Gaza and
+Lascaris; in this state of the case, if any man does not pronounce
+Greek according to accents, while I do, the burden of proof lies with
+him who throws off all established authority in the matter, not with
+me who acknowledge it. If there is no authority for accent in the
+ancient grammarians, then as little is there for quantity. The fact
+of the existence of the one as a living characteristic of the spoken
+and written language of ancient Greece, stands exactly on the same
+foundation as the other. So many ancient grammars, and comments on
+grammars have been published within the last fifty years by Bekker
+and other library-excavators, that the teacher who now requires to be
+taught formally that the ancients really used accents in their public
+elocution, is more worthy of a good flogging than the greatest dunce
+in his drill. But what were accents? Accents are an _intension_ and
+_remission_ (ἐπίτασις and ἄνεσις) of the voice in articulate speech,
+whereby one syllable receives a marked predominance over the others,
+this predominance manifesting itself principally in a higher note or
+intonation given to the accented syllable.[29] This definition occurs
+fifty times if it occurs once in the works of the ancient grammarians
+and rhetoricians; so I need not trouble myself here by an array
+of erudite citations to prove it; and that such an accent is both
+possible and easy to bring out in the case of any Greek word, may be
+experienced by anybody who will pronounce κεφαλή with a marked rise of
+the voice on the last syllable, or νεφέλη with a similar intension of
+vocal utterance on the penult. That the living Greeks give a distinct
+prominence to these very syllables, any man may learn by seeking them
+out in Manchester or London, in both which places they have a chapel.
+Why then should Etonian schoolmasters, and Oxonian lecturers not do
+the same? Do they not teach the doctrine of accents? Have they not
+translated GOETTLING? Do they not print all their books with those very
+marks which Aristophanes of Byzantium, two thousand years ago, with
+provident cunning, devised even for this purpose, that we, studious
+academic men, in the then ULTIMA THULE of civilisation, should now have
+the pleasure of intoning a philosophic period as the divine Plato did,
+or a blast of patriotic indignation as Demosthenes? They say there are
+no accents properly so called in the French language. This I never
+could exactly understand; but do our academic men actually realize this
+peculiar form of levelled human enunciation, (the ὁμαλισμὸς of the old
+grammarians,) without intension or remission, by pronouncing Greek
+altogether unaccented? Believe it not. As if determined to produce a
+scholastic impersonation of every possible monstrosity with regard to
+the finest language in the world, they neglect the written accents
+which lie before their nose, and read according to those accents which
+they have borrowed from the Latin! and this directly in the teeth of
+the public declaration of CICERO and QUINCTILIAN, that Latin had one
+monotonous law of accentuation, Greek another and a much more rich
+and various one.[30] And, as if to place the top-stone on the pyramid
+of absurdities which they pile, after reading Greek with this Latin
+accent (which sounds to a Greek ear exactly as a rude Frenchman’s first
+attempts at English sound to an Englishman) for some half dozen years,
+they set seriously to cram their brain-chambers with rules how Greek
+accents should be placed, and exercise their memory and their eye, with
+a most villainous abuse of function, in doing that work which should
+have been done from the beginning by the ear! If consistency could have
+been looked for from men involved in such a labyrinth of bungling,
+there would have been something heroic in throwing away the marks
+altogether from their books and from their brains, as well as from
+their tongue; certainly this procedure would have saved many a peeping
+editor a great deal of trouble, and many a brisk young gentleman
+riding up in a Cambridge “coach” right into the possession of a snug
+tutorship in Trinity, would have travelled on a smoother road, and felt
+less seriously how the flowers of ancient literature are scarce to be
+enjoyed amid the thorns of modern grammar that besiege a man’s fingers
+and eyes from all sides.[31] But intellectual consistency is not to be
+expected from persons once involved in a gross error, any more than
+moral consistency is from thieves; and it is well for all parties that
+it is so; for by this wise arrangement of nature, as a thief’s story
+often discovers the theft it would conceal, so a philologer’s nonsense
+is most readily refuted by the remnants of incoherent sense that he had
+not wit or courage enough to eliminate. Besides, the dictum of PORSON
+stood mighty over their heads;[32] and as for the young men, the more
+time that was wasted on a reasonless method of teaching Greek, the
+less danger would there be of that rude invasion of BOTANY, GEOLOGY,
+HISTORY, and all the array of modern sciences which has long been the
+special terror of English academic men. So they went on, and so they
+go on now, teaching that people ought to accent κεφαλή on the last
+syllable, and yet actually accenting it on the first! The consequence
+of which perverse proceeding is not only that accents are one of the
+most difficult things to learn in Greek, and seldom thoroughly mastered
+even by those who are excellent scholars otherwise, (_see_ JELF, page
+52, _note_), but an accomplished English scholar, when he makes his
+continental tour, as is common enough in these days, even with men
+who have not much money, finds that his perverse enunciation of the
+Greek vowels, combined with his utter neglect of accents, has put him
+in possession of a language of which he can make no use except in
+soliloquy, and which any person can understand sooner than a native
+of the country to which it belongs.[33] He then comes home belike
+and tells his English friends that the modern Greeks are a set of
+barbarians, who speak a “swallow’s jabber,” so corrupt that no scholar
+can understand a word they say! So true is the record which honest
+Thomas Fuller has left of the issue of the notable Hellenic controversy
+raised by Sir John Cheke—“Here Bishop Gardiner, chancellor of the
+university, interposed his power, affirming Cheke’s pronunciation,
+pretended to be ancient, to be antiquated. He imposed a penalty on all
+such as used this new pronunciation, which, notwithstanding, since
+hath prevailed, and whereby we Englishmen speak Greek and are able to
+understand one another, _which nobody else can_.”[34]
+
+[25] CORPE’s Neo-Hellenic Greek Grammar. London, 1851. See also a
+notice of this work in the ATHENÆUM for last year, where I am happy to
+observe that the opinions advocated in this paper are supported.
+
+[26] Greek Grammar. 1851, sect. 44, 45. DONALDSON (Greek Grammar, p.
+17) says, ‘The accent is the sharp or elevated sound with which one of
+the last three syllables of a Greek word is _regularly_ pronounced.
+This “_regularly_” is as significant as Mr. JELF’s “_ought_.”’
+
+[27] Of course I except Professor MASSON of Belfast, whose complete
+mastery of the living dialect of Greece is the object of admiration to
+all who know him.
+
+[28] Classical Museum, vol. i. p. 338.
+
+[29] There is also a greater _emphasis_ or _stress_ given to the
+accented syllable, as is manifest from the pronunciation of the modern
+Greeks, and from the striking fact that in the modern dialect, the
+unaccented syllable has sometimes been dropt, while the accented
+constitutes the whole modern word, as δὲν for οὐδὲν, μᾶς for ἡμᾶς.
+
+[30] QUINCTIL., lib. i. c. 5; DIOMED. de Oratione, ii.; PUTSCH. i. 426.
+
+[31] JELF, in the Preface to his Grammar, calls the doctrine of accent
+“a difficult branch of scholarship.” The difficulty is altogether an
+artificial one, made by scholastic men who will insist on teaching by
+the eye only and the understanding, what has no meaning at all except
+when addressed to the ear. The doctrine of accentuation in English has
+no peculiar difficulty, plainly because men learn it in the natural way
+by hearing.
+
+[32] “_Si quis igitur vestrum ad accuratam Græcarum literarum scientiam
+aspirat, is probabilem sibi accentuum rationem quam maturrime comparet,
+in propositoque perstet scurrarum dicacitate et stultorum derisione
+immotus_,” ad Med. 1, apud JELF, vol. i. p. 37. I wonder if Porson
+himself pronounced according to the accents. If he did not, he is just
+another instance of that extraordinary incapacity of apprehending a
+large principle that is so characteristic of the English mind.
+
+[33] I may insert here the whole of the passage of BOISSONADE, from
+which the words in one of the prefixed mottoes are taken. “_Nisi quod
+maxime cupio, in omnibus academiis nostris, gymnasiis et scholis
+hodierna Græcorum pronuntiatio recipiatur. Nam cum prorsus perierit
+antiqua pronuntiandi ratio qua Demosthenes, et Sophocles, vel ipsi
+Alexandrini sub Ptolemæis utebantur, et fere ridiculum sit unumquemque
+populum ad suæ linguæ sonos, atque etiam ad libitum, Græcorum quos
+legit librorum pronuntiationem efformare, id saltem boni, admissa
+neotericorum pronuntiatione, lucrabimur, non solum ut Gallus homo
+et Germanus Anglum intelligant Græce loquentem et ab illo Græce
+ipsi loquentes intelligantur, sed id etiam ut cum Græcis doctis et
+scholastica institutione politis confabulemur verbis antiquorum
+et facillime, si velimus, hodiernæ linguæ cognitionem ac usum
+assequamur._”—HERODIAN, Epimerisni, BOISSONADE. London, 1819. Prefat.
+
+[34] History of the University of Cambridge, Section vii.
+
+Let us now ask in a single sentence how all this mass of absurdity came
+about; for we may depend upon it a whole array of brave philologic
+hoplites cannot have stumbled on their way suddenly without the
+apparition of some real or imaginary ghost. The ghost that frightened
+them on the present occasion, and caused them to forswear SPOKEN
+ACCENT (for as we have seen they stuck to it on PAPER) was QUANTITY;
+concerning which, therefore, we must now inquire, whether it be a
+real ghost or only a white sheet. Quantity, they say, cannot stand
+before Accent, or rather is swallowed up by it. Like hostile religious
+sects, or belligerent medical corporations, they cannot meet without
+quarrelling; so the public peace is consulted by getting rid of one of
+them, not in the way of violent murder, (for the law does not allow
+that,) but by what certain philosophical Chartist-Reformers used to
+call “painless extinction.” Therefore they who speak according to
+accent, are wont to remove quantity out of the way noiselessly; and
+they who speak according to quantity must treat accent in the same way.
+This is an old story. The BEAR in Erasmus’ dialogue, (Havercamp, ii.
+95,) speaking rare wisdom in a gruff Johnsonian sort of style, says,
+“_Sunt quidam adeo_ CRASSI _ut non distinguant accentum a quantitate,
+quum sit longe diversa ratio_. =ALIUD EST ENIM ACUTUM ALIUD DIU
+TINNIRE: ALIUD INTENDI, ALIUD EXTENDI.= _At eruditos novi qui, quum
+pronunciarent illud_ ἀνέχου καὶ ἀπέχου, _mediam syllabam, quoniam tonum
+habet acutum, quantum possent producerent, quum sit natura brevis vel
+brevissima potius_.” Certain learned men, it appears, in the beginning
+of the sixteenth century, could not accent the word ἀνέχου on the
+penult, as it ought to be accented, without in the same breath making
+that syllable long, which it is not. To avoid this blunder, the
+Etonians, Oxonians, and other famous modern teachers, omit the accent
+altogether on that syllable and on every syllable—of which the name is
+legion—similarly situated in the Greek language, and thus, by removing
+the cause, are sure of annihilating the effect. A very obvious, but
+surely a very clumsy expedient, and hardly worthy of the subtlety of
+the academic mind. A man by running too hard sometimes breaks his
+legs; and you forthwith vow to avoid his fate by sitting in your chair
+constantly and taking no exercise! Let us see how the case stands here.
+The accent, you say, lengthens the syllable. Take any English word
+in the first place, (as nonsense is not so transparent in a learned
+tongue,) and make the experiment. If a Scotsman says _véesible_, you
+will allow, I suppose, that the first syllable of that word is both
+long and accented: if an Englishman says _viśible_, ’tis equally clear
+that the same syllable is still accented, but it is not now long.
+Accent, therefore, in English has no necessary power to lengthen the
+sound of the vowel of the syllable on which it is placed; and if some
+learned men on the banks of the Rhine, in the days of Erasmus, or on
+the banks of the Isis, in our day, cannot accent a syllable without
+at the same time lengthening it, this happens merely because, as
+the Bear says, they are “ADEO CRASSI;” their ears are gross, and
+have lost—by the dust of the libraries, perhaps—the healthy power of
+discerning differences of modulation in the living human voice. Not a
+few persons have I met with among those who are, or would be scholars,
+in this country, who in this way assert that it is impossible to put
+the accent on the penult of a Greek word, and at the same time, as the
+law of the language requires, make the last syllable long. But these
+persons had got their ears confounded by the traditionary jargon of
+teachers inculcating from dead books a doctrine of which they had no
+living apprehension; and this, along with the utter neglect of musical
+and elocutionary culture so common among our classical devotees, had
+rendered them incapable of perceiving, without an act of special
+attention, the commonest phenomena of spoken language appealing to
+the ear. In the English words _echo_, _primrose_, and many other of
+the same description, the accent and quantity stand in that exact
+relation which is so characteristic of Greek, as in ἔχω, λόγῳ; while
+in the English words _clód-pated_, _hoúsekeeper_, we have that precise
+disposal of accent and quantity which occurs in the word ἄνθρωπος, and
+which has been so often quoted as a proof that it is impossible to
+give effect to accent without violating quantity.[35] A very slight
+elocutionary culture would put a stop to such vain talk; but we have,
+unfortunately, too many scholars who gather their crude notions on
+such subjects from a few phrases current in the schools, without ever
+questioning their own ears, the only proper witness of what is right or
+wrong in the matter of enunciation. Hence the cumbrous mass of erudite
+nonsense on accent and quantity under which our library shelves groan;
+hence the host of imaginary difficulties and impossibilities that
+birch-bearing men will raise when you tell them to perform the simplest
+act of perception of which an unsophisticated human ear is capable.
+“_Vel ab_ ASINIS _licebat hoc discrimen discere_,” continues the
+learned Bear, “_qui rudentes corripiunt acutam vocem, imam producunt_.”
+Very true; a really wise man may learn much from an ass; but they who
+conceit themselves to be wise, when they are not, will learn from
+nobody. And so I conclude with regard to this whole matter of QUANTITY,
+that it is only an imaginary ghost after all; a white sheet which a
+single touch of the finger will turn aside, or only a white mist,
+perhaps, which, if a brave man will only march up to, he shall not know
+that it is there.
+
+[35] When I was at the railway station, SKIPTON, in Yorkshire,
+waiting for a train, I heard one of the men call out, “Any person for
+_Mánchéster_” with a distinct and well-marked dwelling of the voice
+on the second as well as the first syllable. This gave me a very vivid
+idea of the manner in which the Greeks must have pronounced ἄνθρωπος,
+accenting the first syllable, but dwelling on the second syllable with
+a distinct prolongation of the voice.
+
+One thing, however, I will admit—by way of palliation for the enormous
+blunders that have been committed in this matter—that in words of two,
+three, or more syllables, where the accent is on a syllable naturally
+short, while the long syllable is unaccented, a careless speaker may
+readily slur over the long syllable so as to make it short, thus
+converting an anapæst accented on the first syllable, as
+
+      ˏ                                                 ˏ
+    _cĕlăndīne_, into a tribrach with the same accent _cĕlăndĭn_,
+
+a very common vulgarism, as we all know. The unaccented syllable,
+indeed, is, in the very nature of things, placed in a position where
+it is not so likely to get its fair mass of sound as its accented
+neighbour. Thus, except in solemn speaking, the first syllable of
+ŌBĒDĬĔNT seldom gets full weight, though it is equally long with its
+accented sequent; and the second syllable of EDUCATION is vulgarized
+into _edication_, purely from the want of the accent. But that such
+vulgarisms should form any bar in the way of academical men doing
+proper justice to the correct elocution of the Greeks is really too
+bad. The modern Greeks, indeed, we know, go a step farther;[36] they
+not only in their common conversation fail to give the due prolongation
+to their long syllables, when unaccented—making no distinction between
+ω and ο—but they actually give _extension_ as well as _intension_
+to all their accented syllables, and thus fall into the same sin as
+respects quantity that our academicians daily commit against accent.
+But there is not the slightest reason why we should imagine it
+necessary to imitate them in this idiosyncrasy. To do so would be for
+the sake of a superfluous compliment to the living, to cut off one
+great necessary organ, whereby the beautiful wisdom of the dead being
+made alive again becomes ours. The laws of accent are a most important
+element of the oratory of Pericles and Demosthenes; but without
+quantity the harmony of Homer’s numbers is unintelligible. There is no
+reason why we should sacrifice either the one or the other of these two
+great modulating principles of ancient Hellenic speech. The one, so far
+from destroying, does, in fact, regulate to a certain extent,[37] and
+beautifully vary the other. Quantity without accent were a monotonous
+level of dreary sing-song; accent without quantity can be likened
+only to a series of sharp parallel ridges, with steep narrow ravines
+interposed, but without the amplitude of grassy slope, flowering mead,
+and far-stretching fields of yellow-waving corn.
+
+[36] See the essay on this subject in the second volume of the Greek
+works of Professor RANGABE of Athens.
+
+[37] Every practical teacher ought to know how much more easily the
+doctrine of quantity may be taught with constant reference to accent
+than without it; so that pronouncing a word like ἡμέρα, the accent on
+the penult, is the easiest way to make the student remember that the
+final syllable of that word is long.
+
+But some one will still press the question, _How am I to read Homer?
+how Sophocles?_ Is it not manifest, that if I read according to the
+spoken accent, and not according to the quantitative metre, though I
+may preserve myself, by decent care, from grossly violating quantity,
+I shall certainly fail to bring out anything that the ear of the most
+harshly-modulated Hottentot or Cherokee could recognise as rhythm?
+Now what has been said hitherto of the compatibility of accent and
+quantity relates only to words taken separately, or as they occur in
+the loose succession of unfettered speech—a purely elocutional matter:
+of the musical element of rhythm nothing has been said. That this must
+modify the singing or recitation of measured verses to a considerable
+extent, so as to make it different from the oratorical declamation of
+prose, is evident; but that there is no such incomprehensible mystery
+in the matter, as some people imagine, I hope I shall be able to make
+plain in a very few words. The poetry of the ancients differed from
+the mass of that now written in nothing more than in this, that it was
+considered as a living element of the existing music, and exercised in
+subjection to the laws of that divine art. Now the singing of words in
+music has the effect of bringing out more prominently the mass of vocal
+sound in the words, or what the prosodians in their technical style
+call quantity, while the spoken accent—unless it be identified with the
+musical accent or rhythmical beat—is apt to be overwhelmed altogether
+and superseded. That this must be the case the very nature of the thing
+shows; but we have a distinct testimony of an ancient musical writer
+to this effect, which will be useful to those who in all matters are
+constitutionally apt to depend more on authority than on reason.[38]
+This explains why, in the ancient treatises on poetical measures, we
+find not a word said about the spoken accent. If the full musical value
+of each foot, (or bar, as we call it,) in point of vowel-fulness,
+according to an established sequence be given, the poet is considered
+to have done his duty to the musician; the rhythmical beat, or musical
+accent, accompanies the measured succession of bars, as with us, but
+the spoken accent is disregarded. Of all this in our elocutional
+poetry we do, and must, in the nature of things, do the very reverse.
+Poetry composed primarily for recitation must follow the laws of
+spoken speech; and the spoken accent being the most prominent element
+in that speech, becomes of course the great regulator of poetical
+rhythm. Quantity, as the secondary element of spoken speech, though
+the principal thing in music, is not indeed neglected altogether, but
+left to the free disposal of the poet, so that the technical structure
+of his verse is in no wise bound by it. The musician then comes in,
+and finding that he has no liberty in the matter of the spoken accent,
+(the public ear being altogether formed on that,) exercises his large
+discretion in the matter of quantity, drawing out, without ceremony, a
+spoken quaver into a sung minim, or cutting short a spoken minim into
+a sung quaver. Now this license, familiar as it is to us, would have
+strangely startled, and appeared almost ludicrous to a Greek ear; and
+by the same effect of mere custom, we have to explain the fact, that
+the practice of composing poetry, without any reference to the spoken
+accent, practised by the ancients, appears to us so extraordinary. In
+our attempts to explain it, we have sometimes altogether lost out of
+view the fact, that music and conversational speech, though kindred
+arts, and arts in the ancient practice of poetry indissolubly wedded,
+have each their own distinctive tendencies and laws, to which full
+effect cannot easily be given while they act together; and every such
+case of joint action must accordingly be, to a certain extent—like the
+harmonious practice of connubial life—a compromise. My conclusion,
+therefore, with regard to the reading of Homer and Sophocles is, in
+the first place, that they were never intended to be read in our sense
+of the word, that they are not constructed on reading principles,
+and that, when we do recite them—as the ancients themselves no doubt
+likewise did—we must read them in a manner that makes as near an
+approach as possible to the musical principles on which they were
+constructed. With regard to the strictly lyrical parts of poetry, as
+Pindar and the tragic choruses, I have no hesitation in saying, that
+the only proper way to obtain a full perception of their rhythmical
+beauty, is to sing or chant them to any extemporized melody, (which
+would be much more readily done were not music so unworthily neglected
+in our higher schools;) while with regard to the dialogic parts of the
+drama, which were declaimed and not sung by the ancients themselves,
+the teacher must take care to accustom his pupils to a deep and mellow
+fulness of vocalization, and a deliberate stateliness of verbal
+procession, as much as possible the reverse of that hasty trip with
+which we are accustomed to read the dialogue of our dramatic poetry.
+The musical accent, or rhythmical beat, will, of course, in such a
+method of recitation, receive a marked prominence; the long quantity
+will never be slurred; and with regard to the spoken accent, what I
+say is this, the ear of the student must first be trained in reading
+prose never to omit the accent, and accustomed to feel, by the living
+iteration of the ear, that both accent and quantity are an essential
+part of the word. This many schoolmasters will not do, because it
+requires science, and will take a little trouble; but let such pass.
+Those who do so train the young classical ear, will find that in
+turning to poetry, and keeping time with their foot as they read any
+metre, the attentive scholar will not only readily follow the given
+rhythm, and appreciate the position of the musical accent, (very few
+human beings being altogether destitute of the rhythmical principle,)
+but will be able also to preserve the spoken accent in those places
+where the flow of the rhythm does not altogether overpower it. What I
+mean is this. In the line, for instance,
+
+    οὐλομένην ἣ μυρἴ Ἀχαιοῖς ἄλγε’ ἔθηκεν,
+
+the second of the Iliad, the boy who has been properly trained to put
+the accent on the penult of οὔλομένην, preserving the long quantity
+of the final syllable, will, even though he retains that accent in
+the rhythmical declamation of the line, find no impediment to the
+rhythmical progress of the verse, but rather an agreeable variety, and
+an antidote against monotony; and though, on account of the strong
+effect which the rhythm always exercises on the closing word of the
+line, it will be difficult to give the full effect to the spoken accent
+on the antepenultimate of ἔθηκεν, while the closing musical accent lies
+on the penult, nevertheless, a person who has been accustomed always
+to pronounce this word in prose with its proper accent and quantity,
+will bring out the first syllable of the word much more distinctly
+than is done in the sing-song of a merely rhythmical recitation, and
+will not spoil the verse, but rather improve it. And if any person
+asks me how I prove that the ancients read Homer this way, I might
+content myself by giving a Scotch answer, and asking, _How do you prove
+that they read it your way?_ But, in fact, there is no possibility
+of their having read it otherwise; for having once introduced the
+habit of reading compositions, constructed originally on musical, not
+elocutional principles, with that habit they could not but bring in
+as much of the element of their spoken language as was consistent with
+the musical principle on which the very existence of the composition,
+as a rhythmical work of art, depended; that is to say, they allowed
+the musical principle of quantitative rhythm to prevail over the
+elocutional principle of accent, so far only as to produce harmony, not
+so far as to fatigue with monotony.
+
+[38] Δεῖ τὴν φωνὴν ἐν τῷ μελῳδεῖν τὰς μὲν ἐπιτάσεις τε καὶ ἀνέσεις
+ἀφανεῖς ποίεισθαι—ARISTOXENUS, apud PENNINGTON, p. 226.
+
+The reader will observe that I am not theorizing in all this, but
+speaking from experience; and therefore I speak with confidence. For
+ten years I read the Latin poets in Aberdeen, and I found no difficulty
+in reading them so as to combine the living effect of both accent and
+quantity, and teaching the student both by the ear alone. The first
+line of Virgil, to take an example, in respect of accent and quantity,
+may be read three ways. Either
+
+                    ˏ     ˏ
+    _Árma virúmque cānŏ Trōjæ qui prímus ab óris_
+
+                       Or,
+                     ˏ
+             ... _cănō Trōjáe_ ...
+
+                       Or,
+                   ˏ      ˏ
+             ... _căn-ō Trōjæ_ ...
+
+I take notice of these two words CANO and TROJǼ, only because they are
+the only two in which the musical accent of this line clashes with the
+spoken accent, the rules of which, though not marked in Latin books as
+in Greek, were preserved by the living tradition of the Roman Catholic
+Church, and the accentual Latin poetry of their Service, and are
+observed by our schoolmasters as faithfully (without knowing it, many
+of them) as they violate the accent of the Greek. Now, of these three
+ways of reading a Latin hexameter, the second is the only one which
+proceeds upon the principle of the quantitative rhythm exclusively,
+observing the spoken accent only where it happens to coincide with it,
+(as happens here in four bars of the six;) while the first, which is
+the vulgar English way, asserts the dominancy of the spoken accent in
+all the six cases; and yet, as the clash only takes place in two cases,
+preserves, without effort, (as I have just said with regard to Homer,)
+the flow of the musical rhythm. With that grossness of ear, however,
+which Erasmus and his learned Bear noticed in the learned of his day,
+they fall with respect to Latin, plump into the extreme error practised
+by the modern Greeks, and cannot accentuate the first syllable of CANO,
+without lengthening it, while the final syllable of the same word is
+generally deprived of its natural amount of sound, a strange error for
+a people to make with whom Latin verse making (I shall not say with
+what propriety) forms so prominent a part of school-discipline; but
+there is no end to their absurdities, no limit to their contradictions;
+the fact being, as one of themselves has distinctly stated,[39] that
+the “composition of classical verses with them is almost entirely
+MECHANICAL;” and yet they have the assurance to hold up this scholastic
+abortion to the admiration of the public as one of the indispensable
+elements in the training of that improved edition of the ancient
+Roman—John Bull. But to finish. The third method of recitation is, I
+think, the correct one. It violates neither quantity nor accent, but
+makes the one play with an agreeable variety over the other, as we
+see the iridescent colours in a gown of shot silk. I think I have now
+answered the question satisfactorily—_How is Homer to be read?_ If
+anything remains unclear, I shall be happy to communicate personally
+with any person who has an ear.
+
+[39] “Our composition of classical verses is almost entirely
+mechanical. When a boy composes such a verse as _Insignemque canas
+Neptunum vertice cano_, how is he guided to the proper collocation
+of the words? Not by his ear, certainly, for that would be struck
+precisely in the same manner if he wrote it _Insignemque cano Neptunum
+vertice canas_; no, he learns from books that the first of _cano_ (I
+sing) is short, and the first of _canus_ (hoary) is long. Having so
+used them, their respective quantity is stored up as a fact in his
+memory, and by degrees he remembers them so well, that when he sees
+either of them used in a wrong place, he thinks it offends his ear,
+while in truth it only offends his understanding. But I apprehend a
+Roman boy’s process of composition would be quite different. Having
+been used from his cradle to hear the first syllable of _canus_
+take up about twice as much time as that of _cano_, such a verse as
+_Insignemque cano Neptunum vertice canas_, would really hurt his ear,
+because in the second foot the thesis would be complete before the
+syllable was expressed, and he would have a time or σημεῖον too much;
+and in the sixth he could not fill up the time of the arsis without
+giving to the syllable a drawling sound which would be both unusual
+and offensive.”—PENNINGTON, p. 249. So long as such an absurd system
+of writing verses, whether Latin or Greek—from the understanding and
+not from the ear—is practised, the boys who refuse to have anything
+to do with prosody shew a great deal more sense than the masters who
+inculcate it.
+
+Before concluding these observations, I have one or two remarks to make
+on MODERN GREEK, which have a vital connexion with the state of the
+argument. The reader will observe that I have from the beginning spoken
+of Greek as a living language, having had a continuous uninterrupted
+existence, though under various and well-marked modifications, from
+the days of Cadmus and his earth-sown brood to the present hour. Now
+the vulgar notion is, that Romaic, as it used to be called, though
+the present Greeks have with a just pride, I understand, rejected the
+epithet, is not only a different dialect of the Greek, from that spoken
+by Plato and Demosthenes, but a different language altogether, in the
+same way that Italian and Spanish are languages formed on Latin indeed,
+but with an organic type altogether their own. In this view Greek
+becomes a dead language; and the mass of scholastic and academical men
+who teach it habitually as such, without any regard to its existing
+state, will receive a justification of which they are not slow to
+make use. But this vulgar notion, like many others, has grown out of
+pedantic prejudice, and is supported by sheer ignorance. How such a
+notion should have got abroad is easy enough to explain. I mentioned
+already, that the English scholars—who have been allowed to give the
+law on such subjects—have so completely disfigured the classical
+features of Greek speech, that when they happen to meet Greeks, or to
+travel in Greece and attempt conversation, they can make no more of
+the answer they receive, than they can of the twitter of swallows, or
+the language of any other bird. Again, at Oxford and Cambridge, as is
+well known, the majority confine themselves to a very limited range
+even of strictly classical Greek, so that a man may well have received
+high honours for working up his Æschylus and his Aristotle, and yet be
+quite unfit to make out the meaning of a plain modern Greek book when
+he sees it; but the fact is, I have good reason to believe, there is
+not one among a hundred of their scholars that ever saw such a thing.
+Thirdly, we must consider under what a system of prim classical prudery
+these gentlemen are often brought up. They are taught to believe, and
+have been taught here also in Scotland publicly, that after a certain
+golden age of Attic or Atticizing purity, the limits of which are very
+arbitrarily fixed, a race of Greek writers succeeded who “increased
+immensely the vocabulary of the language, while they injured its
+simplicity and debased its beauty;” and under the influence of this
+salutary fear they regard with a strong jealousy whole centuries of
+the most interesting and instructive authors who do not come under
+their arbitrary definition of “classical.” Men who think that the
+vocabulary of the Hellenic language should have been finally closed at
+the time of Polybius, and who pass a philologic interdict against any
+phrase or idiom introduced after that period, will not be very likely
+to look with peculiar favour on the prose of Perrhæbus, or the poetry
+of Soutzos. But by a large-minded philologist all this prudery is
+disregarded. He knows that grammarians can as little cause a language
+to be corrupted and to die, by any dainty squeamishness of theirs, as
+they with their meagre art can create a single word, or manufacture
+one verse of a poem. Looking at the language of Homer and Plato as a
+real historical phenomenon, and not as a mere record in grammatical
+books, he sees that it went on growing and putting forth fresh buds and
+blossoms long after nice lexicographers had declared that it ceased
+to possess vitality. A language lives as long as a people lives—a
+distinct and tangible social totality—speaking it, nor has it the power
+to die at any point, where grammarians may choose to draw a line,
+and say that its authors are no longer classical. What “classical”
+means is hard to say; but as a matter of fact many persons will read
+the Byzantine historians with much more pleasure than Xenophon’s
+Hellenics, and not be able to explain intelligibly why the Greek of
+the one should not be considered as good as the Greek of the other.
+Greek certainly was not a dead language in any sense at the taking
+of Constantinople in the year 1453. If it is dead, it has died since
+that date; but the facts to those who will examine them, prove that
+it is not dead. No doubt, under the oppressive atmosphere of Turkish
+and Venetian domination, the stout old tree began to droop visibly,
+and became encrusted with leprous scabs, and to shew livid blotches,
+which were not pleasant to behold; but such a strong central vitality
+had God planted in that noble organism, that, with the returning
+breeze of freedom, and the spread of intelligence since the great year
+1789, the inward power of healthy life began again to act powerfully,
+and the Turkish and Venetian disfigurement dropt off speedily like a
+mere skin-disease as it was; and smooth Greek sounded glibly again,
+not only in the pulpit, which was the strong refuge of its prolonged
+vitality, but in the forum and from the throne. Those who doubt what I
+say in this matter, had best go to Athens and see; meanwhile, for the
+sake of those to whom the subject may be altogether new,—and from the
+general pedantic narrowness of our academical Greek I fear there may be
+many such—I shall set down a passage from Perrhæbus, and another from a
+common Greek newspaper, from which the fact will be abundantly evident
+that the language of Homer is not dead, but lives, and that in a state
+of purity, to which, considering the extraordinary duration of its
+literary existence—2500 years at least,—there is no parallel perhaps on
+the face of the globe, in Europe certainly not.
+
+    “Κατὰ τὸ 1820 διατρίβων εἰς τὴν Σπάρτην ὁ Πεῤῥαιβὸς
+    ἐπὶ ἡγεμονίας τοῦ Πέτρου Μαυρομιχάλη, διέβη εἰς
+    Κωνσταντινούπολιν, κἀκεῖθεν εἰς Δακίαν, Βασσαραβίαν
+    καὶ Ὀδησσὸν, ὅπου εὗρε τὸν Ἀλέξανδρον Ὑψηλάντην
+    καὶ Γεώργιον Καντακοζηνὸν, φέροντας τὰ πρῶτα
+    τῆς Ἑταιρείας, καὶ μὲ ἀπερίγραπτον ἔνθουσιασμὸν
+    ἐτοιμαζομένους διὰ νὰ κινηθῶσι κατὰ τοῦ Σουλτάνου.
+    Τὸν αὐτὸν σχεδὸν ἐνθουσιασμὸν ἔβλεπέ τις οὐ μόνον
+    κατ’ ἐκεῖνα τὰ μέρη, ἀλλὰ καθ’ ὅλην τὴν Ἑλλάδα,
+    τόσον εἰς σημαντικοὺς, ὅσον καὶ παντὸς ἐπαγγέλματος
+    Ἕλληνας κατοικοῦντας εἰς πόλεις, χώρας καὶ χωρία.
+    Δὲν συστέλλομαι νὰ ὁμολογήσω, ὅτι ἤμην ἐναντίος τοῦ
+    τοιούτου κινήματος κατὰ τοῦ Σουλτάνου· ὄχι διότι
+    δὲν ἐπεθύμουν τὴν ἐλευθερίαν τοῦ Ἔθνους μου, ἀλλὰ
+    διότι μ’ ἐφαίνετο ἄωρον τὸ κίνημα, μὲ τὸ νὰ ἦσαν
+    ἀπειροπόλεμοι οἱ Ἕλληνες, καὶ οἱ πλεῖστοι ἄοπλοι, ὁ
+    δὲ κίνδυνος μέγας.”[40]
+
+            =Ο ΚΟΣΣΟΥΤ ΕΝ ΑΜΕΡΙΚΗ=.
+
+    “Τήν 6 Δεκεμβρίου εἰσήλθεν ὁ ἀρχηγὸς τῆς Οὐγγαρικῆς
+    δημοκρατίας εἰς τὴν πρωτεύουσαν πόλιν τῶν ἡνωμένων
+    Πολιτειῶν. Ἀπὸ τῆς πρώτης στιγμῆς τῆς ἀφίξεως του
+    ὅλοι οἱ ζωγράφοι παρουσιάσθησαν διὰ νὰ λάβωσι τὴν
+    εἰκόνα τοῦ διὰ τῆς ἡλιοτυπίας, ἀλλ’ ὁ Κοσσοὺθ κατ’
+    οὐδένα πρόπον δὲν ἠθέλησε νὰ δεχθῇ τοῦτο. Ἄλλος τις
+    εὐφυέστερος καλλιτέχνης ἐφεῦρε τὸ μέσον νὰ τὴν λάβῃ
+    ἄκοντος αὐτοῦ. Ἔθεσε τὴν μηχανήν του εἴς τι παράθυρον
+    κατα τὴν διάβασίν του καὶ ἐπροκάλεσε μίαν ἔριν ὲν τῇ
+    ὁδῷ διὰ νὰ σταματήσῃ τὴν τέθριππόν του. Τοιουτοτρόπως
+    δὲ κατώρθωσε νὰ λάβῃ λάθρα οὐχὶ μόνον τὴν εἰκόνα τοῦ
+    Μαγυάρου Ἥρωος, ἀλλὰ καὶ ἄλλων τεσσάρων εὑρισκομένων
+    μετ’ αὐτοῦ ἐν τῇ ἁμάξῃ. Ὁ Κοσσοὺθ εὕρισκετο ἐντὸς
+    ἁμάξης ὑπὸ ἕξ καστανοχρόων ἵππων συρομένης ἐφόρει
+    δὲ στολὴν Οὐγγρικὴν, καὶ ἐπὶ τοῦ πίλου τοῦ μέλαν
+    πτερόν.”[41]
+
+[40] “Ἀπομνημονεύματα Πολεμικὰ, διαφόρων μαχῶν συγκροτηθεισῶν μεταξὺ
+Ἑλλήνων καὶ Ὀθωμάνων κατά τε τὸ Σούλιον καὶ Ἀνατολικὴν Ελλάδα ἀπὸ
+τοῦ 1820 μέχρι τοῦ 1829 ἔτους. Συγγραφέντα παρὰ τοῦ Συνταγματαρχοῦ
+Χριστοφόρου Πεῤῥαίβου τοῦ ἐξ Ὀλύμπου τῆς Θετταλίας, καὶ διῃρήμενκ εἰς
+τόμους δύω. Ἐν Ἀθήναις, ἐκ τῆς Τυπογραφίας Ἀνδρέου Κορόμηλα, Ὁδός
+Ἓρμου, Ἀριθ. 215. 1836.”
+
+[41] “Αθηνα, Decemb. 31, 1851.”
+
+These are as fair specimens of the current dialect of Greece as I can
+produce. For it is manifest that while it would be quite easy on the
+one hand to select a specimen of the living dialect written by mere
+men of learning, (as from the works of ŒCONOMUS,) which should make
+a much nearer approach to the idiom of Xenophon, it would be equally
+open on the other to produce a brigand’s song from the mountains of
+Acarnania containing a great deal more of the elements of what the
+admirers of unmixed Atticism would be entitled to call corruption. But
+it is evident that a specimen of the first kind would be no more a
+fair specimen of the average Greek now spoken, than the polished style
+of George Buchanan was of the average Latin current in his day; and
+a brigand’s song were just as fair a specimen of the Greek spoken by
+people of education in modern Athens, as a ballad in the Cumberland
+or the Craven dialect is of the English of Macaulay’s History, or
+Wordsworth’s White Doe. With this remark, by way of explanation, let
+any person who can read common classical Greek without a dictionary,
+tell me with what face it can be asserted that the above is a specimen
+of a new language, in the same sense that Italian is a different
+language from Latin, and Dutch from German. I find nothing in the
+extracts given, but such slight variations in verbal form, and in
+the use of one or two prepositions and pronouns, as the reader of
+Xenophon will find in far greater abundance when he turns to Homer. The
+principal syntactic difference observable is the use of νὰ (for ἵνα),
+with the subjunctive mood, instead of the infinitive, which the modern
+Greeks have allowed to drop; but this is a usage, borrowed from the
+Latin I have often thought, of which very frequent examples occur in
+the New Testament; and besides, a mere new fashion in the syntactical
+form of a sentence was never dreamt of by any sane grammarian, as
+the sufficient sign of a new language. In English, for instance, we
+say, _I beg you will accept this_, and, _I beg you to accept this_.
+Now suppose one of these forms of expression to become obsolete, by a
+change which mere fashion may effect any day, and the other to become
+all dominant, could, I ask, any such change as this, or a whole score
+of such changes, be said to corrupt the English language in such a
+degree as to constitute a new tongue? Much less could the introduction
+of a few new words, formed according to the analogy of the language,
+be said to achieve such a transformation, though an academic purist
+might indeed refuse to put such words as ἡλιοτυπία (photography),
+and ἀτμοπλoῖov (a steam-boat), into his lexicon. As little could a
+philosophical classical scholar be offended by the loss of the optative
+mood, (used in the New Testament so sparingly,) and the substitution
+for it of the auxiliary verb θέλω, which, though it is of comparatively
+rare occurrence, is just as much according to the genius of the Greek
+language, as the frequent use of the other auxiliary verb _to be_,
+both in classical Greek and Latin. Instead of fastening upon such
+insignificant peculiarities, a catholic-minded scholar will rather be
+astonished to find that _in three columns of a Greek newspaper of the
+year 1852, there do not certainly occur three words that are not pure
+native Greek_. In fact the language, so far from being corrupt, as its
+ignorant detractors assert, is the most uncorrupt language in Europe,
+perhaps in the world, at the present moment. The Germans boast of their
+linguistic purity, and sing songs to Hermann who sent the legions of
+Varus with their lingo so bravely out of the Westphalian swamps; but
+let any man compare a column of a German newspaper with a column from
+the =ΑΘΗΝΑ=, or any other ἐφημερίς issued within the girth of King
+Otho’s dominions, and he will understand that while the Greek language
+even now is as a perfectly pure vestment, the German in its familiar
+use is defaced by the ingrained blots of many ages, which no philologic
+sponge of Adelung or Jacob Grimm will ever prevail to wash out. There
+are reasons for this remarkable phenomenon in the history of language,
+which to a thoughtful student of the history of the Greek people will
+readily suggest themselves. I content myself with stating the fact.
+
+These things being so, the natural observation that will occur to
+every one, as bearing on our present inquiry, is, that as the Greek is
+manifestly a living language, and never was dead, but only suffering
+for a season under a cutaneous disease now thrown off, those who speak
+that language are entitled to a decisive voice in the question how
+their language is to be pronounced, _and this on the mere ground that
+they are alive and speak it_; and to their decision we must bow on the
+sole ground of living authority and possessory right. For every living
+language exercises this despotic authority over those who learn it;
+and it is not in the nature of things that one should escape from such
+a sovereignty. No doubt there may be certain exceptions to which, for
+certain special philological purposes, this general rule of obedience
+is liable; but the rule remains. Such an exception, for instance,
+in the literature of our existing English language, is the peculiar
+accentuation of many words that occur in Shakspeare, and even in
+Milton, different from that now used, whereby their rhythm limps to
+our ear in the places where such words occur. Such exceptions, also,
+are the dissyllabic words in Chaucer, that are now shortened into
+monosyllables, and yet must be read as dissyllables by all those who
+will enjoy the original harmony of the poet’s rhythm. In Greek, as I
+have already observed, the whole quantitative value of the language has
+had its poles inverted; in which practice we cannot possibly follow
+the living users of the tongue, because we learn the language not to
+speak with them, as a main object, (though this also has its uses
+seldom thought of by schoolmasters,[42]) but to read the works of their
+ancient poets, the rhythmical value of whose works their living speech
+disowns. This is a sweeping exception to that dominancy of usage which
+Horace recognises as supreme in language; but philological necessity
+compels; and the modern Athenians must even submit in such points to
+receive laws from learned foreigners. But with all this large exceptive
+liberty, we dare not disown the rule. We must follow the authority of
+their living dictation, so far as the object we have in view allows;
+and if we are philosophical students of the language, our object never
+can be resolutely to ignore all knowledge of the elocutional genius
+and habits of the living people who speak it. It must be borne in mind
+also, with how much greater ease a living language can be acquired than
+a dead one; so that were it only for the sake of the speedy mastery of
+the ancient dialect, a thorough practical familiarity with the spoken
+tongue ought first to be cultivated. The present practice, indeed,
+of teaching Greek in our schools and colleges, altogether as a dead
+language, can be regarded only as a great scholastic mistake; and it
+may be confidently affirmed by any person who has reflected on the
+method of nature in teaching languages, that more Greek will be learned
+by three months’ well-directed study at Athens, where it is spoken,
+than by three years’ devotion to the language under the influence of
+our common scholastic and academic appliances in this country.
+
+[42] Perhaps some classical young gentleman at Oxford or Cambridge
+may be moved by the consideration brought forward in the following
+passage:—“I was much delighted with this really Grecian ball, at which
+I was the only foreigner. The Grecian fair I have ever found peculiarly
+agreeable in society. They are not in the smallest degree tainted with
+the artificial refinements and affectations of more civilised life,
+while they have all its graces and fascinations; and I cannot help
+thinking that as some one thought it worth while to learn ancient Greek
+at the age of seventy, for the sole purpose of reading the Iliad, so it
+is well worthy the pains of learning modern Greek at _any_ age, for the
+pleasure of conversing, in her own tongue, with a young and cultivated
+Greek beauty.”—_Wanderings in Greece_, by GEORGE COCHRAN, Esq. London,
+1837.
+
+I am now led, in the last place, to observe, that whatever may be
+thought of Itacism and of accents, as the dominant norm for the
+teaching of Greek in this country, one thing is plain, that no scholar
+of large and catholic views can, after what has been said and proved
+in this paper, content himself with teaching Greek according to the
+present arbitrary and anti-classical fashion _only_. The living dialect
+also must be taught with all its peculiarities, not only because the
+heroic exploits of a modern Admiral Miaulis are as well worthy of the
+attention of a Hellenic student as those of an ancient Phormion; but
+for strictly philological uses also, and that of more kinds than one.
+The transcribers of the MSS., for one thing, in the Middle Ages, all
+wrote with their ear under the habitual influence of the pronunciation
+which now prevails; and were accordingly constantly liable to make
+mistakes that reveal themselves at once to those who are acquainted
+with that pronunciation, but will only slowly be gathered by those
+whose ears have not been trained in the same way. But what is of more
+consequence for Hellenic philologers to note accurately is, that the
+spoken dialect of the Greek tongue, though modern in name and form,
+is nowise altogether modern in substance: but like the conglomerate
+strata of the geologists, contains imbedded very valuable fragments
+of the oldest language of the country. Of this it were easy to adduce
+proofs from so common a book as Passow’s Greek-German Dictionary, where
+occasional reference is made to the modern dialect in illustration of
+the ancient; from which source, I presume, with much else that is of
+first-rate excellence in lexicography, such references have passed into
+the English work of Liddell and Scott. But on this head I shall content
+myself with simply directing the student’s attention to the fact, and
+appending below the testimony of Professor Ross of Halle—a man who has
+travelled much in Greece, can write the language with perfect fluency,
+and is entitled, if any man in Europe is, to speak with the voice of
+authority on such a point.[43]
+
+[43] In a paper on the Comparison of the Forms of the Nominative
+Case in certain Latin and Greek Nouns, (_Zeitschrift für die
+Alterthums-Wissenschaft. 9ͭͤͬ Jahrgang_, No. 49,) Professor Ross writes
+to Professor BERGH of Marburg, as follows:—“My views are founded
+chiefly on the observation of the dialect used by the common people of
+Greece, among whom and with whom I lived so long. This dialect, indeed,
+now spoken by the Greek shepherds and sailors, and which, of course,
+is not to be learnt from books, but from actual intercourse with the
+people, the majority of philologists are apt to hold cheap, but it
+has been to me a mine of rich instruction, and I have no hesitation
+in saying that, at all events, in reference to the non-Attic dialects
+of the Greek tongue, to Latin, Oscan, and even Etruscan, more may be
+got from this source than from the many bulky commentaries of the
+grammarians of the Middle Ages. See what I have said on this point in
+my _Reisen auf den Griechischen Inseln_, iii. p. 155.”
+
+I have now finished all that I had to say on this subject, which has
+proved perhaps more fertile of speculative suggestion and of practical
+direction than the title at first promised. What I have said will at
+least serve the purpose for which it was immediately intended, that
+of justifying my conduct should I find it expedient to introduce
+any decided innovations in the practice of teaching Greek in our
+metropolitan University. And if it should further have the effect
+of inducing any thoughtful teacher to inquire into a curious branch
+of philology which he may have hitherto overlooked, and to question
+the soundness of the established routine of classical inculcation in
+some points, whatever disagreeable labour I may have gone through in
+clearing the learned rubbish from so perplexed a path will not have
+been without its reward. Any sympathizing reader who may communicate
+with me, wishing that I should explain, reconsider, or modify any
+statement here made, will find me, I hope, as willing to listen as to
+speak, and not more zealous for victory than for truth.
+
+EDINBURGH: T. CONSTABLE, PRINTER TO HER MAJESTY.
