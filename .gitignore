@@ -8,10 +8,13 @@ datamarts/inverted_index/
 datamarts/*.db
 datamarts/*.json
 !datamarts/.gitkeep
+control/indexed_books_*.txt
 
 # Alternative benchmark datalakes
 datalake_book_based/
 datalake_batch_based/
+control/downloaded_books_book_based.txt
+control/downloaded_books_batch_based.txt
 
 # Compiled artifacts
 languages/java/build/

@@ -7,6 +7,8 @@ from src.config import INVERTED_INDEX_DIR_PATH
 from src.datamart.inverted_index.base import BaseInvertedIndex
 from src.datamart.tokenizer import TextTokenizer
 
+WINDOWS_RESERVED_NAMES = {"con", "prn", "aux", "nul"} | {f"{p}{i}" for p in ("com", "lpt") for i in range(10)}
+
 
 class HierarchicalInvertedIndex(BaseInvertedIndex):
     """Stores each term as an individual .txt file grouped in subdirectories by first character."""
@@ -28,7 +30,8 @@ class HierarchicalInvertedIndex(BaseInvertedIndex):
         else:
             first_char = clean_term[0].upper()
             folder = first_char if first_char.isalnum() else "_"
-        return self.base_dir / folder / f"{clean_term}.txt"
+        file_name = f"{clean_term}_" if clean_term in WINDOWS_RESERVED_NAMES else clean_term
+        return self.base_dir / folder / f"{file_name}.txt"
 
     def add_document(self, book_id: int | str, text: str) -> None:
         bid = int(book_id)
