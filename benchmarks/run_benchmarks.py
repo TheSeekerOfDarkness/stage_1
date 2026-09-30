@@ -17,14 +17,21 @@ import os
 import shutil
 import statistics
 import subprocess
+import sys
 import time
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(BASE_DIR))
+
 DATALAKE_DIR = BASE_DIR / "datalake"
 BENCHMARK_DIR = BASE_DIR / "benchmarks"
+BENCH_RUNNER = BENCHMARK_DIR / "bench_runner.py"
 RESULTS_JSON = BENCHMARK_DIR / "results.json"
 REPORT_MD = BENCHMARK_DIR / "BENCHMARK_REPORT.md"
+
+from benchmarks.generate_plots import main as generate_all_plots
+from benchmarks.report_template import render_benchmark_markdown_report
 
 
 def get_dir_size_and_count(dir_path: Path) -> tuple[int, int, int]:
@@ -127,17 +134,8 @@ def benchmark_datalake(sample_dir: Path):
         # 1. Python
         out_py = tmp_base / f"py_{layout}"
         cmd_py = [
-            "python", "-c",
-            f"""
-import sys; sys.path.insert(0, '.'); from pathlib import Path; from src.datalake import TimeBasedDatalake, BookBasedDatalake, BatchBasedDatalake;
-out = Path('{out_py}'); inp = Path('{sample_dir}');
-if '{layout}' == 'time_based': dl = TimeBasedDatalake(base_dir=out)
-elif '{layout}' == 'book_based': dl = BookBasedDatalake(base_dir=out)
-else: dl = BatchBasedDatalake(base_dir=out)
-for p in inp.glob('*.txt'):
-    bid = int(p.stem); c = p.read_text(encoding='utf-8')
-    dl.save_book(bid, 'Header ' + str(bid), c)
-"""
+            sys.executable, str(BENCH_RUNNER),
+            "benchmark-datalake", layout, str(sample_dir), str(out_py)
         ]
         stat_py = run_benchmark_trials(cmd_py, warmups=2, iterations=5, cleanup_fn=lambda: shutil.rmtree(out_py, ignore_errors=True))
         sz_py, f_py, d_py = get_dir_size_and_count(out_py)
@@ -184,14 +182,8 @@ def benchmark_inverted_index():
     print("Testing Monolithic Index build across 3 languages...")
     out_py_m = tmp_idx / "py_mono.json"
     cmd_py_m = [
-        "python", "-c",
-        f"""
-import sys; sys.path.insert(0, '.'); from pathlib import Path; from src.datamart.inverted_index.monolithic import MonolithicInvertedIndex;
-idx = MonolithicInvertedIndex(file_path=Path('{out_py_m}')); idx.clear();
-for p in Path('datalake').glob('*/*/*.body.txt'):
-    bid = int(p.name.replace('.body.txt', '')); idx.add_document(bid, p.read_text(encoding='utf-8'))
-idx.save()
-"""
+        sys.executable, str(BENCH_RUNNER),
+        "index-monolithic", "datalake/", str(out_py_m)
     ]
     stat_py_m = run_benchmark_trials(cmd_py_m, warmups=2, iterations=5, cleanup_fn=lambda: out_py_m.unlink(missing_ok=True))
     sz_py_m = out_py_m.stat().st_size if out_py_m.exists() else 0
@@ -229,13 +221,8 @@ idx.save()
 
     out_py_h = tmp_idx / "py_hierarchical"
     cmd_py_h = [
-        "python", "-c",
-        f"""
-import sys; sys.path.insert(0, '.'); from pathlib import Path; from src.datamart.inverted_index.hierarchical import HierarchicalInvertedIndex;
-idx = HierarchicalInvertedIndex(base_dir=Path('{out_py_h}')); idx.clear();
-for p in Path('{sample_5_dir}').glob('*.body.txt'):
-    bid = int(p.name.replace('.body.txt', '')); idx.add_document(bid, p.read_text(encoding='utf-8'))
-"""
+        sys.executable, str(BENCH_RUNNER),
+        "index-hierarchical", str(sample_5_dir), str(out_py_h)
     ]
     stat_py_h = run_benchmark_trials(cmd_py_h, warmups=1, iterations=2, cleanup_fn=lambda: shutil.rmtree(out_py_h, ignore_errors=True))
     sz_py_h, f_py_h, d_py_h = get_dir_size_and_count(out_py_h)
@@ -270,8 +257,8 @@ for p in Path('{sample_5_dir}').glob('*.body.txt'):
     query_results = []
     for q in queries:
         cmd_q_py = [
-            "python", "-c",
-            f"import sys; sys.path.insert(0, '.'); from pathlib import Path; from src.datamart.inverted_index.hierarchical import HierarchicalInvertedIndex; idx = HierarchicalInvertedIndex(base_dir=Path('{out_py_h}')); idx.lookup('{q}')"
+            sys.executable, str(BENCH_RUNNER),
+            "query-hierarchical", str(out_py_h), q
         ]
         stat_q_py = run_benchmark_trials(cmd_q_py, warmups=3, iterations=10)
 
@@ -299,92 +286,8 @@ for p in Path('{sample_5_dir}').glob('*.body.txt'):
     return results, query_results
 
 
-def generate_markdown_report(datalake_res, index_res, query_res):
-    content = f"""# Empirical Benchmark Report (Rigorous Methodology)
-**Search Engine Project — Big Data (ULPGC)**  
-*Methodology: 2 Warmup Rounds + Multi-Trial Measurements with Mean, StdDev, and 95% Confidence Intervals*
-
----
-
-## 1. Abstract
-We study the behavior of three storage algorithms used for data layer ingestion and indexing in search engines:
-1. **Datalake Layouts**: Time-based (`YYYYMMDD/HH/`), Book-based (`<id>/`), and Batch-based (`batch_XXXXX_YYYYY/`).
-2. **Inverted Index Architectures**: Single Monolithic File vs. Hierarchical Folder Structure.
-
-We perform an empirical analysis of execution throughput (ms), disk footprint (KB), directory structures, and query latency across three distinct programming paradigms: **Python 3.12 (Interpreted)**, **Java 11 (JIT-compiled JVM)**, and **Rust 1.93 (Native compiled)**. Our experiments provide a reproducible benchmark across Gutenberg document collections. Based on our experiments, we recommend **Time-based Datalake** combined with **Monolithic / Database Inverted Indexing**.
-
----
-
-## 2. Experiments Matrix
-
-| Experiment | Target Subsystem | Independent Variables | Controlled Variables | Evaluated Metrics |
-| :--- | :--- | :--- | :--- | :--- |
-| **Exp 1: Datalake Write** | Datalake Ingestion | Layout (Time, Book, Batch), Language (Py, Java, Rust) | 3 Books (~1.3 MB raw text) | Mean execution time (ms), StdDev, Files, Dirs |
-| **Exp 2: Index Build** | Datamart Indexing | Index Architecture (Monolithic, Hierarchical), Language | 10,721 unique vocabulary terms | Build time (ms), StdDev, On-disk size (KB) |
-| **Exp 3: Query Retrieval** | Datamart Search | Search Term (`darcy`, `monster`, `rabbit`), Language | Warm cache, 10 measurement iterations | Query latency (ms), StdDev, 95% CI |
-
----
-
-## 3. Datalake Layout Comparison Across 3 Programming Languages
-
-*Sample: 3 books (~1.3 MB raw text). Results reported as `Mean ± StdDev [Min – Max]` (ms).*
-
-| Datalake Layout | Python (ms) | Java (ms) | Rust (ms) | Storage Size (KB) | Files | Dirs |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-"""
-    for d in datalake_res:
-        py_str = f"{d['python']['mean_ms']} ± {d['python']['stddev_ms']}"
-        java_str = f"{d['java']['mean_ms']} ± {d['java']['stddev_ms']}"
-        rust_str = f"{d['rust']['mean_ms']} ± {d['rust']['stddev_ms']}"
-        content += f"| **{d['layout']}** | {py_str} | {java_str} | **{rust_str}** | {round(d['disk_bytes'] / 1024, 1)} | {d['file_count']} | {d['dir_count']} |\n"
-
-    content += """
-### Analysis:
-- **Rust Speed**: Rust consistently achieves sub-5ms write times, demonstrating zero-overhead syscalls.
-- **Warmup Effect**: Warming up the JVM significantly reduced Java's latency compared to cold single-shot startup.
-- **Architectural Scalability**:
-  - **Time-based**: Optimal for incremental downstream ingestion without scanning the full tree.
-  - **Book-based**: Simple direct lookup, but causes directory exhaustion under tens of thousands of books.
-  - **Batch-based**: Restricts directory cardinality to 1,000 files per partition while retaining fast direct arithmetic lookups.
-
----
-
-## 4. Inverted Index Layout Comparison Across 3 Programming Languages
-
-| Index Architecture | Python (ms) | Java (ms) | Rust (ms) | Size on Disk (KB) |
-| :--- | :---: | :---: | :---: | :---: |
-"""
-    for idx in index_res:
-        py_str = f"{idx['python']['mean_ms']} ± {idx['python']['stddev_ms']}"
-        java_str = f"{idx['java']['mean_ms']} ± {idx['java']['stddev_ms']}"
-        rust_str = f"{idx['rust']['mean_ms']} ± {idx['rust']['stddev_ms']}"
-        content += f"| **{idx['structure']}** | {py_str} | {java_str} | **{rust_str}** | {round(idx['size_bytes'] / 1024, 1)} |\n"
-
-    content += """
-### Analysis:
-- **Massive Write Degradation in Hierarchical Folders**: The Hierarchical Folder structure takes **~30x to 50x longer to build** than Monolithic JSON across all languages. Creating thousands of individual files causes high filesystem metadata overhead, directory locking, and inode operations.
-- **Trade-off Summary**: While Hierarchical Folders enable fine-grained posting updates without rewriting the full index, the construction overhead makes it inefficient for bulk indexing unless combined with batched writes or an embedded database.
-
----
-
-## 5. Query Latency Benchmark (10 Iterations, 95% Confidence)
-
-| Query Term | Python (ms) | Java (ms) | Rust (ms) |
-| :--- | :---: | :---: | :---: |
-"""
-    for q in query_res:
-        py_str = f"{q['python']['mean_ms']} ± {q['python']['stddev_ms']}"
-        java_str = f"{q['java']['mean_ms']} ± {q['java']['stddev_ms']}"
-        rust_str = f"{q['rust']['mean_ms']} ± {q['rust']['stddev_ms']}"
-        content += f"| `{q['term']}` | {py_str} | {java_str} | **{rust_str}** |\n"
-
-    content += """
----
-
-## 6. Conclusions & Recommendations
-1. **Language Choice**: Rust provides the highest raw throughput and lowest memory footprint, while Python offers the fastest development cycle for pipeline orchestration.
-2. **Recommended Storage Pair**: **Time-Based Datalake** + **Database / Monolithic Datamart** balances ingestion throughput, incremental processing, and sub-millisecond keyword lookup.
-"""
+def generate_markdown_report(datalake_res, index_res, query_res, books_count=106):
+    content = render_benchmark_markdown_report(datalake_res, index_res, query_res, books_count=books_count)
     REPORT_MD.write_text(content, encoding="utf-8")
     print(f"\nSaved statistical benchmark markdown report to: {REPORT_MD}")
 

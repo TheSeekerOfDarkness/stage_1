@@ -1,4 +1,5 @@
 # Stage 1: Building the Data Layer - Search Engine Project
+
 **Big Data — Grado en Ciencia e Ingeniería de Datos (ULPGC)**
 
 ## Overview
@@ -35,7 +36,9 @@ This repository implements **Stage 1 (Building the Data Layer)** of the Big Data
 ```
 
 ### 1. Datalake
+
 Stores the raw and cleaned book content in an unstructured format, with 3 physical structural designs for benchmark comparison:
+
 - **Time-Based Hierarchy** (`datalake/YYYYMMDD/HH/`):
   - `<BOOK_ID>.header.txt`: Metadata, title, author, release notes.
   - `<BOOK_ID>.body.txt`: Cleaned body text delimited between Gutenberg markers.
@@ -45,12 +48,16 @@ Stores the raw and cleaned book content in an unstructured format, with 3 physic
   - Partitioned into batch folders of 1,000 books to prevent directory exhaustion on massive scale.
 
 ### 2. Control Layer
+
 Maintains state files in `control/` for pipeline auditability and deduplication:
+
 - `control/downloaded_books.txt`: Ingested book IDs.
 - `control/indexed_books.txt`: Indexed book IDs.
 
 ### 3. Datamarts
+
 Structured, queryable data stores:
+
 - **Metadata Store (`datamarts/metadata.db`)**: SQLite database storing parsed metadata (`book_id`, `title`, `author`, `language`, `release_date`, `datalake_path`).
 - **Inverted Index (3 Implementations)**:
   1. **Single Monolithic File**: `datamarts/inverted_index.json`
@@ -115,18 +122,22 @@ Structured, queryable data stores:
 ## Setup & Installation
 
 ### Requirements
+
 - Python 3.10+
 - Optional: Docker (for MongoDB backend)
 
 ### Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### (Optional) Start MongoDB for NoSQL Indexer
+
 ```bash
 docker compose up -d
 ```
+
 *(If MongoDB is not running, the database indexer will transparently use an embedded SQLite document store at `datamarts/inverted_index.db`)*.
 
 ---
@@ -134,7 +145,9 @@ docker compose up -d
 ## Usage
 
 ### 1. Ingesting Books
+
 Download and save a book to the datalake:
+
 ```bash
 # Ingest single book (e.g. Pride and Prejudice, ID 1342)
 python main.py ingest --book-id 1342
@@ -144,7 +157,9 @@ python main.py ingest --book-id 1342 11 84
 ```
 
 ### 2. Indexing Books into Datamarts
+
 Extract metadata to SQLite and build inverted index:
+
 ```bash
 # Index pending books using Monolithic JSON backend
 python main.py index --indexer monolithic
@@ -157,32 +172,40 @@ python main.py index --indexer database
 ```
 
 ### 3. Searching the Datamarts
+
 Search terms across the inverted index and resolve book metadata:
+
 ```bash
 python main.py search "Darcy Elizabeth" --indexer monolithic
 python main.py search "adventure island" --indexer hierarchical
 ```
 
 ### 4. Automated Execution (Run Command)
+
 Run pipeline steps automatically (indexes pending downloaded books or downloads new random books if none pending):
+
 ```bash
 python main.py run --steps 10
 ```
 
 ### 5. Inspect Pipeline Status
+
 View ingestion counts, indexed records, pending queue, and datalake entries:
+
 ```bash
 python main.py status
 ```
 
 ---
 
-## Multi-Language Engines (Java & Rust)
+## Multi-Language Engines
 
 All three languages (Python, Java, Rust) feature parity across tokenization (127 stop words), datalake partitioning, inverted indexing, and keyword search.
 
 ### Java Engine
+
 Compile and run the Java engine:
+
 ```bash
 # Compile
 javac -d languages/java/build languages/java/src/searchengine/*.java
@@ -195,7 +218,9 @@ java -cp languages/java/build searchengine.Main search "war peace"
 ```
 
 ### Rust Engine
+
 Build and run the native Rust engine:
+
 ```bash
 # Build release binary
 cargo build --release --manifest-path languages/rust/Cargo.toml
@@ -212,6 +237,7 @@ cargo build --release --manifest-path languages/rust/Cargo.toml
 ## Benchmarking & Empirical Evaluation
 
 Run the automated statistical benchmark suite (2 warmup rounds + multi-trial measurements with Mean, StdDev, and 95% Confidence Intervals across Python, Java, and Rust):
+
 ```bash
 # Run full benchmark suite
 python benchmarks/run_benchmarks.py
@@ -219,7 +245,9 @@ python benchmarks/run_benchmarks.py
 # Generate publication-quality figures
 python benchmarks/generate_plots.py
 ```
+
 Output charts are saved to `reports/figures/`:
+
 - `datalake_write_speed.png`
 - `inverted_index_build_speed.png`
 - `query_latency.png`
@@ -229,6 +257,7 @@ Output charts are saved to `reports/figures/`:
 ## Running Tests
 
 Run the full automated test suite with pytest:
+
 ```bash
 pytest tests/ -v
 ```
