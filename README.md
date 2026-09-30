@@ -163,11 +163,66 @@ python main.py search "Darcy Elizabeth" --indexer monolithic
 python main.py search "adventure island" --indexer hierarchical
 ```
 
-### 4. Inspect Pipeline Status
+### 4. Automated Execution (Run Command)
+Run pipeline steps automatically (indexes pending downloaded books or downloads new random books if none pending):
+```bash
+python main.py run --steps 10
+```
+
+### 5. Inspect Pipeline Status
 View ingestion counts, indexed records, pending queue, and datalake entries:
 ```bash
 python main.py status
 ```
+
+---
+
+## Multi-Language Engines (Java & Rust)
+
+All three languages (Python, Java, Rust) feature parity across tokenization (127 stop words), datalake partitioning, inverted indexing, and keyword search.
+
+### Java Engine
+Compile and run the Java engine:
+```bash
+# Compile
+javac -d languages/java/build languages/java/src/searchengine/*.java
+
+# Index datalake books
+java -cp languages/java/build searchengine.Main index --indexer monolithic
+
+# Search
+java -cp languages/java/build searchengine.Main search "war peace"
+```
+
+### Rust Engine
+Build and run the native Rust engine:
+```bash
+# Build release binary
+cargo build --release --manifest-path languages/rust/Cargo.toml
+
+# Index datalake books
+./languages/rust/target/release/searchengine_rust index --indexer monolithic
+
+# Search
+./languages/rust/target/release/searchengine_rust search "war peace"
+```
+
+---
+
+## Benchmarking & Empirical Evaluation
+
+Run the automated statistical benchmark suite (2 warmup rounds + multi-trial measurements with Mean, StdDev, and 95% Confidence Intervals across Python, Java, and Rust):
+```bash
+# Run full benchmark suite
+python benchmarks/run_benchmarks.py
+
+# Generate publication-quality figures
+python benchmarks/generate_plots.py
+```
+Output charts are saved to `reports/figures/`:
+- `datalake_write_speed.png`
+- `inverted_index_build_speed.png`
+- `query_latency.png`
 
 ---
 
