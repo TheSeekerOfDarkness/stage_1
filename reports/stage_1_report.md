@@ -13,7 +13,7 @@ The stage is divided into three interconnected subsystems:
 1. **Unstructured Ingestion (Datalake):** Storing raw and preprocessed book texts downloaded from Project Gutenberg under alternative partitioning layouts.
 2. **Structured Queryable Datamarts:** Extracting structured catalog metadata into an embedded relational store (SQLite) and constructing inverted indexes under multiple physical formats to enable sub-millisecond keyword retrieval.
 3. **Control & State Tracking Layer:** Ensuring idempotency, auditability, and failure-recovery by maintaining persistent records of ingested and indexed document identifiers.
-4. **Empirical Multi-Language Benchmarking:** Comparing performance across **Python 3.12**, **Java 11 (OpenJDK)**, and **Rust 1.93 (Native compiled)** across multiple storage and indexing architectures to evaluate runtime efficiency, I/O bottlenecks, and scalability trade-offs.
+4. **Benchmarking:** Comparing performance across **Python 3.12**, **Java 11 (OpenJDK)**, and **Rust 1.93 (Native compiled)** across multiple storage and indexing architectures to evaluate runtime efficiency, I/O bottlenecks, and scalability trade-offs.
 
 ---
 
@@ -97,18 +97,16 @@ Three distinct physical layouts were designed and implemented:
 
 ## 4. Design Decisions & Trade-Offs
 
-1. **Separation of Unstructured Content and Structured Indexes**:
-   Raw text remains intact in the datalake for future reprocessing or model training. Only search terms and clean metadata populate the datamart.
-2. **Idempotent Control Layer**:
-   Using persistent sets in `control/downloaded_books.txt` and `control/indexed_books.txt` prevents redundant network fetches and enables safe pipeline restarts after unexpected termination.
-3. **Multi-Backend Inverted Index Abstraction**:
-   An abstract interface (`BaseInvertedIndex`) decouples the ingestion pipeline and query engine from the physical storage layer.
+1. Raw text remains intact in the datalake for future reprocessing or model training. Only search terms and clean metadata populate the datamart.
+2. Using persistent sets in `control/downloaded_books.txt` and `control/indexed_books.txt` prevents redundant network fetches and enables safe pipeline restarts after unexpected termination.
+3. An abstract interface (`BaseInvertedIndex`) decouples the ingestion pipeline and query engine from the physical storage layer.
 
 ---
 
 ## 5. Benchmarks and Empirical Results
 
-The empirical benchmark suite ([run_benchmarks.py](file:///Users/dennis/ULPGC/BigData/SearchEngineProject/benchmarks/run_benchmarks.py)) was executed following the **Benchmarking Methodology** curriculum guidelines:
+The empirical benchmark suite ([run_benchmarks.py](../benchmarks/run_benchmarks.py)) was executed following the **Benchmarking Methodology** curriculum guidelines:
+
 - **Warmup Protocol**: 2 warmup trials executed prior to measurements to eliminate cold-start cache and JVM class-loading artifacts.
 - **Measurement Protocol**: 5 measurement iterations for bulk operations and 10 iterations for queries, reporting **Mean ± Standard Deviation** and **95% Confidence Intervals**.
 - **Dataset**: Sample corpus consisting of *Pride and Prejudice* (#1342), *Alice in Wonderland* (#11), and *Frankenstein* (#84) totaling ~1.3 MB raw text and 10,721 unique terms.
@@ -133,12 +131,12 @@ The empirical benchmark suite ([run_benchmarks.py](file:///Users/dennis/ULPGC/Bi
 | **Book-based** (`<id>/`) | 476.96 ± 129.64 | 648.70 ± 318.59 | **115.11 ± 9.63** | 51,572.9 | 212 | 106 |
 | **Batch-based** (`batch_XXXXX_YYYYY/`) | 426.61 ± 157.03 | 409.19 ± 16.15 | **159.81 ± 62.10** | 51,572.9 | 212 | 55 |
 
-![Datalake Ingestion Speed](file:///Users/dennis/ULPGC/BigData/SearchEngineProject/reports/figures/datalake_write_speed.png)
+![Datalake Ingestion Speed](figures/datalake_write_speed.png)
 
 #### Analysis
 
-- **Rust High-Throughput I/O**: Rust consistently outperforms both Python and Java across all three datalake layouts, achieving 115–159 ms for writing 106 books (212 files). This represents a **~3x speedup over Python** and **~4x–6x over Java**.
-- **JVM JIT & GC Overhead**: Java exhibits higher variance during datalake directory creation due to JVM thread allocation and file descriptor pooling before full JIT tiering.
+- Rust consistently outperforms both Python and Java across all three datalake layouts, achieving 115–159 ms for writing 106 books (212 files). This represents a **~3x speedup over Python** and **~4x–6x over Java**.
+- Java exhibits higher variance during datalake directory creation due to JVM thread allocation and file descriptor pooling before full JIT tiering.
 - **Architectural Scalability**:
   - **Time-based** partitioning offers the highest utility in distributed data engines because downstream consumers (e.g. indexers) only need to scan partitions matching recent time windows without performing full tree traversals.
   - **Batch-based** partitioning provides a robust alternative for non-time-series data, capping directory entries to 1,000 files per partition and preventing inode exhaustion.
@@ -152,12 +150,12 @@ The empirical benchmark suite ([run_benchmarks.py](file:///Users/dennis/ULPGC/Bi
 | **Monolithic JSON** | Full 106 Books | 2,296.02 ± 92.54 | 2,007.19 ± 111.22 | **1,116.63 ± 30.66** | 10,274.4 | 152,108 terms |
 | **Hierarchical Folders** | 5-Book Sample | 9,832.68 ± 192.07 | 8,775.73 ± 791.49 | **7,365.30 ± 292.51** | 83.3 | ~15,000 terms |
 
-![Inverted Index Construction Latency](file:///Users/dennis/ULPGC/BigData/SearchEngineProject/reports/figures/inverted_index_build_speed.png)
+![Inverted Index Construction Latency](figures/inverted_index_build_speed.png)
 
 #### Analysis
 
-- **Severe I/O Degradation in Hierarchical Folders**: Building the Hierarchical Folder structure for just **5 books** took **7.3 to 9.8 seconds**, whereas building the Monolithic JSON file for **all 106 books (152,108 terms)** completed in **1.1 to 2.3 seconds**. On a per-book basis, hierarchical indexing exhibits an **I/O penalty exceeding 50x–80x**. Opening and appending to tens of thousands of individual files saturates OS inode caches, directory locking primitives, and disk write buffers across all runtimes.
-- **Update Granularity Trade-off**: Hierarchical Folders excel only when performing incremental updates for individual terms, as modifying one word's posting list touches exactly one file rather than rewriting a monolithic document.
+- Building the Hierarchical Folder structure for just **5 books** took **7.3 to 9.8 seconds**, whereas building the Monolithic JSON file for **all 106 books (152,108 terms)** completed in **1.1 to 2.3 seconds**. On a per-book basis, hierarchical indexing exhibits an **I/O penalty exceeding 50x–80x**. Opening and appending to tens of thousands of individual files fills OS inode caches, directory locking primitives, and disk write buffers across all runtimes.
+- Hierarchical Folders excel only when performing incremental updates for individual terms, as modifying one word's posting list touches exactly one file rather than rewriting a monolithic document.
 
 ---
 
@@ -169,7 +167,7 @@ The empirical benchmark suite ([run_benchmarks.py](file:///Users/dennis/ULPGC/Bi
 | `monster` | Frankenstein (84) | 63.56 ± 20.59 | 109.96 ± 8.01 | **3.98 ± 0.27** | 22 Books |
 | `rabbit` | Alice in Wonderland (11) | 44.22 ± 4.82 | 111.36 ± 8.64 | **4.51 ± 0.39** | 27 Books |
 
-![Query Retrieval Latency](file:///Users/dennis/ULPGC/BigData/SearchEngineProject/reports/figures/query_latency.png)
+![Query Retrieval Latency](figures/query_latency.png)
 
 #### Analysis
 
