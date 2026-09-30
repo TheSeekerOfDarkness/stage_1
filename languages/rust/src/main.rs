@@ -127,6 +127,119 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             count,
             elapsed.as_millis()
         );
+    } else if command == "index" {
+        let mut indexer_type = "monolithic";
+        let mut i = 2;
+        while i < args.len() {
+            if args[i] == "--indexer" && i + 1 < args.len() {
+                indexer_type = &args[i + 1];
+                i += 1;
+            }
+            i += 1;
+        }
+
+        let lake_dir = Path::new("datalake");
+        let start = Instant::now();
+        let mut docs = Vec::new();
+        walk_body_files(lake_dir, &mut docs);
+
+        if indexer_type.eq_ignore_ascii_case("hierarchical") {
+            let out_dir = Path::new("datamarts/hierarchical");
+            let index = inverted_index::HierarchicalIndex::new(out_dir);
+            for (id, body) in docs {
+                index.add_document(id, &body)?;
+            }
+            let elapsed = start.elapsed();
+            println!(
+                "\n=== Rust Indexing Summary (hierarchical) ===\nTotal time: {} ms\nOutput directory: {}",
+                elapsed.as_millis(),
+                out_dir.display()
+            );
+        } else {
+            let out_json = Path::new("datamarts/inverted_index.json");
+            let mut index = inverted_index::MonolithicIndex::new();
+            for (id, body) in docs {
+                index.add_document(id, &body);
+            }
+            index.save(out_json)?;
+            let elapsed = start.elapsed();
+            println!(
+                "\n=== Rust Indexing Summary (monolithic) ===\nIndexed {} terms in {} ms\nOutput saved to: {}",
+                index.terms_count(),
+                elapsed.as_millis(),
+                out_json.display()
+            );
+        }
+    } else if command == "search" {
+        let mut indexer_type = "monolithic";
+        let mut query: Option<&String> = None;
+        let mut i = 2;
+        while i < args.len() {
+            if args[i] == "--indexer" && i + 1 < args.len() {
+                indexer_type = &args[i + 1];
+                i += 1;
+            } else if !args[i].starts_with("--") {
+                query = Some(&args[i]);
+            }
+            i += 1;
+        }
+
+        let query_str = match query {
+            Some(q) => q,
+            None => {
+                eprintln!("Usage: searchengine_rust search [--indexer <monolithic|hierarchical>] <query>");
+                std::process::exit(1);
+            }
+        };
+
+        let start = Instant::now();
+        let terms = tokenizer::tokenize(query_str, true);
+        if terms.is_empty() {
+            println!(
+                "\n=== Rust Search Results for: '{}' ({}) ===\nTotal matching books: 0\n(Query contained only stop words or invalid characters)",
+                query_str, indexer_type
+            );
+            return Ok(());
+        }
+
+        let mut matching_ids: Option<std::collections::HashSet<u32>> = None;
+
+        if indexer_type.eq_ignore_ascii_case("hierarchical") {
+            let index = inverted_index::HierarchicalIndex::new("datamarts/hierarchical");
+            for term in &terms {
+                let postings: std::collections::HashSet<u32> = index.lookup(term)?.into_iter().collect();
+                matching_ids = match matching_ids {
+                    None => Some(postings),
+                    Some(prev) => Some(prev.intersection(&postings).cloned().collect()),
+                };
+            }
+        } else {
+            let index = inverted_index::MonolithicIndex::load("datamarts/inverted_index.json")?;
+            for term in &terms {
+                let postings: std::collections::HashSet<u32> = index.lookup(term).into_iter().collect();
+                matching_ids = match matching_ids {
+                    None => Some(postings),
+                    Some(prev) => Some(prev.intersection(&postings).cloned().collect()),
+                };
+            }
+        }
+
+        let elapsed = start.elapsed();
+        let mut sorted: Vec<u32> = matching_ids.map(|s| s.into_iter().collect()).unwrap_or_default();
+        sorted.sort();
+
+        println!(
+            "\n=== Rust Search Results for: '{}' ({}) ===",
+            query_str, indexer_type
+        );
+        println!(
+            "Total matching books: {} (in {:.2} ms)",
+            sorted.len(),
+            elapsed.as_secs_f64() * 1000.0
+        );
+        for id in sorted {
+            println!("  - [Book ID {}]", id);
+        }
     } else {
         eprintln!("Unknown command: {}", command);
         std::process::exit(1);
