@@ -38,6 +38,18 @@ impl MonolithicIndex {
         Ok(())
     }
 
+    pub fn load<P: AsRef<Path>>(file_path: P) -> Result<Self> {
+        let path = file_path.as_ref();
+        if !path.exists() {
+            return Ok(Self::new());
+        }
+        let data = fs::read_to_string(path)?;
+        let index: HashMap<String, Vec<u32>> = serde_json::from_str(&data).map_err(|e| {
+            std::io::Error::new(std::io::ErrorKind::Other, e.to_string())
+        })?;
+        Ok(Self { index })
+    }
+
     pub fn lookup(&self, term: &str) -> Vec<u32> {
         let clean = term.to_lowercase();
         self.index.get(&clean).cloned().unwrap_or_default()
@@ -48,6 +60,15 @@ impl MonolithicIndex {
     }
 }
 
+pub fn is_windows_reserved(name: &str) -> bool {
+    matches!(
+        name,
+        "con" | "prn" | "aux" | "nul"
+            | "com0" | "com1" | "com2" | "com3" | "com4" | "com5" | "com6" | "com7" | "com8" | "com9"
+            | "lpt0" | "lpt1" | "lpt2" | "lpt3" | "lpt4" | "lpt5" | "lpt6" | "lpt7" | "lpt8" | "lpt9"
+    )
+}
+
 pub struct HierarchicalIndex {
     pub base_dir: PathBuf,
 }
@@ -56,6 +77,14 @@ impl HierarchicalIndex {
     pub fn new<P: AsRef<Path>>(base_dir: P) -> Self {
         Self {
             base_dir: base_dir.as_ref().to_path_buf(),
+        }
+    }
+
+    fn get_file_name(term: &str) -> String {
+        if is_windows_reserved(term) {
+            format!("{}_.txt", term)
+        } else {
+            format!("{}.txt", term)
         }
     }
 
@@ -72,7 +101,7 @@ impl HierarchicalIndex {
             let dir = self.base_dir.join(folder);
             fs::create_dir_all(&dir)?;
 
-            let term_file = dir.join(format!("{}.txt", term));
+            let term_file = dir.join(Self::get_file_name(&term));
             let mut file = OpenOptions::new()
                 .create(true)
                 .append(true)
@@ -91,7 +120,7 @@ impl HierarchicalIndex {
             "_".to_string()
         };
 
-        let term_file = self.base_dir.join(folder).join(format!("{}.txt", clean));
+        let term_file = self.base_dir.join(folder).join(Self::get_file_name(&clean));
         if !term_file.exists() {
             return Ok(Vec::new());
         }
