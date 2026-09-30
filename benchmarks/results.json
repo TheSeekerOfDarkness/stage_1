@@ -1,0 +1,490 @@
+{
+  "timestamp": 1790757756.056252,
+  "methodology": "warmup=2, iterations=5, statistical indicators: mean, stddev, min, max, ci95",
+  "datalake_benchmarks": [
+    {
+      "layout": "time_based",
+      "python": {
+        "mean_ms": 416.57,
+        "stddev_ms": 161.09,
+        "min_ms": 255.15,
+        "max_ms": 648.79,
+        "ci95_margin": 199.98,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          648.79,
+          255.15,
+          455.59,
+          271.49,
+          451.81
+        ],
+        "stdout": ""
+      },
+      "java": {
+        "mean_ms": 765.57,
+        "stddev_ms": 159.71,
+        "min_ms": 602.11,
+        "max_ms": 996.65,
+        "ci95_margin": 198.27,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          828.19,
+          602.11,
+          996.65,
+          631.51,
+          769.38
+        ],
+        "stdout": "{\"status\": \"success\", \"layout\": \"time_based\", \"time_ms\": 546}"
+      },
+      "rust": {
+        "mean_ms": 129.63,
+        "stddev_ms": 32.7,
+        "min_ms": 83.23,
+        "max_ms": 175.35,
+        "ci95_margin": 40.6,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          131.11,
+          175.35,
+          125.17,
+          83.23,
+          133.28
+        ],
+        "stdout": "{\"status\": \"success\", \"layout\": \"time_based\", \"books\": 106, \"time_ms\": 124}"
+      },
+      "disk_bytes": 52810663,
+      "file_count": 212,
+      "dir_count": 2
+    },
+    {
+      "layout": "book_based",
+      "python": {
+        "mean_ms": 476.96,
+        "stddev_ms": 129.64,
+        "min_ms": 366.67,
+        "max_ms": 672.41,
+        "ci95_margin": 160.94,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          388.45,
+          411.47,
+          545.79,
+          672.41,
+          366.67
+        ],
+        "stdout": ""
+      },
+      "java": {
+        "mean_ms": 648.7,
+        "stddev_ms": 318.59,
+        "min_ms": 390.99,
+        "max_ms": 1138.13,
+        "ci95_margin": 395.52,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          428.55,
+          803.41,
+          482.43,
+          390.99,
+          1138.13
+        ],
+        "stdout": "{\"status\": \"success\", \"layout\": \"book_based\", \"time_ms\": 1020}"
+      },
+      "rust": {
+        "mean_ms": 115.11,
+        "stddev_ms": 9.63,
+        "min_ms": 98.45,
+        "max_ms": 122.68,
+        "ci95_margin": 11.95,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          120.43,
+          116.52,
+          98.45,
+          122.68,
+          117.47
+        ],
+        "stdout": "{\"status\": \"success\", \"layout\": \"book_based\", \"books\": 106, \"time_ms\": 104}"
+      },
+      "disk_bytes": 52810663,
+      "file_count": 212,
+      "dir_count": 106
+    },
+    {
+      "layout": "batch_based",
+      "python": {
+        "mean_ms": 426.61,
+        "stddev_ms": 157.03,
+        "min_ms": 265.12,
+        "max_ms": 606.18,
+        "ci95_margin": 194.94,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          309.91,
+          265.12,
+          371.46,
+          580.37,
+          606.18
+        ],
+        "stdout": ""
+      },
+      "java": {
+        "mean_ms": 409.19,
+        "stddev_ms": 16.15,
+        "min_ms": 382.08,
+        "max_ms": 423.57,
+        "ci95_margin": 20.05,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          414.09,
+          408.25,
+          417.94,
+          423.57,
+          382.08
+        ],
+        "stdout": "{\"status\": \"success\", \"layout\": \"batch_based\", \"time_ms\": 302}"
+      },
+      "rust": {
+        "mean_ms": 159.81,
+        "stddev_ms": 62.1,
+        "min_ms": 105.67,
+        "max_ms": 252.55,
+        "ci95_margin": 77.09,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          252.55,
+          194.47,
+          105.67,
+          125.46,
+          120.92
+        ],
+        "stdout": "{\"status\": \"success\", \"layout\": \"batch_based\", \"books\": 106, \"time_ms\": 111}"
+      },
+      "disk_bytes": 52810663,
+      "file_count": 212,
+      "dir_count": 55
+    }
+  ],
+  "inverted_index_benchmarks": [
+    {
+      "structure": "monolithic_json",
+      "python": {
+        "mean_ms": 2296.02,
+        "stddev_ms": 92.54,
+        "min_ms": 2235.46,
+        "max_ms": 2455.77,
+        "ci95_margin": 114.88,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          2238.84,
+          2455.77,
+          2235.46,
+          2296.41,
+          2253.64
+        ],
+        "stdout": ""
+      },
+      "java": {
+        "mean_ms": 2007.19,
+        "stddev_ms": 111.22,
+        "min_ms": 1868.92,
+        "max_ms": 2120.44,
+        "ci95_margin": 138.08,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          1929.8,
+          2002.25,
+          2120.44,
+          2114.54,
+          1868.92
+        ],
+        "stdout": "{\"status\": \"success\", \"time_ms\": 1809, \"terms\": 152108, \"output\": \"/Users/dennis/ULPGC/BigData/SearchEngineProject/benchmarks/tmp_indexes/java_mono.json\"}"
+      },
+      "rust": {
+        "mean_ms": 1116.63,
+        "stddev_ms": 30.66,
+        "min_ms": 1080.4,
+        "max_ms": 1155.0,
+        "ci95_margin": 38.07,
+        "iterations": 5,
+        "warmups": 2,
+        "raw_times_ms": [
+          1155.0,
+          1080.4,
+          1130.42,
+          1090.52,
+          1126.81
+        ],
+        "stdout": "{\"status\": \"success\", \"time_ms\": 1115, \"terms\": 152108, \"output\": \"/Users/dennis/ULPGC/BigData/SearchEngineProject/benchmarks/tmp_indexes/rust_mono.json\"}"
+      },
+      "size_bytes": 10520996
+    },
+    {
+      "structure": "hierarchical_folders",
+      "python": {
+        "mean_ms": 9832.68,
+        "stddev_ms": 192.07,
+        "min_ms": 9696.87,
+        "max_ms": 9968.5,
+        "ci95_margin": 271.63,
+        "iterations": 2,
+        "warmups": 1,
+        "raw_times_ms": [
+          9968.5,
+          9696.87
+        ],
+        "stdout": ""
+      },
+      "java": {
+        "mean_ms": 8775.73,
+        "stddev_ms": 791.49,
+        "min_ms": 8216.07,
+        "max_ms": 9335.4,
+        "ci95_margin": 1119.33,
+        "iterations": 2,
+        "warmups": 1,
+        "raw_times_ms": [
+          8216.07,
+          9335.4
+        ],
+        "stdout": "{\"status\": \"success\", \"time_ms\": 8279, \"output\": \"/Users/dennis/ULPGC/BigData/SearchEngineProject/benchmarks/tmp_indexes/java_hierarchical\"}"
+      },
+      "rust": {
+        "mean_ms": 7365.3,
+        "stddev_ms": 292.51,
+        "min_ms": 7158.47,
+        "max_ms": 7572.14,
+        "ci95_margin": 413.67,
+        "iterations": 2,
+        "warmups": 1,
+        "raw_times_ms": [
+          7158.47,
+          7572.14
+        ],
+        "stdout": "{\"status\": \"success\", \"time_ms\": 7558, \"output\": \"/Users/dennis/ULPGC/BigData/SearchEngineProject/benchmarks/tmp_indexes/rust_hierarchical\"}"
+      },
+      "size_bytes": 85344,
+      "files_count": 12935
+    }
+  ],
+  "query_benchmarks": [
+    {
+      "term": "darcy",
+      "python": {
+        "mean_ms": 245.76,
+        "stddev_ms": 166.4,
+        "min_ms": 101.5,
+        "max_ms": 679.76,
+        "ci95_margin": 105.24,
+        "iterations": 10,
+        "warmups": 3,
+        "raw_times_ms": [
+          679.76,
+          315.08,
+          144.57,
+          197.23,
+          205.12,
+          271.81,
+          219.08,
+          109.4,
+          101.5,
+          214.04
+        ],
+        "stdout": ""
+      },
+      "java": {
+        "mean_ms": 344.99,
+        "stddev_ms": 85.5,
+        "min_ms": 233.54,
+        "max_ms": 509.27,
+        "ci95_margin": 54.07,
+        "iterations": 10,
+        "warmups": 3,
+        "raw_times_ms": [
+          446.78,
+          247.0,
+          320.0,
+          335.0,
+          285.78,
+          328.01,
+          509.27,
+          357.82,
+          386.66,
+          233.54
+        ],
+        "stdout": "{\"term\": \"darcy\", \"time_us\": 64655.46, \"postings\": []}"
+      },
+      "rust": {
+        "mean_ms": 16.1,
+        "stddev_ms": 9.02,
+        "min_ms": 7.9,
+        "max_ms": 34.93,
+        "ci95_margin": 5.7,
+        "iterations": 10,
+        "warmups": 3,
+        "raw_times_ms": [
+          7.9,
+          34.93,
+          25.34,
+          16.69,
+          14.94,
+          9.36,
+          9.02,
+          7.93,
+          22.78,
+          12.13
+        ],
+        "stdout": "{\"term\": \"darcy\", \"time_us\": 32, \"postings\": []}"
+      }
+    },
+    {
+      "term": "monster",
+      "python": {
+        "mean_ms": 63.56,
+        "stddev_ms": 20.59,
+        "min_ms": 52.56,
+        "max_ms": 117.62,
+        "ci95_margin": 13.02,
+        "iterations": 10,
+        "warmups": 3,
+        "raw_times_ms": [
+          117.62,
+          79.55,
+          52.56,
+          53.6,
+          55.91,
+          57.49,
+          57.07,
+          54.58,
+          54.28,
+          52.94
+        ],
+        "stdout": ""
+      },
+      "java": {
+        "mean_ms": 109.96,
+        "stddev_ms": 8.01,
+        "min_ms": 99.59,
+        "max_ms": 125.08,
+        "ci95_margin": 5.06,
+        "iterations": 10,
+        "warmups": 3,
+        "raw_times_ms": [
+          125.08,
+          113.46,
+          115.96,
+          110.4,
+          113.71,
+          101.1,
+          99.59,
+          104.84,
+          113.34,
+          102.09
+        ],
+        "stdout": "{\"term\": \"monster\", \"time_us\": 29836.46, \"postings\": [84]}"
+      },
+      "rust": {
+        "mean_ms": 3.98,
+        "stddev_ms": 0.27,
+        "min_ms": 3.64,
+        "max_ms": 4.49,
+        "ci95_margin": 0.17,
+        "iterations": 10,
+        "warmups": 3,
+        "raw_times_ms": [
+          4.49,
+          4.08,
+          3.97,
+          4.01,
+          4.0,
+          3.65,
+          3.73,
+          3.64,
+          3.91,
+          4.3
+        ],
+        "stdout": "{\"term\": \"monster\", \"time_us\": 42, \"postings\": [84]}"
+      }
+    },
+    {
+      "term": "rabbit",
+      "python": {
+        "mean_ms": 44.22,
+        "stddev_ms": 4.82,
+        "min_ms": 39.77,
+        "max_ms": 51.98,
+        "ci95_margin": 3.05,
+        "iterations": 10,
+        "warmups": 3,
+        "raw_times_ms": [
+          47.9,
+          50.31,
+          51.98,
+          48.42,
+          40.89,
+          40.56,
+          40.52,
+          40.22,
+          39.77,
+          41.65
+        ],
+        "stdout": ""
+      },
+      "java": {
+        "mean_ms": 111.36,
+        "stddev_ms": 8.64,
+        "min_ms": 99.39,
+        "max_ms": 128.71,
+        "ci95_margin": 5.46,
+        "iterations": 10,
+        "warmups": 3,
+        "raw_times_ms": [
+          99.39,
+          108.75,
+          109.74,
+          116.36,
+          105.77,
+          107.04,
+          104.58,
+          112.1,
+          128.71,
+          121.18
+        ],
+        "stdout": "{\"term\": \"rabbit\", \"time_us\": 34395.17, \"postings\": [11]}"
+      },
+      "rust": {
+        "mean_ms": 4.51,
+        "stddev_ms": 0.39,
+        "min_ms": 3.92,
+        "max_ms": 5.3,
+        "ci95_margin": 0.25,
+        "iterations": 10,
+        "warmups": 3,
+        "raw_times_ms": [
+          4.21,
+          4.32,
+          5.3,
+          4.81,
+          4.63,
+          4.57,
+          4.61,
+          3.92,
+          4.13,
+          4.61
+        ],
+        "stdout": "{\"term\": \"rabbit\", \"time_us\": 60, \"postings\": [11]}"
+      }
+    }
+  ]
+}
