@@ -51,8 +51,8 @@ Stores the raw and cleaned book content in an unstructured format, with 3 physic
 
 Maintains state files in `control/` for pipeline auditability and deduplication:
 
-- `control/downloaded_books.txt`: Ingested book IDs.
-- `control/indexed_books.txt`: Indexed book IDs.
+- `control/downloaded_books_<datalake>.txt`: Ingested book IDs, one file per datalake layout (e.g. `downloaded_books_time_based.txt`).
+- `control/indexed_books_<indexer>.txt`: Indexed book IDs, one file per inverted index (e.g. `indexed_books_monolithic.txt`). Not stored in git, like the indexes.
 
 ### 3. Datamarts
 
@@ -72,8 +72,8 @@ Structured, queryable data stores:
 ```text
 .
 ├── control/
-│   ├── downloaded_books.txt        # State tracking of ingested books
-│   └── indexed_books.txt           # State tracking of indexed books
+│   ├── downloaded_books_time_based.txt  # State tracking of ingested books
+│   └── indexed_books_<indexer>.txt      # State tracking of indexed books (auto-generated)
 ├── datalake/
 │   └── 20260916/
 │       └── 13/
@@ -143,6 +143,8 @@ docker compose up -d
 ---
 
 ## Usage
+
+The repository already includes 106 downloaded books in `datalake/`, so you can skip step 1: run `python main.py index` once and then search with `python main.py search "<words>"`.
 
 ### 1. Ingesting Books
 
@@ -238,13 +240,17 @@ cargo build --release --manifest-path languages/rust/Cargo.toml
 
 Run the automated statistical benchmark suite (2 warmup rounds + multi-trial measurements with Mean, StdDev, and 95% Confidence Intervals across Python, Java, and Rust):
 
+Requirements: Java (JDK 17+), Rust (cargo) and MongoDB running (`docker compose up -d`). The script compiles the Java and Rust engines by itself. A full run takes about 2 hours, mostly because of the hierarchical index. Note: the MongoDB benchmark replaces the contents of the `inverted_index` collection.
+
 ```bash
-# Run full benchmark suite
+# Run full benchmark suite (also generates the report and the figures)
 python benchmarks/run_benchmarks.py
 
-# Generate publication-quality figures
+# Only regenerate the figures from benchmarks/results.json
 python benchmarks/generate_plots.py
 ```
+
+Results are saved to `benchmarks/results.json` (raw data) and `benchmarks/BENCHMARK_REPORT.md` (tables). They cover: datalake write, lookup, incremental detection, storage and recovery; inverted index build, query, update, memory, disk and scalability; and the SQLite metadata store.
 
 Output charts are saved to `reports/figures/`:
 
