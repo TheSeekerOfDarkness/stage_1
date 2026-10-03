@@ -1,7 +1,7 @@
 use crate::tokenizer;
-use std::collections::{BTreeMap, HashMap};
-use std::fs::{self, OpenOptions};
-use std::io::{Result, Write};
+use std::collections::{BTreeMap, BTreeSet, HashMap};
+use std::fs;
+use std::io::Result;
 use std::path::{Path, PathBuf};
 
 pub struct MonolithicIndex {
@@ -29,7 +29,14 @@ impl MonolithicIndex {
         }
 
         // Sort keys for deterministic JSON output
-        let sorted: BTreeMap<&String, &Vec<u32>> = self.index.iter().collect();
+        let mut sorted: BTreeMap<&String, BTreeSet<u32>> = BTreeMap::new();
+        for (term, ids) in &self.index {
+            let mut set = BTreeSet::new();
+            for id in ids {
+                set.insert(*id);
+            }
+            sorted.insert(term, set);
+        }
         let json_str = serde_json::to_string_pretty(&sorted).map_err(|e| {
             std::io::Error::new(std::io::ErrorKind::Other, e.to_string())
         })?;
@@ -102,11 +109,20 @@ impl HierarchicalIndex {
             fs::create_dir_all(&dir)?;
 
             let term_file = dir.join(Self::get_file_name(&term));
-            let mut file = OpenOptions::new()
-                .create(true)
-                .append(true)
-                .open(term_file)?;
-            writeln!(file, "{}", doc_id)?;
+            let mut ids = BTreeSet::new();
+            if term_file.exists() {
+                for line in fs::read_to_string(&term_file)?.lines() {
+                    if let Ok(id) = line.trim().parse::<u32>() {
+                        ids.insert(id);
+                    }
+                }
+            }
+            ids.insert(doc_id);
+            let mut content = String::new();
+            for id in &ids {
+                content.push_str(&format!("{}\n", id));
+            }
+            fs::write(&term_file, content)?;
         }
         Ok(())
     }
