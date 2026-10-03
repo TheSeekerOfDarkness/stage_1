@@ -19,3 +19,6 @@ control/downloaded_books_batch_based.txt
 # Compiled artifacts
 languages/java/build/
 languages/rust/target/
+
+# Benchmark temporary files
+benchmarks/tmp/

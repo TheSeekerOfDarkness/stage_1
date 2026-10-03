@@ -69,10 +69,92 @@ public class Main {
             String term = args[2];
             long start = System.nanoTime();
             InvertedIndex.Hierarchical index = new InvertedIndex.Hierarchical(indexDir);
-            List<Integer> res = index.lookup(term);
+            List<Integer> res = null;
+            for (int i = 0; i < 100; i++) {
+                res = index.lookup(term);
+            }
             long elapsedNs = System.nanoTime() - start;
-            System.out.printf("{\"term\": \"%s\", \"time_us\": %.2f, \"postings\": %s}%n",
-                    term, elapsedNs / 1000.0, res.toString());
+            System.out.printf(Locale.ROOT, "{\"term\": \"%s\", \"time_us\": %.3f, \"postings\": %s}%n",
+                    term, elapsedNs / 1000.0 / 100, res.toString());
+
+        } else if ("query-monolithic".equals(command)) {
+            InvertedIndex.Monolithic index = InvertedIndex.Monolithic.load(Paths.get(args[1]));
+            String term = args[2];
+            long start = System.nanoTime();
+            List<Integer> res = null;
+            for (int i = 0; i < 100; i++) {
+                res = index.lookup(term);
+            }
+            long elapsedNs = System.nanoTime() - start;
+            System.out.printf(Locale.ROOT, "{\"term\": \"%s\", \"time_us\": %.3f, \"postings\": %s}%n",
+                    term, elapsedNs / 1000.0 / 100, res.toString());
+
+        } else if ("update-monolithic".equals(command)) {
+            Path indexFile = Paths.get(args[1]);
+            Path newBooksDir = Paths.get(args[2]);
+            long start = System.currentTimeMillis();
+            InvertedIndex.Monolithic index = InvertedIndex.Monolithic.load(indexFile);
+            try (var stream = Files.walk(newBooksDir)) {
+                stream.filter(p -> p.getFileName().toString().endsWith(".body.txt")).forEach(p -> {
+                    try {
+                        String name = p.getFileName().toString().replace(".body.txt", "");
+                        int bookId = Integer.parseInt(name);
+                        String body = Files.readString(p, StandardCharsets.UTF_8);
+                        index.addDocument(bookId, body);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+            }
+            index.save(indexFile);
+            long elapsed = System.currentTimeMillis() - start;
+            System.out.printf("{\"status\": \"success\", \"time_ms\": %d, \"terms\": %d}%n", elapsed, index.getTermsCount());
+
+        } else if ("lookup-datalake".equals(command)) {
+            String layout = args[1];
+            Path lakeDir = Paths.get(args[2]);
+            int bookId = Integer.parseInt(args[3]);
+            long start = System.nanoTime();
+            Path found = null;
+            for (int i = 0; i < 100; i++) {
+                if ("time_based".equals(layout)) {
+                    found = new Datalake.TimeBased(lakeDir).findBook(bookId);
+                } else if ("book_based".equals(layout)) {
+                    found = new Datalake.BookBased(lakeDir).findBook(bookId);
+                } else {
+                    found = new Datalake.BatchBased(lakeDir, 1000).findBook(bookId);
+                }
+            }
+            long elapsedNs = System.nanoTime() - start;
+            System.out.printf(Locale.ROOT, "{\"time_us\": %.3f, \"found\": %b}%n", elapsedNs / 1000.0 / 100, found != null);
+
+        } else if ("detect-new".equals(command)) {
+            Path lakeDir = Paths.get(args[1]);
+            Path indexedFile = Paths.get(args[2]);
+            long start = System.nanoTime();
+            Set<String> indexed = new HashSet<>();
+            for (String line : Files.readAllLines(indexedFile, StandardCharsets.UTF_8)) {
+                indexed.add(line.trim());
+            }
+            List<String> ids = new ArrayList<>();
+            try (var stream = Files.walk(lakeDir)) {
+                stream.filter(p -> p.getFileName().toString().endsWith("body.txt")).forEach(p -> {
+                    String name = p.getFileName().toString();
+                    if (name.equals("body.txt")) {
+                        ids.add(p.getParent().getFileName().toString());
+                    } else {
+                        ids.add(name.replace(".body.txt", ""));
+                    }
+                });
+            }
+            int newCount = 0;
+            for (String id : ids) {
+                if (!indexed.contains(id)) {
+                    newCount++;
+                }
+            }
+            long elapsedNs = System.nanoTime() - start;
+            System.out.printf(Locale.ROOT, "{\"time_us\": %.3f, \"new\": %d}%n", elapsedNs / 1000.0, newCount);
 
         } else if ("benchmark-datalake".equals(command)) {
             String layout = args[1];

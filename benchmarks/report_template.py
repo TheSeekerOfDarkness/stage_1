@@ -1,93 +1,120 @@
 """Markdown report generator for benchmark results."""
 
 
-def render_benchmark_markdown_report(datalake_res: list, index_res: list, query_res: list, books_count: int = 106) -> str:
-    """Generate GitHub-flavored Markdown report from empirical benchmark matrices."""
-    content = f"""# Empirical Benchmark Report (Rigorous Methodology)
-**Search Engine Project — Big Data (ULPGC)**  
-*Methodology: 2 Warmup Rounds + Multi-Trial Measurements with Mean, StdDev, and 95% Confidence Intervals*
+def ms(stat: dict) -> str:
+    return f"{stat['mean_ms']} ± {stat['stddev_ms']}"
+
+
+def us(stat: dict) -> str:
+    return f"{stat['mean_us']} ± {stat['stddev_us']}"
+
+
+def render_benchmark_markdown_report(results: dict, books_count: int = 106) -> str:
+    """Generate GitHub-flavored Markdown tables from results.json."""
+    content = f"""# Empirical Benchmark Report
+**Search Engine Project — Big Data (ULPGC)**
+
+*Dataset: {books_count} Project Gutenberg books. Methodology: {results['methodology']}.*
+*Times marked "ms" are wall-clock times of the whole process (includes startup). Times marked "µs" are measured inside each program (no startup), averaged over 100 repetitions.*
 
 ---
 
-## 1. Abstract
-We study the behavior of three storage algorithms used for data layer ingestion and indexing in search engines:
-1. **Datalake Layouts**: Time-based (`YYYYMMDD/HH/`), Book-based (`<id>/`), and Batch-based (`batch_XXXXX_YYYYY/`).
-2. **Inverted Index Architectures**: Single Monolithic File vs. Hierarchical Folder Structure.
+## 1. Datalake
 
-We perform an empirical analysis of execution throughput (ms), disk footprint (KB), directory structures, and query latency across three distinct programming paradigms: **Python 3.12 (Interpreted)**, **Java 11 (JIT-compiled JVM)**, and **Rust 1.93 (Native compiled)**. Our experiments provide a reproducible benchmark across {books_count} Gutenberg books. Based on our experiments, we recommend **Time-based Datalake** combined with **Monolithic / Database Inverted Indexing**.
+### 1.1 Write time ({books_count} books, ms)
 
----
-
-## 2. Experiments Matrix
-
-| Experiment | Target Subsystem | Independent Variables | Controlled Variables | Evaluated Metrics |
-| :--- | :--- | :--- | :--- | :--- |
-| **Exp 1: Datalake Write** | Datalake Ingestion | Layout (Time, Book, Batch), Language (Py, Java, Rust) | {books_count} Books (~51.5 MB raw text) | Mean execution time (ms), StdDev, Files, Dirs |
-| **Exp 2: Index Build** | Datamart Indexing | Index Architecture (Monolithic, Hierarchical), Language | 152,108 unique vocabulary terms | Build time (ms), StdDev, On-disk size (KB) |
-| **Exp 3: Query Retrieval** | Datamart Search | Search Term (`darcy`, `monster`, `rabbit`), Language | Warm cache, 10 measurement iterations | Query latency (ms), StdDev, 95% CI |
-
----
-
-## 3. Datalake Layout Comparison Across 3 Programming Languages
-
-*Sample: {books_count} books (~51.5 MB raw text). Results reported as `Mean ± StdDev` (ms).*
-
-| Datalake Layout | Python (ms) | Java (ms) | Rust (ms) | Storage Size (KB) | Files | Dirs |
+| Layout | Python | Java | Rust | Size (KB) | Files | Dirs |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 """
-    for d in datalake_res:
-        py_str = f"{d['python']['mean_ms']} ± {d['python']['stddev_ms']}"
-        java_str = f"{d['java']['mean_ms']} ± {d['java']['stddev_ms']}"
-        rust_str = f"{d['rust']['mean_ms']} ± {d['rust']['stddev_ms']}"
-        size_kb = round(d['disk_bytes'] / 1024, 1)
-        content += f"| **{d['layout']}** | {py_str} | {java_str} | **{rust_str}** | {size_kb} | {d['file_count']} | {d['dir_count']} |\n"
+    for d in results["datalake_benchmarks"]:
+        size_kb = round(d["disk_bytes"] / 1024, 1)
+        content += f"| {d['layout']} | {ms(d['python'])} | {ms(d['java'])} | {ms(d['rust'])} | {size_kb} | {d['file_count']} | {d['dir_count']} |\n"
 
     content += """
-### Analysis:
-- **Rust Speed**: Rust consistently achieves sub-160ms write times for 106 books, demonstrating zero-overhead syscalls.
-- **Warmup Effect**: Warming up the JVM significantly reduced Java's latency compared to cold single-shot startup.
-- **Architectural Scalability**:
-  - **Time-based**: Optimal for incremental downstream ingestion without scanning the full tree.
-  - **Book-based**: Simple direct lookup, but causes directory exhaustion under tens of thousands of books.
-  - **Batch-based**: Restricts directory cardinality to 1,000 files per partition while retaining fast direct arithmetic lookups.
+### 1.2 Lookup cost: locate one book (µs)
 
----
-
-## 4. Inverted Index Layout Comparison Across 3 Programming Languages
-
-| Index Architecture | Python (ms) | Java (ms) | Rust (ms) | Size on Disk (KB) |
-| :--- | :---: | :---: | :---: | :---: |
-"""
-    for idx in index_res:
-        py_str = f"{idx['python']['mean_ms']} ± {idx['python']['stddev_ms']}"
-        java_str = f"{idx['java']['mean_ms']} ± {idx['java']['stddev_ms']}"
-        rust_str = f"{idx['rust']['mean_ms']} ± {idx['rust']['stddev_ms']}"
-        size_kb = round(idx['size_bytes'] / 1024, 1)
-        content += f"| **{idx['structure']}** | {py_str} | {java_str} | **{rust_str}** | {size_kb} |\n"
-
-    content += """
-### Analysis:
-- **Massive Write Degradation in Hierarchical Folders**: The Hierarchical Folder structure takes **~30x to 50x longer to build** than Monolithic JSON across all languages. Creating thousands of individual files causes high filesystem metadata overhead, directory locking, and inode operations.
-- **Trade-off Summary**: While Hierarchical Folders enable fine-grained posting updates without rewriting the full index, the construction overhead makes it inefficient for bulk indexing unless combined with batched writes or an embedded database.
-
----
-
-## 5. Query Latency Benchmark (10 Iterations, 95% Confidence)
-
-| Query Term | Python (ms) | Java (ms) | Rust (ms) |
+| Layout | Python | Java | Rust |
 | :--- | :---: | :---: | :---: |
 """
-    for q in query_res:
-        py_str = f"{q['python']['mean_ms']} ± {q['python']['stddev_ms']}"
-        java_str = f"{q['java']['mean_ms']} ± {q['java']['stddev_ms']}"
-        rust_str = f"{q['rust']['mean_ms']} ± {q['rust']['stddev_ms']}"
-        content += f"| `{q['term']}` | {py_str} | {java_str} | **{rust_str}** |\n"
+    for d in results["datalake_benchmarks"]:
+        content += f"| {d['layout']} | {us(d['lookup']['python'])} | {us(d['lookup']['java'])} | {us(d['lookup']['rust'])} |\n"
+
+    content += """
+### 1.3 Incremental processing: detect books not yet indexed (µs)
+
+| Layout | Python | Java | Rust |
+| :--- | :---: | :---: | :---: |
+"""
+    for d in results["datalake_benchmarks"]:
+        content += f"| {d['layout']} | {us(d['detect_new']['python'])} | {us(d['detect_new']['java'])} | {us(d['detect_new']['rust'])} |\n"
+
+    content += """
+### 1.4 Recovery after an interruption
+
+A crash is simulated after a book is written to the datalake but before the control file is updated. The pipeline is then run again over all the books.
+
+| Layout | Books expected | Books in control | Copies in datalake | Duplicates | Lost |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+"""
+    for r in results["recovery_test"]:
+        content += f"| {r['layout']} | {r['books_expected']} | {r['books_in_control']} | {r['copies_in_datalake']} | {r['duplicates']} | {r['lost']} |\n"
 
     content += """
 ---
 
-## 6. Conclusions & Recommendations
-1. **Language Choice**: Rust provides the highest raw throughput and lowest memory footprint, while Python offers the fastest development cycle for pipeline orchestration.
-2. **Recommended Storage Pair**: **Time-Based Datalake** + **Database / Monolithic Datamart** balances ingestion throughput, incremental processing, and sub-millisecond keyword lookup.
+## 2. Inverted Index
+
+### 2.1 Build time, memory and disk
+
+| Structure | Books | Python (ms) | Java (ms) | Rust (ms) | Memory Py / Java / Rust (MB) | Size on disk (KB) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 """
+    for i in results["inverted_index_benchmarks"]:
+        mem = i["memory_mb"]
+        size_kb = round(i["size_bytes"] / 1024, 1)
+        content += f"| {i['structure']} | {i['books']} | {ms(i['python'])} | {ms(i['java'])} | {ms(i['rust'])} | {mem['python']} / {mem['java']} / {mem['rust']} | {size_kb} |\n"
+
+    db = results["database_benchmarks"]
+    content += f"| mongodb (Python only) | {db['books']} | {ms(db['build'])} | - | - | {db['memory_mb']} / - / - | {round(db['size_bytes'] / 1024, 1)} |\n"
+
+    content += """
+### 2.2 Query time (µs)
+
+| Structure | Term | Python | Java | Rust |
+| :--- | :--- | :---: | :---: | :---: |
+"""
+    for q in results["query_benchmarks"]:
+        content += f"| {q['structure']} | `{q['term']}` | {us(q['python'])} | {us(q['java'])} | {us(q['rust'])} |\n"
+    for q in db["queries"]:
+        content += f"| mongodb | `{q['term']}` | {us(q['python'])} | - | - |\n"
+
+    content += """
+### 2.3 Update: add new books to an existing index (ms)
+
+| Structure | Books already indexed | New books | Python | Java | Rust |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+"""
+    for u in results["update_benchmarks"]:
+        content += f"| {u['structure']} | {u['base_books']} | {u['new_books']} | {ms(u['python'])} | {ms(u['java'])} | {ms(u['rust'])} |\n"
+
+    content += """
+### 2.4 Scalability: build time vs number of books (ms)
+
+| Structure | Books | Python | Java | Rust |
+| :--- | :---: | :---: | :---: | :---: |
+"""
+    for s in results["scalability_benchmarks"]:
+        content += f"| {s['structure']} | {s['books']} | {ms(s['python'])} | {ms(s['java'])} | {ms(s['rust'])} |\n"
+
+    content += """
+---
+
+## 3. Metadata Store (SQLite, Python)
+
+| Books | Insert all (ms) | Query by author (µs) | Query by ID (µs) |
+| :---: | :---: | :---: | :---: |
+"""
+    for m in results["metadata_benchmarks"]:
+        content += f"| {m['books']} | {m['insert_ms']} | {m['query_author_us']} | {m['query_id_us']} |\n"
+
     return content

@@ -14,6 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE_DIR))
 
 from src.datalake import BatchBasedDatalake, BookBasedDatalake, TimeBasedDatalake
+from src.datamart.inverted_index.database import DatabaseInvertedIndex
 from src.datamart.inverted_index.hierarchical import HierarchicalInvertedIndex
 from src.datamart.inverted_index.monolithic import MonolithicInvertedIndex
 
@@ -78,7 +79,6 @@ def run_index_hierarchical(lake_dir_str: str, out_dir_str: str):
 
     t0 = time.perf_counter()
     idx = HierarchicalInvertedIndex(base_dir=out_dir)
-    idx.clear()
 
     docs = walk_body_files(lake_dir)
     for bid, body in docs:
@@ -93,9 +93,94 @@ def run_query_hierarchical(index_dir_str: str, term: str):
     idx = HierarchicalInvertedIndex(base_dir=index_dir)
 
     t0 = time.perf_counter()
-    postings = idx.lookup(term)
+    for _ in range(100):
+        postings = idx.lookup(term)
+    elapsed_us = (time.perf_counter() - t0) * 1_000_000 / 100
+    print(f'{{"term": "{term}", "time_us": {elapsed_us:.3f}, "postings": {postings}}}')
+
+
+def run_query_monolithic(index_file_str: str, term: str):
+    idx = MonolithicInvertedIndex(file_path=Path(index_file_str))
+
+    t0 = time.perf_counter()
+    for _ in range(100):
+        postings = idx.lookup(term)
+    elapsed_us = (time.perf_counter() - t0) * 1_000_000 / 100
+    print(f'{{"term": "{term}", "time_us": {elapsed_us:.3f}, "postings": {postings}}}')
+
+
+def run_update_monolithic(index_file_str: str, new_books_dir_str: str):
+    t0 = time.perf_counter()
+    idx = MonolithicInvertedIndex(file_path=Path(index_file_str))
+    for bid, body in walk_body_files(Path(new_books_dir_str)):
+        idx.add_document(bid, body)
+    idx.save()
+    elapsed_ms = (time.perf_counter() - t0) * 1000
+    print(f'{{"status": "success", "time_ms": {elapsed_ms:.2f}, "terms": {len(idx.index)}}}')
+
+
+def run_lookup_datalake(layout: str, lake_dir_str: str, book_id: str):
+    lake_dir = Path(lake_dir_str)
+    if layout == "time_based":
+        dl = TimeBasedDatalake(base_dir=lake_dir)
+    elif layout == "book_based":
+        dl = BookBasedDatalake(base_dir=lake_dir)
+    else:
+        dl = BatchBasedDatalake(base_dir=lake_dir)
+
+    t0 = time.perf_counter()
+    for _ in range(100):
+        header_path, body_path = dl.find_book(book_id)
+    elapsed_us = (time.perf_counter() - t0) * 1_000_000 / 100
+    found = "true" if body_path else "false"
+    print(f'{{"time_us": {elapsed_us:.3f}, "found": {found}}}')
+
+
+def run_detect_new(lake_dir_str: str, indexed_file_str: str):
+    t0 = time.perf_counter()
+    indexed = set()
+    for line in Path(indexed_file_str).read_text(encoding="utf-8").splitlines():
+        indexed.add(line.strip())
+    ids = []
+    for p in Path(lake_dir_str).rglob("*body.txt"):
+        if p.name == "body.txt":
+            ids.append(p.parent.name)
+        else:
+            ids.append(p.name.replace(".body.txt", ""))
+    new_count = 0
+    for book_id in ids:
+        if book_id not in indexed:
+            new_count += 1
     elapsed_us = (time.perf_counter() - t0) * 1_000_000
-    print(f'{{"term": "{term}", "time_us": {elapsed_us:.2f}, "postings": {postings}}}')
+    print(f'{{"time_us": {elapsed_us:.3f}, "new": {new_count}}}')
+
+
+def open_mongo_index():
+    idx = DatabaseInvertedIndex(mongo_uri="mongodb://localhost:27017")
+    if idx.backend_type != "mongodb":
+        print("MongoDB is not running (start it with: docker compose up -d)", file=sys.stderr)
+        sys.exit(1)
+    return idx
+
+
+def run_index_database(lake_dir_str: str):
+    t0 = time.perf_counter()
+    idx = open_mongo_index()
+    idx.clear()
+    for bid, body in walk_body_files(Path(lake_dir_str)):
+        idx.add_document(bid, body)
+    elapsed_ms = (time.perf_counter() - t0) * 1000
+    print(f'{{"status": "success", "time_ms": {elapsed_ms:.2f}, "terms": {idx.get_terms_count()}, "size_bytes": {idx.get_storage_size_bytes()}}}')
+
+
+def run_query_database(term: str):
+    idx = open_mongo_index()
+
+    t0 = time.perf_counter()
+    for _ in range(100):
+        postings = idx.lookup(term)
+    elapsed_us = (time.perf_counter() - t0) * 1_000_000 / 100
+    print(f'{{"term": "{term}", "time_us": {elapsed_us:.3f}, "postings": {postings}}}')
 
 
 def main():
@@ -113,6 +198,18 @@ def main():
         run_index_hierarchical(sys.argv[2], sys.argv[3])
     elif command == "query-hierarchical":
         run_query_hierarchical(sys.argv[2], sys.argv[3])
+    elif command == "query-monolithic":
+        run_query_monolithic(sys.argv[2], sys.argv[3])
+    elif command == "update-monolithic":
+        run_update_monolithic(sys.argv[2], sys.argv[3])
+    elif command == "lookup-datalake":
+        run_lookup_datalake(sys.argv[2], sys.argv[3], sys.argv[4])
+    elif command == "detect-new":
+        run_detect_new(sys.argv[2], sys.argv[3])
+    elif command == "index-database":
+        run_index_database(sys.argv[2])
+    elif command == "query-database":
+        run_query_database(sys.argv[2])
     else:
         print(f"Unknown command: {command}", file=sys.stderr)
         sys.exit(1)

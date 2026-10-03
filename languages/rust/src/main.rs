@@ -26,6 +26,25 @@ fn walk_body_files(dir: &Path, files: &mut Vec<(u32, String)>) {
     }
 }
 
+fn list_book_ids(dir: &Path, ids: &mut Vec<String>) {
+    if let Ok(entries) = fs::read_dir(dir) {
+        for entry in entries {
+            if let Ok(entry) = entry {
+                let path = entry.path();
+                let name = entry.file_name().to_string_lossy().to_string();
+                if path.is_dir() {
+                    list_book_ids(&path, ids);
+                } else if name == "body.txt" {
+                    let folder = path.parent().unwrap().file_name().unwrap();
+                    ids.push(folder.to_string_lossy().to_string());
+                } else if name.ends_with(".body.txt") {
+                    ids.push(name.replace(".body.txt", ""));
+                }
+            }
+        }
+    }
+}
+
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args: Vec<String> = env::args().collect();
     if args.len() < 2 {
@@ -81,13 +100,92 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         let start = Instant::now();
         let index = inverted_index::HierarchicalIndex::new(index_dir);
-        let postings = index.lookup(term)?;
-        let elapsed_us = start.elapsed().as_micros();
+        let mut postings = Vec::new();
+        for _ in 0..100 {
+            postings = index.lookup(term)?;
+        }
+        let elapsed_us = start.elapsed().as_secs_f64() * 1_000_000.0 / 100.0;
 
         println!(
-            "{{\"term\": \"{}\", \"time_us\": {}, \"postings\": {:?}}}",
+            "{{\"term\": \"{}\", \"time_us\": {:.3}, \"postings\": {:?}}}",
             term, elapsed_us, postings
         );
+    } else if command == "query-monolithic" {
+        let index = inverted_index::MonolithicIndex::load(&args[2])?;
+        let term = &args[3];
+
+        let start = Instant::now();
+        let mut postings = Vec::new();
+        for _ in 0..100 {
+            postings = index.lookup(term);
+        }
+        let elapsed_us = start.elapsed().as_secs_f64() * 1_000_000.0 / 100.0;
+
+        println!(
+            "{{\"term\": \"{}\", \"time_us\": {:.3}, \"postings\": {:?}}}",
+            term, elapsed_us, postings
+        );
+    } else if command == "update-monolithic" {
+        let index_file = Path::new(&args[2]);
+        let new_books_dir = Path::new(&args[3]);
+
+        let start = Instant::now();
+        let mut index = inverted_index::MonolithicIndex::load(index_file)?;
+        let mut docs = Vec::new();
+        walk_body_files(new_books_dir, &mut docs);
+        for (id, body) in docs {
+            index.add_document(id, &body);
+        }
+        index.save(index_file)?;
+
+        println!(
+            "{{\"status\": \"success\", \"time_ms\": {}, \"terms\": {}}}",
+            start.elapsed().as_millis(),
+            index.terms_count()
+        );
+    } else if command == "lookup-datalake" {
+        let layout = &args[2];
+        let lake_dir = Path::new(&args[3]);
+        let book_id: u32 = args[4].parse()?;
+
+        let start = Instant::now();
+        let mut found = None;
+        for _ in 0..100 {
+            if layout == "time_based" {
+                found = datalake::TimeBasedDatalake::new(lake_dir).find_book(book_id);
+            } else if layout == "book_based" {
+                found = datalake::BookBasedDatalake::new(lake_dir).find_book(book_id);
+            } else {
+                found = datalake::BatchBasedDatalake::new(lake_dir, 1000).find_book(book_id);
+            }
+        }
+        let elapsed_us = start.elapsed().as_secs_f64() * 1_000_000.0 / 100.0;
+
+        println!(
+            "{{\"time_us\": {:.3}, \"found\": {}}}",
+            elapsed_us,
+            found.is_some()
+        );
+    } else if command == "detect-new" {
+        let lake_dir = Path::new(&args[2]);
+        let indexed_file = Path::new(&args[3]);
+
+        let start = Instant::now();
+        let mut indexed = std::collections::HashSet::new();
+        for line in fs::read_to_string(indexed_file)?.lines() {
+            indexed.insert(line.trim().to_string());
+        }
+        let mut ids = Vec::new();
+        list_book_ids(lake_dir, &mut ids);
+        let mut new_count = 0;
+        for id in &ids {
+            if !indexed.contains(id) {
+                new_count += 1;
+            }
+        }
+        let elapsed_us = start.elapsed().as_secs_f64() * 1_000_000.0;
+
+        println!("{{\"time_us\": {:.3}, \"new\": {}}}", elapsed_us, new_count);
     } else if command == "benchmark-datalake" {
         let layout = &args[2];
         let books_dir = Path::new(&args[3]);

@@ -32,6 +32,28 @@ impl TimeBasedDatalake {
 
         Ok((header_path, body_path))
     }
+
+    pub fn find_book(&self, book_id: u32) -> Option<PathBuf> {
+        find_file(&self.base_dir, &format!("{}.body.txt", book_id))
+    }
+}
+
+fn find_file(dir: &Path, name: &str) -> Option<PathBuf> {
+    if let Ok(entries) = fs::read_dir(dir) {
+        for entry in entries {
+            if let Ok(entry) = entry {
+                let path = entry.path();
+                if path.is_dir() {
+                    if let Some(found) = find_file(&path, name) {
+                        return Some(found);
+                    }
+                } else if entry.file_name().to_string_lossy() == name {
+                    return Some(path);
+                }
+            }
+        }
+    }
+    None
 }
 
 pub struct BookBasedDatalake {
@@ -56,6 +78,15 @@ impl BookBasedDatalake {
         fs::write(&body_path, body.trim())?;
 
         Ok((header_path, body_path))
+    }
+
+    pub fn find_book(&self, book_id: u32) -> Option<PathBuf> {
+        let path = self.base_dir.join(book_id.to_string()).join("body.txt");
+        if path.exists() {
+            Some(path)
+        } else {
+            None
+        }
     }
 }
 
@@ -87,5 +118,19 @@ impl BatchBasedDatalake {
         fs::write(&body_path, body.trim())?;
 
         Ok((header_path, body_path))
+    }
+
+    pub fn find_book(&self, book_id: u32) -> Option<PathBuf> {
+        let start = (book_id / self.batch_size) * self.batch_size;
+        let end = start + self.batch_size - 1;
+        let path = self
+            .base_dir
+            .join(format!("batch_{:05}_{:05}", start, end))
+            .join(format!("{}.body.txt", book_id));
+        if path.exists() {
+            Some(path)
+        } else {
+            None
+        }
     }
 }
