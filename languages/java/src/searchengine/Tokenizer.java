@@ -25,7 +25,7 @@ public class Tokenizer {
         "you'll", "you're", "you've", "your", "yours", "yourself", "yourselves"
     );
 
-    private static final Pattern TOKEN_PATTERN = Pattern.compile("\\b[a-zA-Z0-9]+(?:'[a-zA-Z0-9]+)?\\b");
+    private static final Pattern TOKEN_PATTERN = Pattern.compile("(?<![\\p{L}\\p{N}_])[a-zA-Z0-9]+(?:'[a-zA-Z0-9]+)?(?![\\p{L}\\p{N}_])");
 
     public static List<String> tokenize(String text, boolean removeStopwords) {
         List<String> tokens = new ArrayList<>();

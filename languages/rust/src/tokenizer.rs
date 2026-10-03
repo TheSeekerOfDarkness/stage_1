@@ -1,4 +1,4 @@
-use regex::Regex;
+use fancy_regex::Regex;
 use std::collections::HashSet;
 use std::sync::LazyLock;
 
@@ -26,14 +26,15 @@ static STOP_WORDS: LazyLock<HashSet<&'static str>> = LazyLock::new(|| {
     words.into_iter().collect()
 });
 
-static TOKEN_REGEX: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"\b[a-zA-Z0-9]+(?:'[a-zA-Z0-9]+)?\b").unwrap());
+static TOKEN_REGEX: LazyLock<Regex> = LazyLock::new(|| {
+    Regex::new(r"(?<![\p{L}\p{N}_])[a-zA-Z0-9]+(?:'[a-zA-Z0-9]+)?(?![\p{L}\p{N}_])").unwrap()
+});
 
 pub fn tokenize(text: &str, remove_stopwords: bool) -> Vec<String> {
     let lower = text.to_lowercase();
     let mut tokens = Vec::new();
     for mat in TOKEN_REGEX.find_iter(&lower) {
-        let word = mat.as_str();
+        let word = mat.unwrap().as_str();
         if !remove_stopwords || !STOP_WORDS.contains(word) {
             tokens.push(word.to_string());
         }

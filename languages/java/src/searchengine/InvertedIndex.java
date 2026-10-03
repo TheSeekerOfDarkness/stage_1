@@ -30,7 +30,7 @@ public class InvertedIndex {
                 var it = index.entrySet().iterator();
                 while (it.hasNext()) {
                     var entry = it.next();
-                    writer.write("  \"" + entry.getKey() + "\": " + entry.getValue().toString());
+                    writer.write("  \"" + entry.getKey() + "\": " + new TreeSet<>(entry.getValue()).toString());
                     if (it.hasNext()) {
                         writer.write(",\n");
                     } else {
@@ -125,10 +125,20 @@ public class InvertedIndex {
                 Files.createDirectories(dir);
 
                 Path termFile = dir.resolve(getFileName(term));
-                try (BufferedWriter writer = Files.newBufferedWriter(termFile, StandardCharsets.UTF_8,
-                        StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
-                    writer.write(docId + "\n");
+                Set<Integer> ids = new TreeSet<>();
+                if (Files.exists(termFile)) {
+                    for (String line : Files.readAllLines(termFile, StandardCharsets.UTF_8)) {
+                        if (!line.trim().isEmpty()) {
+                            ids.add(Integer.parseInt(line.trim()));
+                        }
+                    }
                 }
+                ids.add(docId);
+                StringBuilder content = new StringBuilder();
+                for (int id : ids) {
+                    content.append(id).append("\n");
+                }
+                Files.writeString(termFile, content.toString(), StandardCharsets.UTF_8);
             }
         }
 
