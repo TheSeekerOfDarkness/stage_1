@@ -41,9 +41,9 @@ def plot_datalake_write_speed(data):
     rust_stds = [d["rust"]["stddev_ms"] for d in data]
 
     fig, ax = plt.subplots(figsize=(9, 5.5))
-    rects1 = ax.bar(x - width, py_means, width, yerr=py_stds, label="Python 3.12", color="#3572A5", capsize=4, alpha=0.9)
-    rects2 = ax.bar(x, java_means, width, yerr=java_stds, label="Java 11 (JVM)", color="#E76F00", capsize=4, alpha=0.9)
-    rects3 = ax.bar(x + width, rust_means, width, yerr=rust_stds, label="Rust 1.93 (Native)", color="#C84B31", capsize=4, alpha=0.9)
+    rects1 = ax.bar(x - width, py_means, width, yerr=py_stds, label="Python", color="#3572A5", capsize=4, alpha=0.9)
+    rects2 = ax.bar(x, java_means, width, yerr=java_stds, label="Java", color="#E76F00", capsize=4, alpha=0.9)
+    rects3 = ax.bar(x + width, rust_means, width, yerr=rust_stds, label="Rust", color="#C84B31", capsize=4, alpha=0.9)
 
     ax.set_ylabel("Execution Time (ms)")
     ax.set_title("Datalake Ingestion Speed Across Layouts (106 Books)")
@@ -83,9 +83,9 @@ def plot_index_build_speed(data):
     rust_stds = [d["rust"]["stddev_ms"] for d in data]
 
     fig, ax = plt.subplots(figsize=(9, 5.5))
-    rects1 = ax.bar(x - width, py_means, width, yerr=py_stds, label="Python 3.12", color="#3572A5", capsize=4, alpha=0.9)
-    rects2 = ax.bar(x, java_means, width, yerr=java_stds, label="Java 11 (JVM)", color="#E76F00", capsize=4, alpha=0.9)
-    rects3 = ax.bar(x + width, rust_means, width, yerr=rust_stds, label="Rust 1.93 (Native)", color="#C84B31", capsize=4, alpha=0.9)
+    rects1 = ax.bar(x - width, py_means, width, yerr=py_stds, label="Python", color="#3572A5", capsize=4, alpha=0.9)
+    rects2 = ax.bar(x, java_means, width, yerr=java_stds, label="Java", color="#E76F00", capsize=4, alpha=0.9)
+    rects3 = ax.bar(x + width, rust_means, width, yerr=rust_stds, label="Rust", color="#C84B31", capsize=4, alpha=0.9)
 
     ax.set_ylabel("Execution Time (ms, Log Scale)")
     ax.set_yscale("log")
@@ -111,28 +111,31 @@ def plot_index_build_speed(data):
 
 
 def plot_query_latency(data):
-    terms = [d["term"] for d in data]
-    x = np.arange(len(terms))
+    labels = []
+    for d in data:
+        labels.append(f"{d['structure'].split('_')[0]}\n'{d['term']}'")
+    x = np.arange(len(labels))
     width = 0.25
 
-    py_means = [d["python"]["mean_ms"] for d in data]
-    py_stds = [d["python"]["stddev_ms"] for d in data]
+    py_means = [d["python"]["mean_us"] for d in data]
+    py_stds = [d["python"]["stddev_us"] for d in data]
 
-    java_means = [d["java"]["mean_ms"] for d in data]
-    java_stds = [d["java"]["stddev_ms"] for d in data]
+    java_means = [d["java"]["mean_us"] for d in data]
+    java_stds = [d["java"]["stddev_us"] for d in data]
 
-    rust_means = [d["rust"]["mean_ms"] for d in data]
-    rust_stds = [d["rust"]["stddev_ms"] for d in data]
+    rust_means = [d["rust"]["mean_us"] for d in data]
+    rust_stds = [d["rust"]["stddev_us"] for d in data]
 
     fig, ax = plt.subplots(figsize=(9, 5.5))
-    rects1 = ax.bar(x - width, py_means, width, yerr=py_stds, label="Python 3.12", color="#3572A5", capsize=4, alpha=0.9)
-    rects2 = ax.bar(x, java_means, width, yerr=java_stds, label="Java 11 (JVM)", color="#E76F00", capsize=4, alpha=0.9)
-    rects3 = ax.bar(x + width, rust_means, width, yerr=rust_stds, label="Rust 1.93 (Native)", color="#C84B31", capsize=4, alpha=0.9)
+    rects1 = ax.bar(x - width, py_means, width, yerr=py_stds, label="Python", color="#3572A5", capsize=4, alpha=0.9)
+    rects2 = ax.bar(x, java_means, width, yerr=java_stds, label="Java", color="#E76F00", capsize=4, alpha=0.9)
+    rects3 = ax.bar(x + width, rust_means, width, yerr=rust_stds, label="Rust", color="#C84B31", capsize=4, alpha=0.9)
 
-    ax.set_ylabel("Lookup Latency (ms)")
-    ax.set_title("Single & Multi-Term Query Retrieval Latency Across Languages")
+    ax.set_ylabel("Lookup Latency (µs, Log Scale)")
+    ax.set_yscale("log")
+    ax.set_title("Query Lookup Latency Across Languages (without process startup)")
     ax.set_xticks(x)
-    ax.set_xticklabels([f"'{t}'" for t in terms])
+    ax.set_xticklabels(labels)
     ax.legend(frameon=True)
     ax.grid(axis="y", linestyle="--", alpha=0.7)
 
